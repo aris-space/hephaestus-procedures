@@ -1,0 +1,145 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[top=3cm, headheight=2.2cm, headsep=10pt]{geometry}
+\usepackage{graphicx}
+
+% To reference the last page
+\usepackage{lastpage}
+
+% Like `tabularx` but supports pagebreaks
+\usepackage{ltablex}
+% Adjust row vertical spacing
+\renewcommand{\arraystretch}{1.2}
+
+% Multiline cells
+\usepackage{makecell}
+
+% Set date format to ISO 8601
+\usepackage{datetime}
+\newdateformat{isodate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
+
+% Table colouring
+\usepackage[table]{xcolor}
+\definecolor{tableHeaderColor}
+  {rgb}{0.75,0.75,0.75}
+\definecolor{tableColumnColor}
+  {rgb}{0.95, 0.95, 0.95}
+\definecolor{notesColor}
+  {rgb}{0.95, 0.95, 0.95}
+\definecolor{highlightColor}
+  {rgb}{1.00, 0.95, 0.80}
+
+% Icons for checkbox
+\usepackage{pifont}
+% Command to create a checkbox
+\newcommand{\checkbox}{\ding{113}}
+
+\usepackage{array}
+% Define a counter for the item numbers
+\newcounter{rowCounter}
+% Initialize counter
+\setcounter{rowCounter}{0}
+
+% Command for row in checklist
+% First argument is amount
+% Second argument is description
+\newcommand{\checklistItem}[2]{
+    \checkbox & #1 & #2 \\ \hline
+}
+
+% Command for row in procedure list
+\newcommand{\procedureItem}[1]{
+  \stepcounter{rowCounter} % Increment counter
+  1.\arabic{rowCounter}
+  &
+  \checkbox
+  &
+  \checkbox
+  &
+  \checkbox
+  &
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in note list
+\newcommand{\noteItem}[1]{
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\renewcommand{\headrulewidth}{0pt}
+\lhead{\includegraphics[width=2cm]{../../common/assets/HELIOS_LOGO.pdf}}
+\rhead{\includegraphics[width=2cm]{../../common/assets/ARIS_space_to_grow_LOGO-black.pdf}}
+\cfoot{\thepage}
+\fancyfoot[L]{Project HELIOS}
+\fancyfoot[C]{Page \thepage\ out of \pageref{LastPage}}
+
+% Draft watermark
+\usepackage{background}
+\backgroundsetup{
+  scale=25,
+  color=gray,
+  opacity=0.4,
+  angle=45,
+  position=current page.center,
+  contents={Draft}
+}
+
+\title{DACS Control Station Installation}
+\author{Operating Procedure}
+\date{Version: \isodate\today}
+
+\begin{document}
+
+\maketitle
+
+% Set the page style for the title page
+\thispagestyle{fancy}
+
+%%%%%% Prefix section
+% Change section numbering to A, B, C...
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Operation Description}
+\input{sections/operation-description.tex}
+
+\section{Required Documents}
+\input{sections/required-documents.tex}
+
+\section{Required Tools}
+\input{sections/required-tools.tex}
+
+\section{Required Materials}
+\input{sections/required-materials.tex}
+
+\newpage
+
+%%%%%% Main section
+% Change section numbering to 1, 2, 3...
+\renewcommand{\thesection}{\arabic{section}}
+
+% Reset section counter to start from 1 again
+\setcounter{section}{0}
+
+\section{Installation}
+\input{sections/installation.tex}
+
+\newpage
+
+%%%%%% Notes
+\setcounter{section}{0}
+\section*{Notes}
+\input{sections/notes.tex}
+
+\end{document}
