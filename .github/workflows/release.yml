@@ -23,5 +23,5 @@ jobs:
     - name: Make release with PDFs
       uses: softprops/action-gh-release@v2
       with:
-        name: artifacts
-        path: src/dacs-sw/control-station-installation/main.pdf
+        files: |
+          src/dacs-sw/control-station-installation/main.pdf
