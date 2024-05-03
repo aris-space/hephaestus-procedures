@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.7](https://github.com/aris-space/helios-procedures/compare/v0.0.6...v0.0.7) - 2024-05-03
+- ci: Manually specify which tag `softprops/action-gh-release` should use by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/19
+
 ## [v0.0.4](https://github.com/aris-space/helios-procedures/compare/v0.0.3...v0.0.4) - 2024-05-03
 - ci: Make release draft by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/15
 
