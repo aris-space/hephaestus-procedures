@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.6](https://github.com/aris-space/helios-procedures/compare/v0.0.5...v0.0.6) - 2024-05-03
+- ci: Use tagpr output to trigger release by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/17
+
 ## [v0.0.4](https://github.com/aris-space/helios-procedures/compare/v0.0.3...v0.0.4) - 2024-05-03
 - ci: Make release draft by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/15
 
