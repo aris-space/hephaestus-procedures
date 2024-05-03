@@ -8,6 +8,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
-    - uses: Songmu/tagpr@v1
+    - id: tagpr
+      uses: Songmu/tagpr@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Compile LaTeX document
+      if: ${{ steps.tagpr.outputs.tag != '' }}
+      uses: xu-cheng/latex-action@v3
+      with:
+        working_directory: src/dacs-sw/control-station-installation/
+        root_file: main.tex
+        work_in_root_file_dir: true
+
+    - name: Make release with PDFs
+      if: ${{ steps.tagpr.outputs.tag != '' }}
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          src/dacs-sw/control-station-installation/main.pdf
