@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.3](https://github.com/aris-space/helios-procedures/compare/v0.0.2...v0.0.3) - 2024-05-03
+- fix(ci): Give path for release action correcly by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/11
+- ci: Trigger on release instead of tag push by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/13
+- ci: Set `tagpr` to make a release by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/14
+
 ## [v0.0.2](https://github.com/aris-space/helios-procedures/compare/v0.0.1...v0.0.2) - 2024-05-03
 - ci: Add config for release action by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/7
 - ci: Prevent `tagpr` from creating a release by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/8
