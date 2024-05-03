@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.4](https://github.com/aris-space/helios-procedures/compare/v0.0.3...v0.0.4) - 2024-05-03
+- ci: Make release draft by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/15
+
 ## [v0.0.3](https://github.com/aris-space/helios-procedures/compare/v0.0.2...v0.0.3) - 2024-05-03
 - fix(ci): Give path for release action correcly by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/11
 - ci: Trigger on release instead of tag push by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/13
