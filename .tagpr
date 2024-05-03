@@ -40,4 +40,4 @@
 	vPrefix = true
 	releaseBranch = main
 	versionFile = -
-	release = false
+	release = true
