@@ -1,8 +1,7 @@
 name: "Make release"
 on:
-  push:
-    tags:
-      - 'v*'
+  release:
+    types: [ created ]
 
 permissions:
   contents: write # Needed to write to GitHub draft release
