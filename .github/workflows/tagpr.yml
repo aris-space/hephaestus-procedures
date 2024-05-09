@@ -13,6 +13,12 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+    - name: Remove waterkmark
+      if: ${{ steps.tagpr.outputs.tag != '' }}
+      # Set the variable controlling the watermark addition to `false`
+      run: |
+        sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/dacs-sw/control-station-installation/main.tex
+
     - name: Compile LaTeX document
       if: ${{ steps.tagpr.outputs.tag != '' }}
       uses: xu-cheng/latex-action@v3
