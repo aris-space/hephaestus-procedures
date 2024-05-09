@@ -86,15 +86,19 @@
 \fancyfoot[C]{Page \thepage\ out of \pageref{LastPage}}
 
 % Draft watermark
-\usepackage{background}
-\backgroundsetup{
-  scale=25,
-  color=gray,
-  opacity=0.4,
-  angle=45,
-  position=current page.center,
-  contents={Draft}
-}
+\newboolean{isDraft}
+\setboolean{isDraft}{true} % Set to false to remove the watermark
+\ifthenelse{\boolean{isDraft}}{
+  \usepackage{background}
+  \backgroundsetup{
+    scale=25,
+    color=gray,
+    opacity=0.4,
+    angle=45,
+    position=current page.center,
+    contents={Draft}
+  }
+}{}
 
 \title{DACS Control Station Installation}
 \author{Operating Procedure}
