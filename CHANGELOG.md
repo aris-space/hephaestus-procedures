@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.8](https://github.com/aris-space/helios-procedures/compare/v0.0.7...v0.0.8) - 2024-05-09
+- feat: Allow setting draft watermark via variable by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/21
+- ci: Remove watermark on release by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/23
+
 ## [v0.0.7](https://github.com/aris-space/helios-procedures/compare/v0.0.6...v0.0.7) - 2024-05-03
 - ci: Manually specify which tag `softprops/action-gh-release` should use by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/19
 
