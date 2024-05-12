@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.12](https://github.com/aris-space/helios-procedures/compare/v0.0.11...v0.0.12) - 2024-05-12
+- feat(docs): Add content from current installation procedure from SharePoint by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/29
+
 ## [v0.0.11](https://github.com/aris-space/helios-procedures/compare/v0.0.10...v0.0.11) - 2024-05-12
 - fix(ci): Re-add accidentally removed `tag_name` line by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/30
 
