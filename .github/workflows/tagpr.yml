@@ -37,5 +37,6 @@ jobs:
       if: ${{ steps.tagpr.outputs.tag != '' }}
       uses: softprops/action-gh-release@v2
       with:
+        tag_name: ${{ steps.tagpr.outputs.tag }}
         files: |
           release/sw-control-station-installation.pdf
