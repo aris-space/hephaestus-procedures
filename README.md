@@ -19,6 +19,11 @@ Basically make many small PRs rather than one big one.
 Whenenever there are unreleased changes on main, `tagpr` will create a new release pull request.
 Merging that PR will automatically create a new release.
 
+### Structure
+
+All LaTeX source is located in `src/` and from there separated by subteam (`dacs-sw`, ...).
+The `src/common/` folder contains shared content like assets.
+
 ### Other
 
 By default, documents will have a draft watermark controlled by a single LaTeX variable unless they are compiled by the release pipeline.
