@@ -4,5 +4,148 @@
 \begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|X|}
   \hline
   \rowcolor{tableHeaderColor}
-  ID & CK 1 & CK 2 & CK 3 & Description \\ \hline
+  ID & CK 1 & CK 2 & CK 3 & Description                       \\ \hline
+
+  \procedureItem{
+    Unpack material and place monitors on two tables in the following order (from left to right):
+  \\
+    PROMETHEUS Monitor 1, PROMETHEUS Monitor 2, Surveillance/KiDAQ Monitor
+  }
+
+  \procedureItem{
+    Connect 2 monitors PROMETHEUS Monitor 1 and 2 to MC PC (DP cable)
+  }
+
+  \procedureItem{
+    Connect the remaining monitor to KiDAQ PC (DP cable)
+  }
+
+  \procedureItem{
+    Connect keyboards, mouses, power adapters and Wifi Adapters to both PCs
+  \\
+    Important: Connect the US keyboard to the mission control PC!
+  }
+
+  \procedureItem{
+    Plug in power of Ethernet switch
+  }
+
+  \procedureItem{
+    Connect 100m Ethernet cable to PRO Ethernet Switch
+  }
+
+  \procedureItem{
+    Connect PRO Ethernet switch to PRO Mission Control PC with short Ethernet cable
+  }
+
+  \procedureItem{
+    Connect PRO Ethernet switch to KiDAQ PC with short Ethernet cable
+  }
+
+  \procedureItem{
+    Turn both PCs on.
+  \\
+    Login credentials can be found on the DACS software page of the wiki
+  \\
+  \texttt{https://wiki.aris-space.ch/e/en/rocketry/engines    \\/liquid/test-bench/data-acquisition-and-control-system\\/Subsystems/Software}
+  }
+
+  \procedureItem{
+    For the right monitor settings on the MC PC go to 'Settings' -$>$ 'Displays' and check the following things:
+    \begin{itemize}
+      \item Primary Display: Dell Inc. 28"
+      \item Fractional Scaling ON
+      \item Dell Inc. 24": 100\% Scaling
+    \end{itemize}
+    Dell Inc. 28": 175\% Scaling (check the UI in Google Chrome and if the size is appropriate, otherwise change 175\% to 125\% and try again) if there is some problem with this monitor (e.g. flickering) you can try to change this to another value, but then the UI formatting might not be perfect but still manageable)
+  }
+
+  \procedureItem{
+    Connect the 100m ethernet cable to the ethernet switch in DACS Box and to the mission control PC.
+  \\
+    (Check that in the upper right corner when you click on the WLAN symbol it says 'Wired connected')
+  }
+
+  \procedureItem{
+    Connect mission control PC to hotspot
+  }
+
+  \procedureItem{
+    Launch system by running in terminal:
+  \\
+    \texttt{./start\_test\_maria.sh}
+  \\
+    Then continue at step 1.19.
+  \\
+    If that does not work do steps 1.14.-1.18.
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    The following steps are already executed by the \texttt{start\_test\_maria.sh} file and usually don't have to be done
+  \\
+    Open UI in browser (preferably Firefox):
+  \\
+  \texttt{file:///home/dacs/git/user-interface/rosWebPage/ui/ \\index.html}
+  \\
+    There is also a bookmark so you don't need to type this in
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Launch ROS from terminal:
+    \begin{itemize}
+      \item \texttt{cd catkin\_ws}
+      \item \texttt{catkin build}
+      \item \texttt{source ./devel/setup.bash}
+      \item \texttt{roslaunch data\_acquisition test.launch}
+    \end{itemize}
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Refresh UI and ensure it is connected to ROS websocket (green message in the histogram)
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Open Plotjuggler in a new terminal:
+    \begin{itemize}
+      \item \texttt{cd catkin\_ws}
+      \item \texttt{catkin build}
+      \item \texttt{source ./devel/setup.bash}
+      \item \texttt{rosrun plotjuggler plotjuggler}
+    \end{itemize}
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Open Plotjuggler in a new terminal:
+    \begin{itemize}
+      \item \texttt{cd catkin\_ws}
+      \item \texttt{source ./devel/setup.bash}
+      \item \texttt{rosrun plotjuggler plotjuggler}
+    \end{itemize}
+  }
+
+  \procedureItem{
+    For the first Plotjuggler window:
+    \begin{itemize}
+      \item Press 'Start' (check that ROS Topic Subscriber is chosen in the Streaming window)
+      \item Choose all sensor topics
+      \item configure plots you want to see by importing layout from \texttt{/home/dacs/git/configuration\_tests/plotjuggler\_config.xml}
+      \item set buffer in upper left corner to 60 to set the window size to 60 seconds
+      \item Move this window to the second monitor
+    \end{itemize}
+  }
+
+  \procedureItem{
+    For the second Plotjuggler window:
+    \begin{itemize}
+      \item Press 'Start' (check that ROS Topic Subscriber is chosen in the Streaming window)
+      \item Choose all sensor topics
+      \item configure plots you want to see by importing layout from \texttt{/home/dacs/git/configuration\_tests/plotjuggler\_config.xml}
+      \item set buffer in upper left corner to 600 to set the window size to 10 minutes
+    \end{itemize}
+  }
 \end{tabularx}
