@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.13](https://github.com/aris-space/helios-procedures/compare/v0.0.12...v0.0.13) - 2024-05-12
+- docs: Add initial usage information to README by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/33
+- fix: Use lower resolution version of HELIOS icon by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/36
+- docs: Add information about project structure by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/37
+
 ## [v0.0.12](https://github.com/aris-space/helios-procedures/compare/v0.0.11...v0.0.12) - 2024-05-12
 - feat(docs): Add content from current installation procedure from SharePoint by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/29
 
