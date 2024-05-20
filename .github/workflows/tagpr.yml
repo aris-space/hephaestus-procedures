@@ -40,6 +40,7 @@ jobs:
       run: |
         mkdir release
         mv src/dacs-sw/control-station-installation/main.pdf release/sw-control-station-installation.pdf
+        mv src/dacs-sw/template/main.pdf release/sw-template.pdf
   
     - name: Make release with PDFs
       if: ${{ steps.tagpr.outputs.tag != '' }}
