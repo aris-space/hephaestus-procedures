@@ -14,13 +14,21 @@ jobs:
         root_file: main.tex
         work_in_root_file_dir: true
 
+    - name: Compile LaTeX template document
+      uses: xu-cheng/latex-action@v3
+      with:
+        working_directory: src/dacs-sw/template/
+        root_file: main.tex
+        work_in_root_file_dir: true
+  
     - name: Rename files and move to single release folder
       run: |
         mkdir release
         mv src/dacs-sw/control-station-installation/main.pdf release/sw-control-station-installation.pdf
+        mv src/dacs-sw/template/main.pdf release/template.pdf
     
     - name: Upload PDF file
       uses: actions/upload-artifact@v4
       with:
         name: artifacts
-        path: release/sw-control-station-installation.pdf
+        path: release/*

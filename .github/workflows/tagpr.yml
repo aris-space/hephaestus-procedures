@@ -27,6 +27,14 @@ jobs:
         root_file: main.tex
         work_in_root_file_dir: true
 
+    - name: Compile LaTeX template document
+      if: ${{ steps.tagpr.outputs.tag != '' }}
+      uses: xu-cheng/latex-action@v3
+      with:
+        working_directory: src/dacs-sw/template/
+        root_file: main.tex
+        work_in_root_file_dir: true
+      
     - name: Rename files and move to single release folder
       if: ${{ steps.tagpr.outputs.tag != '' }}
       run: |
@@ -39,4 +47,4 @@ jobs:
       with:
         tag_name: ${{ steps.tagpr.outputs.tag }}
         files: |
-          release/sw-control-station-installation.pdf
+          release/*
