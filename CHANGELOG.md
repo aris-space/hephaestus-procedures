@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.14](https://github.com/aris-space/helios-procedures/compare/v0.0.13...v0.0.14) - 2024-05-20
+- refactor: Move library code to common LaTeX header file by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/38
+- feat: Add DACS SW template by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/40
+
 ## [v0.0.13](https://github.com/aris-space/helios-procedures/compare/v0.0.12...v0.0.13) - 2024-05-12
 - docs: Add initial usage information to README by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/33
 - fix: Use lower resolution version of HELIOS icon by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/36
