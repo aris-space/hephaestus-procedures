@@ -1,40 +1,8 @@
 \documentclass{article}
-\usepackage[utf8]{inputenc}
-\usepackage[top=3cm, headheight=2.2cm, headsep=10pt]{geometry}
-\usepackage{graphicx}
 
-% To reference the last page
-\usepackage{lastpage}
+% Use common packages and commands
+\input{../../common/lib/header}
 
-% Like `tabularx` but supports pagebreaks
-\usepackage{ltablex}
-% Adjust row vertical spacing
-\renewcommand{\arraystretch}{1.2}
-
-% Multiline cells
-\usepackage{makecell}
-
-% Set date format to ISO 8601
-\usepackage{datetime}
-\newdateformat{isodate}{\THEYEAR-\twodigit{\THEMONTH}-\twodigit{\THEDAY}}
-
-% Table colouring
-\usepackage[table]{xcolor}
-\definecolor{tableHeaderColor}
-  {rgb}{0.75,0.75,0.75}
-\definecolor{tableColumnColor}
-  {rgb}{0.95, 0.95, 0.95}
-\definecolor{notesColor}
-  {rgb}{0.95, 0.95, 0.95}
-\definecolor{highlightColor}
-  {rgb}{1.00, 0.95, 0.80}
-
-% Icons for checkbox
-\usepackage{pifont}
-% Command to create a checkbox
-\newcommand{\checkbox}{\ding{113}}
-
-\usepackage{array}
 % Define a counter for the item numbers
 \newcounter{rowCounter}
 % Initialize counter
@@ -73,32 +41,6 @@
   \end{minipage}
   \\ \hline
 }
-
-% Header and footer
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{} % Clear header and footer
-\renewcommand{\headrulewidth}{0pt}
-\lhead{\includegraphics[width=2cm]{../../common/assets/HELIOS_LOGO.png}}
-\rhead{\includegraphics[width=2cm]{../../common/assets/ARIS_space_to_grow_LOGO-black.pdf}}
-\cfoot{\thepage}
-\fancyfoot[L]{Project HELIOS}
-\fancyfoot[C]{Page \thepage\ out of \pageref{LastPage}}
-
-% Draft watermark
-\newboolean{isDraft}
-\setboolean{isDraft}{true} % Set to false to remove the watermark
-\ifthenelse{\boolean{isDraft}}{
-  \usepackage{background}
-  \backgroundsetup{
-    scale=25,
-    color=gray,
-    opacity=0.4,
-    angle=45,
-    position=current page.center,
-    contents={Draft}
-  }
-}{}
 
 \title{DACS Control Station Installation}
 \author{Operating Procedure}
