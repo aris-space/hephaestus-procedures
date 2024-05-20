@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.15](https://github.com/aris-space/helios-procedures/compare/v0.0.14...v0.0.15) - 2024-05-20
+- fix(ci): Copy rendered template to release folder by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/41
+
 ## [v0.0.14](https://github.com/aris-space/helios-procedures/compare/v0.0.13...v0.0.14) - 2024-05-20
 - refactor: Move library code to common LaTeX header file by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/38
 - feat: Add DACS SW template by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/40
