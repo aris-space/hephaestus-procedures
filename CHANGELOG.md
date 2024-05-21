@@ -1,5 +1,12 @@
 # Changelog
 
+## [v0.0.16](https://github.com/aris-space/helios-procedures/compare/v0.0.15...v0.0.16) - 2024-05-21
+- docs: Mention how to delete lines in procedures by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/43
+- docs: Mention that `main` does not allow direct pushing by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/44
+- style(ci): Trim trailing newlines by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/47
+- feat: Add skeleton for database ingestion procedure by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/48
+- fix(ci): Prefix all dacs-sw files with the corresponding string by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/49
+
 ## [v0.0.15](https://github.com/aris-space/helios-procedures/compare/v0.0.14...v0.0.15) - 2024-05-20
 - fix(ci): Copy rendered template to release folder by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/41
 
