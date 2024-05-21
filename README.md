@@ -15,6 +15,7 @@ Changes should be small and atomic.
 Basically make many small PRs rather than one big one.
 
 ⚠️ Note that the `main` branch is protected, all changes have to be made to new branches and then merged via a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ⚠️
+⚠️ You will **NOT** be able to push to `main` ⚠️
 
 Whenenever there are unreleased changes on main, `tagpr` will create a new release pull request.
 Merging that PR will automatically create a new release.
