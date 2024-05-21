@@ -19,6 +19,14 @@ Basically make many small PRs rather than one big one.
 Whenenever there are unreleased changes on main, `tagpr` will create a new release pull request.
 Merging that PR will automatically create a new release.
 
+If you want to remove an entry in a procedure, make sure to comment it out in the source rather than deleting the line.
+This makes it easier to see who "removed" an entry when using [`git blame`](https://git-scm.com/docs/git-blame).
+This is important as procedures often get entries removed that are assumed trivial or unnecessary.
+As each team member has their own definition of what is "unnecessary", it is important to be able to easily see who removed an entry.
+
+This only applies to procedure contents.
+LaTeX commands etc can be deleted just fine if they are no longer needed.
+
 ### Structure
 
 All LaTeX source is located in `src/` and from there separated by subteam (`dacs-sw`, ...).
