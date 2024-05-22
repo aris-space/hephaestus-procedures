@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.0.18](https://github.com/aris-space/helios-procedures/compare/v0.0.17...v0.0.18) - 2024-05-22
+- style(ci): Trim trailing newline by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/53
+- chore: Fix typo by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/54
+- ci: Create parent folder if not exists by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/56
+- chore: Fix typo in CI step name by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/57
+
 ## [v0.0.17](https://github.com/aris-space/helios-procedures/compare/v0.0.16...v0.0.17) - 2024-05-21
 - fix(ci): Compile database ingestion document by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/50
 
