@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.20](https://github.com/aris-space/helios-procedures/compare/v0.0.19...v0.0.20) - 2024-05-22
+- fix(ci): Do not show draft watermark on release files by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/59
+
 ## [v0.0.19](https://github.com/aris-space/helios-procedures/compare/v0.0.18...v0.0.19) - 2024-05-22
 - ci: Compile all procedures in a single step by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/52
 
