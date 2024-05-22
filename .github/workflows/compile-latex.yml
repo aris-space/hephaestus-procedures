@@ -30,7 +30,7 @@ jobs:
       
     - name: Rename files and move to single release folder
       run: |
-        mkdir release
+        mkdir --parents release
         mv src/dacs-sw/control-station-installation/main.pdf release/dacs-sw-control-station-installation.pdf
         mv src/dacs-sw/template/main.pdf release/dacs-sw-template.pdf
         mv src/dacs-sw/database-ingestion/main.pdf release/dacs-sw-database-ingestion.pdf
