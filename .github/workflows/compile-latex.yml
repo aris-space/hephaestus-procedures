@@ -35,7 +35,7 @@ jobs:
         mv src/dacs-sw/template/main.pdf release/dacs-sw-template.pdf
         mv src/dacs-sw/database-ingestion/main.pdf release/dacs-sw-database-ingestion.pdf
 
-    - name: Upload PDF file
+    - name: Upload PDF files
       uses: actions/upload-artifact@v4
       with:
         name: artifacts
