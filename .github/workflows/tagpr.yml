@@ -13,7 +13,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Remove waterkmark
+    - name: Remove watermark
       if: ${{ steps.tagpr.outputs.tag != '' }}
       # Set the variable controlling the watermark addition to `false`
       run: |
