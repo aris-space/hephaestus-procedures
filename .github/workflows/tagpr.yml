@@ -42,7 +42,7 @@ jobs:
         working_directory: src/dacs-sw/database-ingestion/
         root_file: main.tex
         work_in_root_file_dir: true
-          
+
     - name: Rename files and move to single release folder
       if: ${{ steps.tagpr.outputs.tag != '' }}
       run: |
