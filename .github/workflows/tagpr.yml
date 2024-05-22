@@ -19,29 +19,15 @@ jobs:
       run: |
         sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/dacs-sw/control-station-installation/main.tex
 
-    - name: Compile LaTeX document
+    - name: Compile all LaTeX documents
       if: ${{ steps.tagpr.outputs.tag != '' }}
-      uses: xu-cheng/latex-action@v3
-      with:
-        working_directory: src/dacs-sw/control-station-installation/
-        root_file: main.tex
-        work_in_root_file_dir: true
-
-    - name: Compile LaTeX template document
-      if: ${{ steps.tagpr.outputs.tag != '' }}
-      uses: xu-cheng/latex-action@v3
-      with:
-        working_directory: src/dacs-sw/template/
-        root_file: main.tex
-        work_in_root_file_dir: true
-
-    - name: Compile LaTeX database ingestion document
-      if: ${{ steps.tagpr.outputs.tag != '' }}
-      uses: xu-cheng/latex-action@v3
-      with:
-        working_directory: src/dacs-sw/database-ingestion/
-        root_file: main.tex
-        work_in_root_file_dir: true
+      run: |
+        projects=("control-station-installation" "template" "database-ingestion")
+        for project in "${projects[@]}"; do
+          working_directory="src/dacs-sw/$project"
+          root_file="main.tex"
+          docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace/$working_directory texlive/texlive:latest latexmk -pdf -interaction=nonstopmode $root_file
+        done
 
     - name: Rename files and move to single release folder
       if: ${{ steps.tagpr.outputs.tag != '' }}
