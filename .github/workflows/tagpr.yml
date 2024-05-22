@@ -17,7 +17,7 @@ jobs:
       if: ${{ steps.tagpr.outputs.tag != '' }}
       # Set the variable controlling the watermark addition to `false`
       run: |
-        sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/dacs-sw/control-station-installation/main.tex
+        sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/common/lib/header.tex
 
     - name: Compile all LaTeX documents
       if: ${{ steps.tagpr.outputs.tag != '' }}
