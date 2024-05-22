@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.19](https://github.com/aris-space/helios-procedures/compare/v0.0.18...v0.0.19) - 2024-05-22
+- ci: Compile all procedures in a single step by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/52
+
 ## [v0.0.18](https://github.com/aris-space/helios-procedures/compare/v0.0.17...v0.0.18) - 2024-05-22
 - style(ci): Trim trailing newline by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/53
 - chore: Fix typo by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/54
