@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.17](https://github.com/aris-space/helios-procedures/compare/v0.0.16...v0.0.17) - 2024-05-21
+- fix(ci): Compile database ingestion document by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/50
+
 ## [v0.0.16](https://github.com/aris-space/helios-procedures/compare/v0.0.15...v0.0.16) - 2024-05-21
 - docs: Mention how to delete lines in procedures by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/43
 - docs: Mention that `main` does not allow direct pushing by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/44
