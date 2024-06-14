@@ -6,4 +6,63 @@
   \hline
   \rowcolor{tableHeaderColor}
   ID & CK 1 & Description \\ \hline
+
+  \procedureItem{
+    Locate the rosbags:
+  \\
+    They are in the folder (\texttt{catkin\_ws/src/rosbags})
+  }
+
+  \procedureItem{
+    Copy the rosbags that you need (the specific time of the bags)
+  }
+
+  \procedureItem{
+    Go to the folder (\texttt{git/datamanagement/database\_pro/bagsvortex/Param\_anal})
+  }
+
+  \procedureItem{
+    Remove all old rosbags from that specific folder (move them into bagsvortex)
+  }
+
+  \procedureItem{
+    Paste your new rosbags in there
+  }
+
+  \procedureItem{
+    Go to the ProDacs config file, which is located in the folder (\texttt{git/configuration\_tests})
+  }
+
+  \procedureItem{
+    Open it and change the date and time and name of the test to your test, be careful to leave the formatting of the date and time as it is, do not change anything in the format or it will crash the script
+  }
+
+  \procedureItem{
+    Save it with (\texttt{Ctrl + S}), if a window pops up asking if xlsx or the other format, go with the excel format
+  }
+
+  \procedureItem{
+    Go to the terminal or terminator, doesnt matter which one
+  }
+
+  \procedureItem{
+    Type (\texttt{cd git/datamanagment/database\_pro}), this will lead you to the correct directory
+  }
+
+  \procedureItem{
+    Create a database entry by typing this into the terminal (\texttt{python3 configure\_db.py})
+  }
+
+  \procedureItem{
+    Check if the date and name are correct, if yes press (\texttt{Y}) if not then go to step number 6 (i.e. the one regarding ProDacs config file)
+  }
+
+  \procedureItem{
+    Write a brief description of the test so you will understand what it was at a later time
+  }
+
+  \procedureItem{
+    After the entry was created you can run (\texttt{python3 read\_bag.py}) this will ingest the rosbags into the database entry
+  }
+
 \end{tabularx}

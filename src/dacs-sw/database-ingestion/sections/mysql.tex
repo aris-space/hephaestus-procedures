@@ -6,4 +6,39 @@
   \hline
   \rowcolor{tableHeaderColor}
   ID & CK 1 & Description \\ \hline
+  \procedureItem{
+    All the following commands should be run in the terminal
+  }
+
+  \procedureItem{
+    Check if database is running. If it isn't, start it by running
+  \\
+    \texttt{sudo service start mysql}
+  }
+
+  \procedureItem{
+    Log into database
+  \\
+    \texttt{mysql -u root -p}
+  }
+
+  \procedureItem{
+    Database password can be found in the wiki
+  }
+
+  \procedureItem{
+    Select the database
+  \\
+    \texttt{USE dacs;}
+  }
+
+  \procedureItem{
+    Show the recorded tests
+  \\
+    \texttt{SELECT * from tests;}
+  }
+
+  \procedureItem{
+    You should now see all the test entries in the database.
+  }
 \end{tabularx}
