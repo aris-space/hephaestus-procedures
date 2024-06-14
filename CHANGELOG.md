@@ -1,5 +1,10 @@
 # Changelog
 
+## [v0.0.21](https://github.com/aris-space/helios-procedures/compare/v0.0.20...v0.0.21) - 2024-06-14
+- style: Add missing newline in readme by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/61
+- feat(docs): Add procedure for DACS SW database ingestion by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/46
+- ci: Use Python script to move compiled LaTeX files by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/63
+
 ## [v0.0.20](https://github.com/aris-space/helios-procedures/compare/v0.0.19...v0.0.20) - 2024-05-22
 - fix(ci): Do not show draft watermark on release files by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/59
 
