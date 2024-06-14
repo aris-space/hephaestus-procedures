@@ -33,9 +33,7 @@ jobs:
       if: ${{ steps.tagpr.outputs.tag != '' }}
       run: |
         mkdir --parents release
-        mv src/dacs-sw/control-station-installation/main.pdf release/dacs-sw-control-station-installation.pdf
-        mv src/dacs-sw/template/main.pdf release/dacs-sw-template.pdf
-        mv src/dacs-sw/database-ingestion/main.pdf release/dacs-sw-database-ingestion.pdf
+        python3 scripts/move-files.py
 
     - name: Make release with PDFs
       if: ${{ steps.tagpr.outputs.tag != '' }}
