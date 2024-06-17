@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.22](https://github.com/aris-space/helios-procedures/compare/v0.0.21...v0.0.22) - 2024-06-17
+- ci: Discover and compile LaTeX files recursively by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/64
+
 ## [v0.0.21](https://github.com/aris-space/helios-procedures/compare/v0.0.20...v0.0.21) - 2024-06-14
 - style: Add missing newline in readme by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/61
 - feat(docs): Add procedure for DACS SW database ingestion by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/46
