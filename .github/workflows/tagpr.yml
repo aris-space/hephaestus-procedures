@@ -21,13 +21,7 @@ jobs:
 
     - name: Compile all LaTeX documents
       if: ${{ steps.tagpr.outputs.tag != '' }}
-      run: |
-        projects=("control-station-installation" "template" "database-ingestion")
-        for project in "${projects[@]}"; do
-          working_directory="src/dacs-sw/$project"
-          root_file="main.tex"
-          docker run --rm -v ${{ github.workspace }}:/workspace -w /workspace/$working_directory texlive/texlive:latest latexmk -pdf -interaction=nonstopmode $root_file
-        done
+      run: python3 scripts/compile-all-latex.py
 
     - name: Rename files and move to single release folder
       if: ${{ steps.tagpr.outputs.tag != '' }}
