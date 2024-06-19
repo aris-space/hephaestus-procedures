@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.0.23](https://github.com/aris-space/helios-procedures/compare/v0.0.22...v0.0.23) - 2024-06-19
+- feat(docs): Mention grabbing newest config file by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/66
+- feat: Add table counter to template by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/68
+- feat: Add `dvipsnames` to the xcolor imports by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/69
+- feat: Add initial skeleton for control station preparation procedure by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/70
+- feat: Import `soul` package for highlighting by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/71
+- feat(docs): Add procedure for preparing DACS control station by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/72
+
 ## [v0.0.22](https://github.com/aris-space/helios-procedures/compare/v0.0.21...v0.0.22) - 2024-06-17
 - ci: Discover and compile LaTeX files recursively by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/64
 
