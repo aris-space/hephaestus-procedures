@@ -7,6 +7,9 @@
 % Initialize counter
 \setcounter{rowCounter}{0}
 
+\newcounter{tableCounter}
+\setcounter{tableCounter}{0}
+
 % Command for row in checklist
 % First argument is amount
 % Second argument is description
@@ -17,7 +20,7 @@
 % Command for row in procedure list
 \newcommand{\procedureItem}[1]{
   \stepcounter{rowCounter} % Increment counter
-  1.\arabic{rowCounter}
+  \arabic{tableCounter}.\arabic{rowCounter}
   &
   \checkbox
   &
