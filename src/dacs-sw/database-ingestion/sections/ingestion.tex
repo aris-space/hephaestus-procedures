@@ -8,26 +8,30 @@
   ID & CK 1 & Description \\ \hline
 
   \procedureItem{
+    Open the rosbag uploader webpage: \texttt{https://aris-helios.vsos.ethz.ch/}
+  }
+
+  \procedureItem{
     Locate the rosbags:
   \\
     They are in the folder (\texttt{catkin\_ws/src/rosbags})
   }
 
   \procedureItem{
-    Copy the rosbags that you need (the specific time of the bags)
+    Drag and drop the rosbags that you need onto the webpage
   }
 
-  \procedureItem{
-    Go to the folder (\texttt{git/datamanagement/database\_pro/bagsvortex/Param\_anal})
-  }
+  % \procedureItem{
+  %   Go to the folder (\texttt{git/datamanagement/database\_pro/bagsvortex/Param\_anal})
+  % }
 
-  \procedureItem{
-    Remove all old rosbags from that specific folder (move them into bagsvortex)
-  }
+  % \procedureItem{
+  %   Remove all old rosbags from that specific folder (move them into bagsvortex)
+  % }
 
-  \procedureItem{
-    Paste your new rosbags in there
-  }
+  % \procedureItem{
+  %   Paste your new rosbags in there
+  % }
 
   \procedureItem{
     Go to the ProDacs config file, which is located in the folder (\texttt{git/configuration\_tests})
@@ -42,27 +46,37 @@
   }
 
   \procedureItem{
-    Go to the terminal or terminator, doesnt matter which one
+    Drag and drop the configurationfile onto the webpage
+  }
+
+  % \procedureItem{
+  %   Go to the terminal or terminator, doesnt matter which one
+  % }
+
+  % \procedureItem{
+  %   Type (\texttt{cd git/datamanagment/database\_pro}), this will lead you to the correct directory
+  % }
+
+  % \procedureItem{
+  %   Create a database entry by typing this into the terminal (\texttt{python3 configure\_db.py})
+  % }
+
+  % \procedureItem{
+  %   Check if the date and name are correct, if yes press (\texttt{Y}) if not then go to step number 6 (i.e. the one regarding ProDacs config file)
+  % }
+
+  \procedureItem{
+    Fill out the comment filed with a brief description of the test so you will understand what it was at a later time
   }
 
   \procedureItem{
-    Type (\texttt{cd git/datamanagment/database\_pro}), this will lead you to the correct directory
+    Finally press \textit{upload} and wait.
+    At the moment the progress bar is broken.
+    Just wait for a message to pop up that says that upload has finished.
+    If unsure, check the network traffic in \textit{system monitor} to see if something is being uploaded
   }
 
   \procedureItem{
-    Create a database entry by typing this into the terminal (\texttt{python3 configure\_db.py})
+    Poke Georg about doing ingestion manually until automatic ingestion is finished.
   }
-
-  \procedureItem{
-    Check if the date and name are correct, if yes press (\texttt{Y}) if not then go to step number 6 (i.e. the one regarding ProDacs config file)
-  }
-
-  \procedureItem{
-    Write a brief description of the test so you will understand what it was at a later time
-  }
-
-  \procedureItem{
-    After the entry was created you can run (\texttt{python3 read\_bag.py}) this will ingest the rosbags into the database entry
-  }
-
 \end{tabularx}
