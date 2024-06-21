@@ -2,12 +2,28 @@
 
 \stepcounter{tableCounter} % Increment counter
 \setcounter{rowCounter}{0} % Reset counter
-\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|X|}
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|X|}
   \hline
   \rowcolor{tableHeaderColor}
-  ID & CK 1 & CK 2 & CK 3 & Description \\ \hline
+  ID & Check & Description \\ \hline
 
   \procedureItem{
-    REPLACE ME
+    Ensure all sensors are in the correct position and installed
+  }
+
+  \procedureItem{
+    Check that all cables are running into the DACS Box of the trailer
+  }
+
+  \procedureItem{
+    Install KiDAQ and plug in sensors
+  }
+
+  \procedureItem{
+    Plug in ethernet in KiDAQ and network switch
+  }
+
+  \procedureItem{
+    Do not yet power KiDAQ on
   }
 \end{tabularx}
