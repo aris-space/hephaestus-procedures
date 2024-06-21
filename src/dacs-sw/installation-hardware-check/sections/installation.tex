@@ -8,6 +8,203 @@
   ID & CK 1 & CK 2 & CK 3 & Description \\ \hline
 
   \procedureItem{
-    REPLACE ME
+    Check that \underline{none} of the following cables are connected to the electrical cabinet (=P01+A01):
+    \begin{itemize}
+      \item 230VAC Power Supply (male blue SN 441011 type 12 plug, right side bottom)
+      \item MAB Signal Cable (M12 5 pin connector, right side bottom)
+      \item Ethernet Cable (RJ45 connector, right side bottom)
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Check if all plugs on the right side of the electrical cabinet (=P01+A01) are present and all cables are connected according to the wiring map.
+    \textit{Cables including HDC connector housings from X01 to X04 can be temporarily removed to provide a better overview of the P01 to P30 and T01 to T18. Reconnect after this step.}
+  }
+
+  \procedureItem{
+    Open electrical cabinet (=P01+A01) with the DIN lock key.
+  }
+
+  \procedureItem{
+    Check if all components of the electrical cabinet (=P01+A01) are grounded. The following components must be observed:
+
+    \begin{itemize}
+      \item cabinet door
+      \item ceiling
+      \item mounting plate
+    \end{itemize}
+
+    The cable is green yellow and ensures sufficient contact via non-insulated ring terminal lugs.
+  }
+
+  \procedureItem{
+    Check for loose wiring in the 230VAC connections (bottom right of =P01+A01). The wiring runs from the type 13 sockets to the terminals and the power supplies, with the colour code as follows.
+
+    \begin{itemize}
+      \item L: black, grey, or brown
+      \item PE: yellow and green
+      \item N: blue
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Check the power supply on the bottom of the mounting plate for loose cables or breaks as well as the presence of the components.
+    Components that must be present are:
+
+    \begin{itemize}
+      \item 24VDC Weidmüller power supply
+      \item 12VDC Weidmüller power supply
+      \item 5VDC Adjustable power supply
+    \end{itemize}
+
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map.
+  }
+
+  \procedureItem{
+    Check the terminal blocks on the right side of the electrical cabinet (=P01+A01) for loose cables or breaks as well as the presence of the terminal blocks. The terminal blocks should be present in the following order from top to bottom.
+
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map. The following terminal blocks should be present.
+
+    \begin{itemize}
+      \item Thermocouple T1-T10
+      \item Thermocouple T11-T20
+      \item Thermocouple T21-T30
+      \item Static Pressure P1-P10
+      \item Static Pressure P11-P20
+      \item Sense Line S1-S15
+      \item RTD T31-T40
+      \item 24V Supply
+      \item Loadcell L1-L6
+      \item Mass Flow M1-M4
+      \item Valve V1-V20
+      \item Throttle Valve C1-C4
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Check the wiring from the terminal blocks to the signal amplifiers for loose wires and bad insulation. The signal amplifiers can be identified by their labelling:
+
+    \begin{itemize}
+      \item “4-20mA to 2-10V Converter”
+      \item “0-10VDC to 0-20mA Converter 3 Wire”
+    \end{itemize}
+
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map.
+  }
+
+  \procedureItem{
+    Check the wiring from the terminal blocks and the signal amplifiers to the expansion boards (DB-37) and relays boards (RB12) for loose wires and bad insulation.
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map.
+  }
+
+  \procedureItem{
+    Check that:
+
+    \begin{itemize}
+      \item Labjack 1 is connected to Ethernet Switch 0
+      \item Labjack 2 is connected to Ethernet Switch 0
+      \item Labjack 3 is connected to Ethernet Switch 0
+      \item Labjack 4 is connected to Ethernet Switch 0
+      \item Labjack 5 is connected to Ethernet Switch 0
+      \item Ethernet Switch is connected to RJ-45 connector on left side.
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Unroll the 100m cable from the trailer to the Mission Control Room.
+    Be attentive not to damage the cable.
+  }
+
+  \procedureItem{
+    Connect the MAB cable signal to the MAB box
+  }
+
+  \procedureItem{
+    Connect the MAB cable signal to the electrical cabinet (=P01+A01).
+  }
+
+  \procedureItem{
+    Connect the 230 VAC power supply of the 100m in the Mission Control Room
+
+    Connect the 230 VAC power supply of the electrical cabinet (=P01+A01) to the 100m
+  }
+
+  \procedureItem{
+    \sout{
+      Switch on “ON” fuel circuit, oxidizer circuit, firing circuit on the MAB box (in the mission control room), and check that the trailer light changes accordingly
+    }
+
+    \sout{
+      The lights on the MAB box should also turn on. If this is not the case check that the red abort button is not pressed (pull the red button until it clicks).
+    }
+  }
+
+  \procedureItem{
+    \sout{
+      Check that a red light turns on in the safety relays inside the electrical cabinet (=P01+A01) for each circuit
+    }
+  }
+
+
+  \procedureItem{
+    \sout{
+      Switch on “OFF” fuel circuit, oxidizer circuit, firing circuit on the MAB box, red lights on the relays should turn off.
+    }
+  }
+
+  \procedureItem{
+    A green light should turn on for:
+
+    \begin{itemize}
+      \item 24 VDC Power Supply
+      \item 12 VDC Power Supply
+      \item Labjack 1
+      \item Labjack 2
+      \item Labjack 3
+      \item Labjack 4
+      \item Labjack 5
+      \item RB12 Board 0
+      \item RB12 Board 1
+      \item CB37 Board X1
+      \item CB37 Board X2
+      \item CB37 Board X3
+      \item CB37 Board X4
+      \item CB37 Board X5
+      \item Mux80
+    \end{itemize}
+
+    If there’s a light not turning on it means it’s not powered. Control that the connectors are properly attached and connected
+  }
+
+  \procedureItem{
+    Connect the ethernet cable to the mission control room computer
+  }
+
+  \procedureItem{
+    Connect the ethernet cable to the electrical cabinet (=P01+A01), if not already done
+  }
+
+  \procedureItem{
+    The software responsible should check that the ethernet is connected to mission control room computer.
+    If the Labjack is connected to the ethernet an orange light should start blinking on the Labjack
+  }
+
+  \procedureItem{
+    \sout{
+      Check every analog input pin in the CB37 .0 and .1 with a multimeter and assure that nothing exceeds the limit voltage of 10 V, especially the pin that use voltage divider.
+    }
+
+    \sout{
+      To do that set the multimeter on “V, DC” and while keeping the black wire (of the multimeter) in an insert input of the main ground block and touch with the red wire every screw of the CB37s analog/digital input pins
+    }
+  }
+
+  \procedureItem{
+    Check if loadcell transmitter are tared.If not tare them.
+    Press tare on the Loadcell PCB in the DACS box.
+  }
+
+  \procedureItem{
+    Close the electrical cabinet (=P01+A01) with the DIN lock key.
   }
 \end{tabularx}
