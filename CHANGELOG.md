@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.24](https://github.com/aris-space/helios-procedures/compare/v0.0.23...v0.0.24) - 2024-06-21
+- feat: Add initial skeleton for kidaq procedure by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/73
+- feat(docs): Add procedure for DACS KiDAQ by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/75
+
 ## [v0.0.23](https://github.com/aris-space/helios-procedures/compare/v0.0.22...v0.0.23) - 2024-06-19
 - feat(docs): Mention grabbing newest config file by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/66
 - feat: Add table counter to template by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/68
