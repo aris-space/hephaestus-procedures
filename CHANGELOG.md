@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.26](https://github.com/aris-space/helios-procedures/compare/v0.0.25...v0.0.26) - 2024-06-22
+- feat(docs): Update procedure in regards to trailer connection by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/81
+
 ## [v0.0.25](https://github.com/aris-space/helios-procedures/compare/v0.0.24...v0.0.25) - 2024-06-21
 - feat: Add initial skeleton for installation hardware check by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/76
 - feat(docs): Add procedure for installation hardware check by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/78
