@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\input{../../common/lib/header}
+
+\usepackage[normalem]{ulem}
+
+% Define a counter for the item numbers
+\newcounter{rowCounter}
+% Initialize counter
+\setcounter{rowCounter}{0}
+
+\newcounter{tableCounter}
+\setcounter{tableCounter}{0}
+
+% Command for row in checklist
+% First argument is amount
+% Second argument is description
+\newcommand{\checklistItem}[2]{
+  \checkbox
+  &
+  #1
+  &
+  \begin{minipage}[t]{\linewidth}
+    #2
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in procedure list
+\newcommand{\procedureItem}[1]{
+  \stepcounter{rowCounter} % Increment counter
+  \arabic{tableCounter}.\arabic{rowCounter}
+  &
+  \checkbox
+  &
+  \checkbox
+  &
+  \checkbox
+  &
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in note list
+\newcommand{\noteItem}[1]{
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+
+\title{Installation-Surveillance}
+\author{Operating Procedure}
+\date{Version: \isodate\today}
+
+\begin{document}
+
+\maketitle
+
+% Set the page style for the title page
+\thispagestyle{fancy}
+
+%%%%%% Prefix section
+% Change section numbering to A, B, C...
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Operation Description}
+\input{sections/operation-description.tex}
+
+\section{Required Documents}
+\input{sections/required-documents.tex}
+
+\section{Required Tools/Materials}
+\input{sections/required-tools-materials.tex}
+
+\newpage
+
+%%%%%% Main section
+% Change section numbering to 1, 2, 3...
+\renewcommand{\thesection}{\arabic{section}}
+
+% Reset section counter to start from 1 again
+\setcounter{section}{0}
+
+\section{Installation}
+\input{sections/installation.tex}
+
+\newpage
+
+%%%%%% Notes
+\setcounter{section}{0}
+\section*{Notes}
+\input{sections/notes.tex}
+
+\end{document}
