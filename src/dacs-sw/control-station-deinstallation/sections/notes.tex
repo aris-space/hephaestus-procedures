@@ -5,6 +5,59 @@
   \hline
 
   \noteItem{
-    \textbf{REPLACE ME}
+    \textbf{Do not under any circumstances update the software} even if prompted!
+    The ROS version we use is not compatible with all Ubuntu versions.
   }
+
+  \noteItem{
+    The \textbf{abort key for the UI is 'Esc'}.
+    This will immediately trigger the abort sequence corresponding to the current phase.
+  }
+
+  \noteItem{
+    To \textbf{stop a process} in the terminal: CTRL-C
+  \\
+    To \textbf{save a file}: CTRL-S
+  }
+
+  \noteItem{
+    Important files that might have to be changed:
+    \begin{itemize}
+      \item \textbf{/home/dacs/git/configuration-tests/PRO\_DACS-Configuration.xlsx}
+            \\
+            here you can change controllable actuators per phase and sensor abort thresholds, afterwards do catkin build again
+
+      \item \textbf{/home/dacs/git/user-interface/rosWebPage/ui/configure\_ui.py}
+            \\
+            here you can change anything related to the UI, in particular which config file is used (this is quite unreadable code so use CTRL-F to find things)
+            To apply changes run:
+            Cd /home/dacs/git/user-interface/rosWebPage/ui/
+            python3 configure\_ui.py
+
+      \item \textbf{/home/dacs/git/software-rpi4/state\_machine/src/:}
+            \\
+            In this folder you find the state machine list (list of phases) and sequences (watch out for the syntax if you change anything here)
+            Check which file is used in state\_machine.cpp
+            afterwards do catkin build again
+
+      \item \textbf{/home/dacs/git/software-rpi4/data\_acquisition/src/core/T7\_streaming.py}
+            \\
+            here you can change the streaming rate in case you get a Labjack buffer error or anything of that kind
+
+      \item \textbf{/home/dacs/git/software-rpi4/data\_acquisition/launch/test.launch}
+            \\
+            here you can change which ROS modules are started at roslaunch, might be useful to delete the throttling module if it gives any errors for example
+
+      \item \textbf{/home/dacs/git/software-rpi4/throttling\_control/src}
+            \\
+            In the setpoint.py, control.py and the core folder you can change the setting for the setpoints and the controller parameters.
+
+    \end{itemize}
+  }
+
+  \noteItem{
+    To see \textbf{error messages regarding the UI} in Google Chrome click on the three dots '…' in the upper right corner, then 'More Tools' and 'Developer Tools'.
+    Now you can see a few messages that might help find problems in the Configuration file for example
+  }
+
 \end{tabularx}
