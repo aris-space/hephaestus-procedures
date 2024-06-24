@@ -34,6 +34,8 @@ LaTeX commands etc can be deleted just fine if they are no longer needed.
 All LaTeX source is located in `src/` and from there separated by subteam (`dacs-sw`, ...).
 The `src/common/` folder contains shared content like assets.
 
+The `scripts` folder contains Python scripts used in generating the procedure PDFs.
+
 ### Other
 
 By default, documents will have a draft watermark controlled by a single LaTeX variable unless they are compiled by the release pipeline.
