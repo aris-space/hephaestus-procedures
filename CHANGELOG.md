@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.0.27](https://github.com/aris-space/helios-procedures/compare/v0.0.26...v0.0.27) - 2024-06-24
+- feat(docs): Add procedure for control station deinstallation by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/83
+- docs: Mention what the `script` folder contains by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/85
+- feat: Add initial skeleton for surveillance installation procedure by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/86
+- feat(docs): Add procedure for surveillance installation by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/87
+
 ## [v0.0.26](https://github.com/aris-space/helios-procedures/compare/v0.0.25...v0.0.26) - 2024-06-22
 - feat(docs): Update procedure in regards to trailer connection by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/81
 
