@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.28](https://github.com/aris-space/helios-procedures/compare/v0.0.27...v0.0.28) - 2024-06-26
+- feat(docs): Add procedure for data saving export by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/90
+
 ## [v0.0.27](https://github.com/aris-space/helios-procedures/compare/v0.0.26...v0.0.27) - 2024-06-24
 - feat(docs): Add procedure for control station deinstallation by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/83
 - docs: Mention what the `script` folder contains by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/85
