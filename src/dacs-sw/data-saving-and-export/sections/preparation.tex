@@ -8,6 +8,42 @@
   ID & CK 1 & CK 2 & CK 3 & Description \\ \hline
 
   \procedureItem{
-    REPLACE ME
+    Before starting a test, create a folder for it on sharepoint if it doesn't already exist:
+  \\
+    Create a folder with the name testtype in /Data/
+  \\
+    Inside that folder, make a new folder with the test designation.
+  }
+
+  \procedureItem{
+    Inside the test specific folder, create a folder named Configuration where later the configuration files (\texttt{PRO\_DACS-Configuration}, \texttt{state\_machine\_list}, \texttt{state\_machine\_sequences}) used for that specific test should be saved in
+  }
+
+  \procedureItem{
+    Create a new folder called Rosbags inside the test specific folder
+  }
+
+  \procedureItem{
+    Create a new folder called Videos inside the test specific folder
+  }
+
+  \procedureItem{
+    Create a new folder called Photos inside the test specific folder
+  }
+
+  \procedureItem{
+    Make sure that the folder \texttt{catkin\_ws/src} contains a folder with the name rosbags.
+  \\
+    \noindent
+  \\
+    Before starting a new test, make sure that those folders are empty. If not, go to deinstallation.
+  }
+
+  \procedureItem{
+    Make sure that the launch file used for the test launches the rosbags node, i.e. you can see a line in the .launch file that looks like this (with the correct path):
+
+    \texttt{
+      <node pkg="rosbag" type="record" name="recorder" args="record -a -o /home/\textbf{dacs}/catkin\_ws/src/rosbags/test --split --duration=300"/>
+    }
   }
 \end{tabularx}

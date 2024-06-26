@@ -8,6 +8,69 @@
   ID & CK 1 & CK 2 & CK 3 & Description \\ \hline
 
   \procedureItem{
-    REPLACE ME
+    Make sure configFile is the same as the one being used for the test (especially Firing Parameter Specification!) (the right Configuration file should be in the designated folder of the test)
+  }
+
+  \procedureItem{
+    To connect to sql server type in terminal:
+  \\
+    \texttt{sudo service mysql start}
+  }
+
+  \procedureItem{
+    To configure db run:
+  \\
+    \texttt{cd /home/dacs/git/data-management/database\_pro}
+  \\
+    For this the Config File should be in the folder above
+  \\
+    \texttt{python3 configure\_db.py}
+  \\
+    In the above the script the right config file name has to be used
+  }
+
+  \procedureItem{
+    To read in rosbag run:
+  \\
+    For this the Folder with bagfiles (unzipped) should be in the  \texttt{database\_pro} folder
+  \\
+    Before you run this command you need to adapt the folder
+    name in the Code
+  \\
+    \texttt{python3 read\_bag.py}
+  \\
+    (This might take some time)
+  }
+
+  \procedureItem{
+    To plot data run:
+  \\
+    \texttt{python3 data\_analysis.py}
+  \\
+    (adapt code, a few instructions are in the code file)
+  }
+
+  \procedureItem{
+    To find out configid:
+    Make sure sql server is running
+  \\
+    \texttt{mysql -u root -p}
+    password: \texttt{aris}
+  \\
+    \texttt{use dacs;}
+  \\
+    \texttt{Select * from tests;}
+  \\
+    This should return a table with the tests and configIds
+  \\
+    To exit this view you can type \texttt{exit}
+  }
+
+  \procedureItem{
+    Once you're finished enter in terminal:
+  \\
+    \texttt{sudo service mysql stop}
+  \\
+    to stop SQL
   }
 \end{tabularx}
