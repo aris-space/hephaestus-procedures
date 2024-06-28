@@ -9,7 +9,13 @@ To get the procedures, go to the [release page on right side](https://github.com
 
 Commit messages should follow [conventional commit message structure](https://www.conventionalcommits.org/)
 
-TODO: examples
+**Exempt from this are commits that only change procedure contents.**
+
+This means, if your commit edits anything other than procedure contents, then you should prefix your commit messages with for example
+- `feat:` for changes that are not procedure related, e.g. adding a new LaTeX skeleton or
+- `fix:` for all other changes
+- `docs:` for documentation changes regarding the repo like updating the readme or comments in the LaTeX source.
+- `refactor:` for changes in the LaTeX structure like renaming a file or moving imports
 
 Changes should be small and atomic.
 Basically make many small PRs rather than one big one.
