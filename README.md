@@ -19,6 +19,7 @@ This means, if your commit edits anything other than procedure contents, then yo
 
 Changes should be small and atomic.
 Basically make many small PRs rather than one big one.
+PRs that make big changes can be made as drafts to better preview the planned adjustments but they should be merged as smaller individual changes.
 
 ⚠️ Note that the `main` branch is protected, all changes have to be made to new branches and then merged via a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) ⚠️
 
