@@ -1,5 +1,16 @@
 # Changelog
 
+## [v0.0.29](https://github.com/aris-space/helios-procedures/compare/v0.0.28...v0.0.29) - 2024-06-28
+- feat: Add package for strikethrough command by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/91
+- feat(docs): Mention taking picture of UI after installation by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/93
+- docs: Explain how commit messages should be formatted by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/94
+- docs: Mention making bigger preview pull requests by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/95
+- Rename all occurences to "HELIOS Ethernet Switch" by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/96
+- Adjust config file related steps by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/97
+- Mention committing config file at the end of test by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/98
+- Mention replacement Ethernet cable by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/99
+- Replace all occurences of Chrome with Firefox by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/100
+
 ## [v0.0.28](https://github.com/aris-space/helios-procedures/compare/v0.0.27...v0.0.28) - 2024-06-26
 - feat(docs): Add procedure for data saving export by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/90
 
