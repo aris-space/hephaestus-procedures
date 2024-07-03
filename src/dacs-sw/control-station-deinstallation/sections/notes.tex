@@ -25,20 +25,22 @@
     \begin{itemize}
       \item \textbf{/home/dacs/git/configuration-tests/PRO\_DACS-Configuration.xlsx}
             \\
-            here you can change controllable actuators per phase and sensor abort thresholds, afterwards do catkin build again
+            here you can change controllable actuators per phase and sensor abort thresholds, afterwards do \texttt{catkin build} again
 
       \item \textbf{/home/dacs/git/user-interface/rosWebPage/ui/configure\_ui.py}
             \\
             here you can change anything related to the UI, in particular which config file is used (this is quite unreadable code so use CTRL-F to find things)
             To apply changes run:
-            Cd /home/dacs/git/user-interface/rosWebPage/ui/
-            python3 configure\_ui.py
+            \\
+            \texttt{cd /home/dacs/git/user-interface/rosWebPage/ui/}
+            \\
+            \texttt{python3 configure\_ui.py}
 
       \item \textbf{/home/dacs/git/software-rpi4/state\_machine/src/:}
             \\
             In this folder you find the state machine list (list of phases) and sequences (watch out for the syntax if you change anything here)
             Check which file is used in state\_machine.cpp
-            afterwards do catkin build again
+            afterwards do \texttt{catkin build} again
 
       \item \textbf{/home/dacs/git/software-rpi4/data\_acquisition/src/core/T7\_streaming.py}
             \\
@@ -50,7 +52,7 @@
 
       \item \textbf{/home/dacs/git/software-rpi4/throttling\_control/src}
             \\
-            In the setpoint.py, control.py and the core folder you can change the setting for the setpoints and the controller parameters.
+            In the \texttt{setpoint.py}, \texttt{control.py} and the core folder you can change the setting for the setpoints and the controller parameters.
 
     \end{itemize}
   }
