@@ -1,5 +1,11 @@
 # Changelog
 
+## [v0.0.30](https://github.com/aris-space/helios-procedures/compare/v0.0.29...v0.0.30) - 2024-07-03
+- style: Render terminal commands as monospace text by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/101
+- Remove one-time entry to take a screenshot of the depressurised system by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/103
+- feat: Make links clickable in PDF by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/105
+- Mention that MOB box is permanently attached to cable by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/104
+
 ## [v0.0.29](https://github.com/aris-space/helios-procedures/compare/v0.0.28...v0.0.29) - 2024-06-28
 - feat: Add package for strikethrough command by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/91
 - feat(docs): Mention taking picture of UI after installation by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/93
