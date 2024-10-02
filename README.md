@@ -1,5 +1,5 @@
-# helios-procedures
-LaTeX source for HELIOS related procedures
+# hephaestus-procedures
+LaTeX source for HEPHAESTUS related procedures
 
 To get the procedures, go to the [release page on right side](https://github.com/aris-space/helios-procedures/releases) and download it from the release assets.
 
