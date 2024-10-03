@@ -1,0 +1,98 @@
+\documentclass{article}
+
+\input{../../common/lib/header}
+
+% Define a counter for the item numbers
+\newcounter{rowCounter}
+% Initialize counter
+\setcounter{rowCounter}{0}
+
+\newcounter{tableCounter}
+\setcounter{tableCounter}{0}
+
+% Command for row in checklist
+% First argument is amount
+% Second argument is description
+\newcommand{\checklistItem}[2]{
+  \checkbox & #1 & #2 \\ \hline
+}
+
+% Command for row in procedure list
+\newcommand{\procedureItem}[2]{
+  \stepcounter{rowCounter} % Increment counter
+  \arabic{tableCounter}.\arabic{rowCounter}
+  &
+  \checkbox
+  &
+  \begin{minipage}[t]{1.2\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\linewidth}
+    #2
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in note list
+\newcommand{\noteItem}[1]{
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+
+\title{Template Procedure}
+\author{Operating Procedure}
+\date{Version: \isodate\today}
+
+\begin{document}
+
+\maketitle
+
+% Set the page style for the title page
+\thispagestyle{fancy}
+
+%%%%%% Prefix section
+% Change section numbering to A, B, C...
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Operation Description}
+\input{sections/operation-description.tex}
+
+\section{Required Documents}
+\input{sections/required-documents.tex}
+
+\section{Required Tools}
+\input{sections/required-tools.tex}
+
+\section{Required Materials}
+\input{sections/required-materials.tex}
+
+\newpage
+
+%%%%%% Main section
+% Change section numbering to 1, 2, 3...
+\renewcommand{\thesection}{\arabic{section}}
+
+% Reset section counter to start from 1 again
+\setcounter{section}{0}
+
+\section{Procedure example numero uno}
+\input{sections/procedure_1.tex}
+
+\section{Procedure example numero dos}
+\input{sections/procedure_2.tex}
+
+\newpage
+
+%%%%%% Notes
+\setcounter{section}{0}
+\section*{Notes}
+\input{sections/notes.tex}
+
+\end{document}

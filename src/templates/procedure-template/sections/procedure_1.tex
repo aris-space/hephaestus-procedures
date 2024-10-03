@@ -1,0 +1,82 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+  \cellcolor{cyan}
+  \procedureItem{
+    This is a task for the test conductor, which is why it's marked as cyan.
+  }{Here, comments or pictures can be added to clarify the task.}
+  
+  \cellcolor{green}
+  \procedureItem{
+    This is a task for the Safety Officer, which is why it's marked green. Tasks can also have itemized lists:
+
+    \begin{itemize}
+      \item Like this: \texttt{/home/dacs/git/}
+
+      \item Or this
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Commit config file and push to GitLab.
+  \\
+    Make sure to commit it under your name based on the instructions in the wiki
+  \\
+    Make sure to push after committing
+  }
+
+  \procedureItem{
+    Unplug the power supply of the trailer
+  }
+
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor}This is an inserted comment, for example: 30 min before briefing} \\ \hline
+
+  \procedureItem{
+    Unplug the 70m Ethernet cable and extension.
+  }
+
+  \procedureItem{
+    Carefully roll up the 70m Ethernet replacement cable and the extensions individually.
+  \\
+    Note that it is only rated for indoor usage so make sure to not drag it along the ground.
+  }
+
+  \procedureItem{
+    Put the Ethernet connector protectors back onto the 70m Ethernet cable.
+  }
+
+  \procedureItem{
+    Roll the rugged cable up onto cable roll starting on the trailer side as the MOB box is permanently attached to the cable and should not be moved around to much.
+  }
+
+  \procedureItem{
+    Make sure the data is saved and uploaded on Sharepoint as described in PRO\_OP\_DACS\_009\_DataSavingExport\_01
+  }
+
+  \procedureItem{
+    Turn off mission control PC and Surveillance/KiDAQ PC
+  }
+
+  \procedureItem{
+    \hl{
+      Place the three monitors with foil to protect the displays in the two big DACS boxes
+    }
+  }
+
+  \procedureItem{
+    \hl{
+      Put PC power cables, power strips, DP cables, mouses, keyboards and manual override box in the same boxes
+    }
+  }
+
+  \procedureItem{
+    \hl{
+      Put the two PCs in the smaller DACS box together with the Ethernet switch, Ethernet cables and Switch‘s power cable
+    }
+  }{}
+\end{tabularx}
