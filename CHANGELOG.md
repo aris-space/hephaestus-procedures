@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.31](https://github.com/aris-space/helios-procedures/compare/v0.0.30...v0.0.31) - 2024-10-03
+- Template creation by @v30matt in https://github.com/aris-space/helios-procedures/pull/106
+
 ## [v0.0.30](https://github.com/aris-space/helios-procedures/compare/v0.0.29...v0.0.30) - 2024-07-03
 - style: Render terminal commands as monospace text by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/101
 - Remove one-time entry to take a screenshot of the depressurised system by @tgeorg-ethz in https://github.com/aris-space/helios-procedures/pull/103

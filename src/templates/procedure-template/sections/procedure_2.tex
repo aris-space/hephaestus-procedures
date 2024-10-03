@@ -1,0 +1,12 @@
+% Just copy and paste from procedure_1 and modify as needed
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+  \procedureItem{
+    Sample task
+  }{Sample comment}
+\end{tabularx}
