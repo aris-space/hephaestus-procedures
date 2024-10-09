@@ -1,0 +1,179 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Firing}} \\ \hline
+
+\cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start Time: }
+  
+  \cellcolor{yellow}
+  \procedureItem{Confirm software abort key combination (Ctrl-Space)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Define abort responsibilities: 
+    \begin{itemize}
+      \item 1 pers. (usually SO): surveillance cameras (top left and top right)
+      \item 1 pers.: surveillance area (window)
+      \item 1 pers. (usually TC): graphs (mainly CC Pressure)
+      \item 1 pers. (usually DACS1): UI (sensor values, post-firing/abort)
+    \end{itemize}}{The one person responsible for the window is also in charge for starting and stopping the screen recording as well as the recording of the KiDAQ}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$TC to all: inform about start of \textbf{Firing} in a few minutes}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Start video recording with surveillance cameras}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Check all sensor readings for anomalies:
+    \begin{itemize}
+      \item Go through all sensors in the UI and read the values out loud, so that everyone in the control station can hear it
+    \end{itemize}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Perform a surveillance area check}{}
+  
+  \cellcolor{green}
+  \procedureItem{Ensure everyone is in the HUT}{}
+  
+  \cellcolor{green}
+  \procedureItem{→SO announces to everyone that no one is allowed to leave the HUT}{}
+  
+  \cellcolor{green}
+  \procedureItem{Check that window is open}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Confirm KiDAQ is ready for firing}{}
+  
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Chill 1}} \\ \hline
+
+\cellcolor{yellow}
+  \procedureItem{Switch to PSS plots (if necessary)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until OSS Main Line Temperature is -140°C. Monitor OSS Pressure above Tank.}{Indicators showing that the prechill is complete: The time evolution of the temperature in the main line/injector manifold show a drop shortly before the final temperature is reached. You should see ‘clouds’ coming out of the nozzle.}
+  
+  \cellcolor{yellow}
+  \procedureItem{Change phase in the UI to \textbf{INITIAL PRESSURIZATION}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Close Main Valve (OSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{→Arm \textbf{}{FIRING} circuit}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{→Disarm \textbf{OSS PRE-FILL} circuit}{}
+  
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Initial Pressurization}} \\ \hline
+
+\cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start Time: }
+  
+  \cellcolor{yellow}
+  \procedureItem{Close Vent Valve (FSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Open Pressurization Valve (FSS PRZ)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Check FSS Pressure above Tank}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Open Pressurization Valve (OSS PRZ)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Check OSS Pressure above Tank}{}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-CF and Firing}} \\ \hline
+
+  \cellcolor{yellow}
+  \procedureItem{Change phase in the UI to \textbf{FIRING}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Start recording on KiDAQ}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Perform a final surveillance area check}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Switch to Firing plots}{}
+  
+  \cellcolor{green}
+  \procedureItem{Turn \textbf{IGNITION KEY} ON}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$ TC to all: announce start of the Firing}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$TC to all: countdown starts on 5; 
+    \begin{itemize}
+      \item 5, 4, 3, 2, 1
+    \end{itemize}}{"Check after pre-CF:
+    \begin{itemize}
+      \item OSS Pressure above Tank
+      \item OSS pressurization manometer bottle on camera
+      \item FSS Pressure above Tank
+      \item Mass flow OSS
+    \end{itemize}
+    Turn on KiDAQ recording after 30s}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\rightarrow$ Initiate \textbf{FIRING} sequence}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Check that phase in the UI is \textbf{POST-FIRING}:
+    \begin{itemize}
+      \item If an abort is triggered:
+      \begin{itemize}
+        \item Check that UI is in \textbf{SAFE STATE}
+        \item Turn \textbf{IGNITION KEY} OFF
+        \item Disarm \textbf{FIRING} circuit
+        \item Check system state with surveillance cameras
+        \item Check system state with sensor measurements
+        \item If system is in a safe state, check which sensor triggered the abort
+        \item Analyse and discuss further operations
+      \end{itemize}
+    \end{itemize}}{
+      Possible options on how to continue in case of abort: \\
+      \textbf{Overpressure}: consult HEL\_CP\_PSS\_006\_ \\ Overpressure\_01
+      \begin{enumerate}
+        \item pressurization OSS / FSS $\rightarrow$ check pressure reducers, confirm sensor in depressurized state with gauge
+        \item vent OSS: $\rightarrow$ if pressure remains after abort: possibly frozen NO vent valve / SRV: don't approach
+        \item CC: check mass flows, injector manifold pressure
+      \end{enumerate}
+      \textbf{Overtemperature}: Potential damage to engine
+      \begin{enumerate}
+        \item check water pump functionality (check recording of water pump camera), inspect engine once in safe state
+      \end{enumerate}
+  }
+  
+  \cellcolor{green}
+  \procedureItem{Turn \textbf{IGNITION KEY} OFF}{}
+  
+  \cellcolor{green}
+  \procedureItem{SO takes \textbf{IGNITION KEY}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Check system state with surveillance cameras}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Check all sensor readings for anomalies:
+    \begin{itemize}
+      \item Go through all sensors in the UI and read the values out loud, so that everyone in the control station can hear it
+    \end{itemize}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Stop video recording with surveillance cameras}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Stop KiDAQ recording}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Change the phase in the UI to \textbf{RUN TANK DEPRESSURIZATION}}{}
+  
+\end{tabularx}
