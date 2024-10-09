@@ -17,6 +17,25 @@
   \checkbox & #1 & #2 \\ \hline
 }
 
+% Command for row in procedure list
+\newcommand{\procedureItem}[2]{
+  \stepcounter{rowCounter} % Increment counter
+  \arabic{tableCounter}.\arabic{rowCounter}
+  &
+  \checkbox
+  &
+  \begin{minipage}[t]{1.2\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\linewidth}
+    #2
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
 % Command for row in note list
 \newcommand{\noteItem}[1]{
   \begin{minipage}[t]{\linewidth}
@@ -27,8 +46,8 @@
 }
 
 
-\title{Material List}
-\author{Packing List}
+\title{Functionality Check Valves}
+\author{Operating Procedure}
 \date{Version: \isodate\today}
 
 \begin{document}
@@ -42,26 +61,25 @@
 % Change section numbering to A, B, C...
 \renewcommand{\thesection}{\Alph{section}}
 
-\section{General Box}
-\input{sections/general-box.tex}
+\section{Operation Description}
+\input{sections/operation-description.tex}
 
-\section{Safety Box}
-\input{sections/safety-box.tex}
-
-\section{Tool Box}
-\input{sections/tool-box.tex}
-
-\section{ENG Boxes}
-\input{sections/eng-boxes.tex}
-
-\section{PSS Boxes}
-\input{sections/pss-boxes.tex}
-
-\section{DACS Boxes}
-\input{sections/dacs-boxes.tex}
+\section{Required Tools}
+\input{sections/required-tools.tex}
 
 \newpage
 
+%%%%%% Main section
+% Change section numbering to 1, 2, 3...
+\renewcommand{\thesection}{\arabic{section}}
+
+% Reset section counter to start from 1 again
+\setcounter{section}{0}
+
+\section{Main Procedure}
+\input{sections/main-procedure.tex}
+
+\newpage
 
 %%%%%% Notes
 \setcounter{section}{0}
