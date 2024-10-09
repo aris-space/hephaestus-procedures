@@ -1,0 +1,70 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Arm \textbf{OSS PRE-FILL} circuit}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open Pressurization Valve (OSS PRZ)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open Main Valve (OSS MAIN)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Close Vent Valve (OSS)}{}
+  
+  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles and face shields (first time opening bottle only)}{}
+  
+  \procedureItem{Slowly open the N2 Bottle Valve (OSS PRZ)}{}
+  
+  \procedureItem{First time opening N2 Bottle: 
+
+Check line between bottle and Pressure Reducer (OSS PRZ) for leaks (i.e. apply snoop to all fittings)}{}
+  
+  \procedureItem{Set the Pressure Reducer (OSS PRZ) to 5 bar (using the red knob)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: check OSS Pressure above Tank}{}
+  
+  \procedureItem{Apply SNOOP to all fittings in the pressurized lines}{}
+  
+  \procedureItem{\textbf{Iteration point}:
+If there are visible leaks:
+\begin{itemize}
+  \item Mark leaking fittings
+  \item Close N2 Bottle Valve (OSS PRZ) fully
+  \item If Pressure Reducer (OSS PRZ) is set to DECREASE: set it to 3 bar
+  \item Ensure that no one is in front of Vent Valve (OSS)
+  \item Open Vent Valve (OSS)
+  \item Verify that the system is fully depressurized (check manometer)
+  \item $\leftrightarrow$TC to DACS1: check OSS Pressure above Tank
+  \item Set the Pressure Reducer (OSS PRZ) to DECREASE
+  \item Close Vent Valve (OSS)
+  \item Retighten all marked fittings and go back to step 1.5.
+  \item If there are no leaks: go back to step 1.5. and repeat with 10 bar
+  \item If there are still no leaks: continue with step 1.10.
+\end{itemize}
+}{}
+  
+  \procedureItem{Close N2 Bottle Valve (OSS PRZ) fully}{}
+  
+  \procedureItem{Ensure that no one is in front of Vent Valve (OSS)}{}
+  
+  \procedureItem{Open Vent Valve (OSS)}{}
+  
+  \procedureItem{Verify that the system is fully depressurized (check manometer)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: check OSS Pressure above Tank}{}
+  
+  \procedureItem{Set the Pressure Reducer (OSS PRZ) to DECREASE}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: close Main Valve (OSS MAIN)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: close Pressurization Valve (OSS PRZ)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Disarm \textbf{OSS PRE-FILL} circuit}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Confirm that no circuit is armed and all valves are in normal state}{}
+  
+\end{tabularx}
