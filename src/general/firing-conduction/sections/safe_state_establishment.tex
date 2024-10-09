@@ -1,0 +1,396 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Run Tank Depressurization}} \\ \hline
+  \cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start Time: }
+  
+  \cellcolor{yellow}
+  \procedureItem{Close Pressurization Valve (FSS PRZ)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Close Pressurization Valve (OSS PRZ)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Open Vent Valve (OSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Open Vent Valve (FSS)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until FSS Pressure above Tank is smaller or equal to 1 barg}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until OSS Pressure above Tank is smaller or equal to 1 barg}{}
+  
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{System Deactivation}} \\ \hline
+
+\cellcolor{yellow}
+  \procedureItem{Change phase in the UI to \textbf{SYSTEM DEACTIVATION}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Arm OSS PRE-FILL circuit}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Disarm FIRING circuit}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{HOLD: system is in a safe-ish state, time for discussion}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Check all sensor readings for anomalies:
+  \begin{itemize}
+      \item Go through all sensors in the UI and read the values out loud, so that everyone in the control station can hear it
+  \end{itemize}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Perform a surveillance area check}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles and face shields}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{TC, SO and PSS1 slowly approach the safety zone}{}
+  
+  \cellcolor{green}
+  \procedureItem{Take fire extinguisher at the border of the safety zone}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Look for anomalies (smoke, leaks, \ldots)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Listen for anomalies (hissing, actuation signals, \ldots)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{TC, SO and PSS1 slowly approach the DACS compartment (from behind)}{}
+  
+  \cellcolor{green}
+  \procedureItem{Stay in position with the fire extinguisher}{}
+  
+  \cellcolor{green}
+  \procedureItem{Keep an overview of the DACS and FSS compartment}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Visually inspect the trailer for anomalies}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Approach FSS compartment (from behind)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Visually inspect trailer for anomalies}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Write down pressure on Pressure Reducer (H2 IGN)}{H2 Bottle Pressure: }
+  
+  \cellcolor{orange}
+  \procedureItem{Close H2 Bottle Valve (H2 IGN) fully}{}
+  
+  \cellcolor{green}
+  \procedureItem{Keep an overview of the DACS and OSS compartment}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Approach OSS compartment (from behind)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Visually inspect trailer for anomalies}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Write down pressure on Pressure Reducer (O2 IGN)}{O2 Bottle Pressure: }
+  
+  \cellcolor{orange}
+  \procedureItem{Close O2 Bottle Valve (O2 IGN) fully}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Close N2 Bottle Valve (OSS PRZ) fully}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Open Bleed Valve (OSS PRZ) carefully (N2 will leave the system)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until OSS Pressurization Pressure is equal to 0.0 barg (Check manometer and Sensor readings)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (OSS PRZ) to DECREASE}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Close Bleed Valve (OSS PRZ)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Approach FSS compartment (from behind)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Close N2 Bottle Valve (FSS PRZ) fully}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Open Bleed Valve (FSS PRZ) carefully (N2 will leave the system)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until FSS Pressurization Pressure is equal to 0.0 barg (Check manometer and sensor readings)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (FSS PRZ) to DECREASE}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Close Bleed Valve (FSS PRZ)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Turn off Water Pump}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Slowly open Drain Valve (FSS) (ethanol will leave the system)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: check FSS Load Cell readings}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Close Drain Valve (FSS) (as soon as no more ethanol is leaving the system)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Open N2 Bottle Valve (FSS PRZ) slowly}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (FSS PRZ) to 5 bar}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Step back from the system (outside the safety zone!)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: check all temperatures in the engine (nominal < 70°C)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{FIRING} circuit}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Vent Valve (FSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (FSS PRZ)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (FSS) for 5s}{\hl{CROSS CONTAMINATION????}}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Pressurization Valve (FSS PRZ)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Vent Valve (FSS)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until FSS Pressure above Tank is equal to 0.0 barg}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (FSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (H2 IGN)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Main Valve (H2 IGN)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (O2 IGN)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Main Valve (O2 IGN)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (FSS)}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{Check igniter lines pressure}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{OSS PRE-FILL} circuit}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{FIRING} circuit}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Approach FSS compartment from behind}{While approaching, check Igniter Fuel Line Pressure and Igniter Oxidizer Line Pressure}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (H2 IGN) to DECREASE and close additional knob}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Write down pressure on Pressure Reducer (FSS PRZ)}{N2 Pressure: }
+  
+  \cellcolor{orange}
+  \procedureItem{Close N2 Bottle Valve (FSS PRZ) fully}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Open Bleed Valve (FSS PRZ) carefully (N2 will leave the system)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Wait until FSS Pressurization Pressure is equal to 0.0 barg (Check manometer and sensor readings)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (FSS PRZ) to DECREASE}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Close Bleed Valve (FSS PRZ)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Approach the ENG compartment (side only; DO NOT STAND IN FRONT OF THE ENGINE)}{}
+  
+  \cellcolor{green}
+  \procedureItem{Keep fire extinguisher ready}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Inspect FSS main line to the engine and its connection for anomalies}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Inspect OSS main line to the engine and its connection for anomalies}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Inspect engine for anomalies}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Turn off cameras}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Perform final visual inspection}{}
+  
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{OSS Run Tank Purging}} \\ \hline
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{OSS RUN TANK PURGING}}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Approach OSS compartment (from behind)}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (O2 IGN) to DECREASE and fully close additional knob}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Open N2 Bottle Valve (OSS PRZ) slowly}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (OSS PRZ) to 5 bar}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{TC, SO and PSS1 are only allowed to stay inside the LOX safety zone (be aware of the SRV openings)}{}
+
+\cellcolor{orange}
+  \procedureItem{Check that end cap (x-piece (OSS FILL)) is properly tightened using the ½ in. Swagelok gap inspector}{}
+
+\cellcolor{orange}
+  \procedureItem{Close Drain Valve (OSS FILL)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Fill Valve (OSS FILL)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: check OSS Load Cell}{}
+
+\cellcolor{orange}
+  \procedureItem{Slowly open Drain Valve (OSS FILL) (remaining LOX will drain)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Vent Valve (OSS)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Fill Valve (OSS)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (OSS PRZ) (wait until check valve stops making a sound)}{Reminder: \textbf{OSS PRE-FILL} circuit is armed}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Fill Valve (OSS) for 5s}{}
+
+\cellcolor{orange}
+  \procedureItem{Close Drain Valve (OSS FILL)}{}
+
+\cellcolor{orange}
+  \procedureItem{Stand on FSS side with insight to Engine}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (OSS MAIN) for 5s}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Pressurization Valve (OSS PRZ)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Vent Valve (OSS)}{}
+
+\cellcolor{orange}
+  \procedureItem{Verify that no more LOX is in the system (check temperature and density reading on Mass Flow Sensor (OSS))}{}
+
+\cellcolor{cyan}
+  \procedureItem{Write down pressure on Pressure Reducer (OSS PRZ)}{N2 Pressure: }
+
+\cellcolor{orange}
+  \procedureItem{Close N2 Bottle Valve (OSS PRZ)}{}
+
+\cellcolor{orange}
+  \procedureItem{Open Bleed Valve (OSS PRZ) carefully (N2 will leave the system)}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: check OSS Pressurization Pressure}{}
+
+\cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (OSS PRZ) to DECREASE}{}
+
+\cellcolor{orange}
+  \procedureItem{Close Bleed Valve (OSS PRZ)}{}
+
+\cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
+
+\cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: confirm that all valves are in normal state and no circuit is armed}{}
+
+\cellcolor{cyan}
+  \procedureItem{Write down pressure on Pressure Reducer (PRG)}{N2 Pressure: }
+
+\cellcolor{orange}
+  \procedureItem{Close N2 Bottle Valve (PRG) fully}{}
+
+\cellcolor{orange}
+  \procedureItem{OPEN BLEED VALVE ON THE PRESSURE REDUCER ON THE FILL VALVE IN THE OSS}{}
+
+\cellcolor{cyan}
+  \procedureItem{Wait until Pneumatic Pressure is equal to 0.0 barg (check manometer and sensor readings)}{}
+
+\cellcolor{cyan}
+  \procedureItem{Wait until Purge Pressure is equal to 0.0 barg (check manometer and sensor readings)}{}
+
+\cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (PNU) to DECREASE}{}
+
+\cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (PRG) to DECREASE}{}
+
+\cellcolor{orange}
+  \procedureItem{CLOSE BLEED VALVE ON THE PRESSURE REDUCER ON THE FILL VALVE IN THE OSS}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{SAFE STATE}}{}
+
+\cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$ TC to all: system is in \textbf{Safe State}}{}
+
+\cellcolor{cyan}
+  \procedureItem{TC, SO and PSS1 return to HUT}{}
+
+\end{tabularx}
