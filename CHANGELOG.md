@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.1](https://github.com/aris-space/hephaestus-procedures/commits/v0.0.1) - 2024-10-09
+- Fix oopsie by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/1
+- Create Firing Procedure by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/3
+
 ## [v0.0.31](https://github.com/aris-space/helios-procedures/compare/v0.0.30...v0.0.31) - 2024-10-03
 - Template creation by @v30matt in https://github.com/aris-space/helios-procedures/pull/106
 
