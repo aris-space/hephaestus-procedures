@@ -6,3 +6,6 @@ main.log
 main.pdf
 main.synctex.gz
 indent.log
+.vscode/procedures-usefuls.code-snippets
+.DS_Store
+src/general/firing-conduction/main.out
