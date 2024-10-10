@@ -1,6 +1,6 @@
 # Changelog
 
-## [v0.0.3](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.2...v0.0.3) - 2024-10-10
+## [v1.0.0](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.2...v0.0.3) - Leakage Test Dry Run
 - Add Functionality check valves by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/7
 - High Pressure Leakage Test by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/9
 - Injury and Trespassing Contingency Procedure by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/10
