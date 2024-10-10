@@ -1,0 +1,21 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|c|X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Respomsible & Task \\ \hline
+
+  \procedureItem{RE}{Check if Ethernet cable in Mission Control PC is plugged in securely. If not, plug it in and relaunch ROS. If yes
+  set all actuators to normal state with manual override box in order to depressurize the system.}
+    
+  \procedureItem{RE}{Wait a few seconds 
+  until system is depressurized (check if valves are in normal state with surveillance cameras, especially vents open)
+  As soon as it stops hissing the pressure is down to 1 bar again.}
+    
+    \procedureItem{RE/RS}{Inspect system to find connection error and relaunch ROS}
+    
+    \procedureItem{RE}{Inform coaches}
+  
+\end{tabularx}

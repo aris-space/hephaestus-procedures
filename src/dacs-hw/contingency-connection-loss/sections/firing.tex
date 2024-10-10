@@ -1,0 +1,20 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|c|X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Respomsible & Task \\ \hline
+ 
+  \procedureItem{RE}{Abort with manual override box}
+  
+  \procedureItem{RE}{Wait a few seconds 
+until system is depressurized (check if valves are in normal state with surveillance cameras, especially vents open)
+As soon as it stops hissing the pressure is down to 1 bar again.}
+  
+  \procedureItem{RE/RS}{Carefully approach system to find connection error and restart ROS}
+  
+  \procedureItem{RE}{Inform coaches}
+  
+\end{tabularx}

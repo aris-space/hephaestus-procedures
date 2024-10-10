@@ -1,0 +1,27 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|c|X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Respomsible & Task \\ \hline
+
+  \procedureItem{ALL}{Stay inside HUT}
+  
+  \procedureItem{ALL}{Try to locate leakage using surveillance camera system}
+  
+  \procedureItem{RE}{Depressurize the system}
+  
+  \procedureItem{RS}{If the leakage is still visible or audible:
+$\rightarrow$ Wait until leak stops or system is safe to approach}
+  
+  \procedureItem{RA}{Deactivate the system}
+  
+  \procedureItem{RS}{Ensure safe state}
+  
+  \procedureItem{ALL}{Leakage test}
+  
+  \procedureItem{RE}{Inform coaches}
+  
+\end{tabularx}

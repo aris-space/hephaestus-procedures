@@ -1,0 +1,21 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|c|X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Respomsible & Task \\ \hline
+  
+  \procedureItem{RE}{Deactivate all circuits via manual override}
+  
+  \procedureItem{RE}{Check the power supply in the HUT and try to restart the system by manually disconnecting it from the mains and reconnecting it.
+(A successful connection is signalled by a green light on the trailer)}
+  
+  \procedureItem{RS}{Check if trailer / system has live current with multimeter}
+  
+  \procedureItem{RS}{Inspect system to find connection error}
+  
+  \procedureItem{RE}{Inform coaches}
+  
+\end{tabularx}
