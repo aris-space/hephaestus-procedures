@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.0.3](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.2...v0.0.3) - 2024-10-10
+- Add Functionality check valves by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/7
+- High Pressure Leakage Test by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/9
+- Injury and Trespassing Contingency Procedure by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/10
+- add fire contingency by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/11
+- PSS Procedures by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/12
+- Update contingency branch by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/14
+- Low pressure leakage test by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/15
+
 ## [v0.0.2](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.1...v0.0.2) - 2024-10-09
 - Add Packing List by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/5
 
