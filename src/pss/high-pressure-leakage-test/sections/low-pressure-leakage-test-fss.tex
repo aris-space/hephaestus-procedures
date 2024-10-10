@@ -1,0 +1,69 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+
+  \procedureItem{$\rightarrow$Arm \textbf{FSS FILL} circuit}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open Pressurization Valve (FSS PRZ)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open Main Valve (FSS MAIN)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Close Vent Valve (FSS)}{}
+  
+  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles and face shields (first time opening bottle only)}{}
+  
+  \procedureItem{Slowly open the N2 Bottle Valve (FSS PRZ)}{}
+  
+  \procedureItem{First time opening N2 Bottle: 
+
+Check line between bottle and Pressure Reducer (FSS PRZ) for leaks (i.e. apply snoop to all fittings)}{}
+  
+  \procedureItem{Set the Pressure Reducer (FSS PRZ) to 5 bar (using the red knob)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Pressure above Tank}{}
+  
+  \procedureItem{Apply SNOOP to all fittings in the pressurized lines}{}
+  
+  \procedureItem{\textbf{Iteration point}:
+If there are visible leaks:
+
+\begin{itemize}
+  \item Mark leaking fittings
+  \item Close N2 Bottle Valve (FSS PRZ) fully
+  \item If Pressure Reducer (FSS PRZ) is set to DECREASE: set it to 3 bar
+  \item Ensure that no one is in front of Vent Valve (FSS)
+  \item Open Vent Valve (FSS)
+  \item Verify that the system is fully depressurized (check manometer)
+  \item $\leftrightarrow$TC to DACS1: check FSS Pressure above Tank
+  \item Set the Pressure Reducer (FSS PRZ) to DECREASE
+  \item Close Vent Valve (FSS)
+  \item Retighten all marked fittings and go back to step 2.5.
+  \item If there are no leaks: go back to step 2.5. and repeat with 10 bar
+  \item If there are still no leaks: continue with step 2.10.
+\end{itemize}
+}{}
+  
+  \procedureItem{Close N2 Bottle Valve (FSS PRZ) fully}{}
+  
+  \procedureItem{Ensure that no one is in front of Vent Valve (FSS)}{}
+  
+  \procedureItem{Open Vent Valve (FSS)}{}
+  
+  \procedureItem{Verify that the system is fully depressurized (check manometer)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Pressure above Tank}{}
+  
+  \procedureItem{Set the Pressure Reducer (FSS PRZ) to DECREASE}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: close Main Valve (FSS MAIN)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: close Pressurization Valve (FSS PRZ)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Disarm FSS FILL circuit}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Confirm that no circuit is armed and all valves are in normal state}{}
+  
+\end{tabularx}
