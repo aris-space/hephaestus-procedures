@@ -1,0 +1,119 @@
+\documentclass{article}
+
+\input{../../common/lib/header}
+
+% Define a counter for the item numbers
+\newcounter{rowCounter}
+% Initialize counter
+\setcounter{rowCounter}{0}
+
+\newcounter{tableCounter}
+\setcounter{tableCounter}{0}
+
+% Command for row in checklist
+% First argument is amount
+% Second argument is description
+\newcommand{\checklistItem}[2]{
+  \checkbox & #1 & #2 \\ \hline
+}
+
+% Command for row in procedure list
+\newcommand{\procedureItem}[2]{
+  \stepcounter{rowCounter} % Increment counter
+  \arabic{tableCounter}.\arabic{rowCounter}
+  &
+  \checkbox
+  &
+  #1
+  &
+  \begin{minipage}[t]{\linewidth}
+    #2
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in note list
+\newcommand{\noteItem}[1]{
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+
+\title{Power Loss}
+\author{Contingency Procedure}
+\date{Version: \isodate\today}
+
+\begin{document}
+
+\maketitle
+
+% Set the page style for the title page
+\thispagestyle{fancy}
+
+%%%%%% Prefix section
+% Change section numbering to A, B, C...
+\renewcommand{\thesection}{\Alph{section}}
+
+\section{Alert Level}
+\input{../../general/alert-level.tex}
+Power Loss is an alert \textbf{LEVEL 3} event.
+
+\section{Contingency Team Roles}
+\begin{tabularx}{0.9\textwidth}{|c|c|}
+  \hline
+  \rowcolor{tableHeaderColor} Role & Responsible \\ \hline
+  RE & DACS1 \\ \hline
+  RS & SO \\ \hline
+\end{tabularx}
+
+\section{Impacted Subsystems}
+\begin{tabularx}{0.9\textwidth}{|c|c|}
+  \hline
+  \rowcolor{tableHeaderColor} Subsystem & Impact \\ \hline
+  DACS & Loss of Control \\ \hline
+  ENG & Secure \\ \hline
+  PSS & Secure \\ \hline
+\end{tabularx}
+
+\section{Contingency Plan Activation}
+\begin{tabularx}{0.9\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|c|X|c|}
+  \hline
+  \rowcolor{tableHeaderColor} ID & Check & Subteam & Criterion & Value \\ \hline
+  1. & \checkbox & HEP & ...while system is in \textcolor{red}{safe state}  & Go to \textcolor{red}{1} \\ \hline
+  2. & \checkbox & HEP & ...while system is  \textcolor{red}{pressurized}  & Go to \textcolor{red}{2} \\ \hline
+  3. & \checkbox & HEP & ...during \textcolor{red}{firing}  & Go to \textcolor{red}{3} \\ \hline 
+\end{tabularx}
+
+\newpage
+
+%%%%%% Main section
+% Change section numbering to 1, 2, 3...
+\renewcommand{\thesection}{\arabic{section}}
+
+% Reset section counter to start from 1 again
+\setcounter{section}{0}
+
+\section{Recovery Operations: System in \textcolor{red}{Safe State}}
+\input{sections/safe-state.tex}
+
+\section{Recovery Operations: System is \textcolor{red}{Pressurized}}
+\input{sections/pressurized.tex}
+
+\section{Recovery Operations: During \textcolor{red}{Firing}}
+\input{sections/firing.tex}
+
+\section{Nominal Operation Resumption Check}
+\input{sections/resumption-check.tex}
+
+\newpage
+
+%%%%%% Notes
+\setcounter{section}{0}
+\section*{Notes}
+\input{sections/notes.tex}
+
+\end{document}
