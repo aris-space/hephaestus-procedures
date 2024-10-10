@@ -4,6 +4,8 @@
   \hline
   \rowcolor{tableHeaderColor}
   ID & Check & Description & Comments \\ \hline
+\iftoggle{firing}{
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Ignition Check}} \\ \hline
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start time: }
@@ -127,18 +129,18 @@
   
   \cellcolor{cyan}
   \procedureItem{\textit{Note: Approach System as in the System Activation (i.e. confirming visually and audibly that everything seems fine before approaching) and close H2 and O2 Bottles. Although O2 and H2 are closed, there is still some residual O2 and H2 in the lines (especially O2, because that one cannot be purged). As a consequence, you cannot stand in front of the engine compartment from this point on.}}{}
-  
+}{}
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Fuel Filling}} \\ \hline
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
-  
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Close O2 Bottle Valve (O2 IGN) fully}{}
   
   \cellcolor{orange}
   \procedureItem{Close H2 Bottle Valve (H2 IGN) fully}{}
-  
+  }{}
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{FUEL FILLING}}{}
   
@@ -457,13 +459,13 @@
 
 \cellcolor{orange}
   \procedureItem{Turn on GoPro and other cameras around the trailer}{\hl{Add detailed list}}
-
+  \iftoggle{firing}{
 \cellcolor{orange}
   \procedureItem{Open H2 Bottle Valve (H2 IGN)}{}
 
 \cellcolor{orange}
   \procedureItem{Check that Pressure Reducer (H2 IGN) is set to \textcolor{red}{10 barg} (i.e. check Igniter Fuel Line Pressure)}{}
-
+  }{}
 \cellcolor{orange}
   \procedureItem{Set Pressure Reducer (PRG) to 20 barg}{}
 
@@ -481,13 +483,13 @@
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Pressurization Pressure}{}
-
+  \iftoggle{firing}{
 \cellcolor{orange}
   \procedureItem{Open O2 Bottle Valve (O2 IGN)}{}
 
 \cellcolor{orange}
   \procedureItem{Check that Pressure Reducer (O2 IGN) is set to 10 barg (i.e. check Igniter Oxidizer Line Pressure)}{}
-
+  }{}
 \cellcolor{orange}
   \procedureItem{Check that Pressure Reducer (OSS PRZ) is set to DECREASE}{}
 

@@ -81,13 +81,13 @@
   
   \cellcolor{orange}
   \procedureItem{Visually inspect trailer for anomalies}{}
-  
+  \iftoggle{firing}{
   \cellcolor{cyan}
   \procedureItem{Write down pressure on Pressure Reducer (H2 IGN)}{H2 Bottle Pressure: }
   
   \cellcolor{orange}
   \procedureItem{Close H2 Bottle Valve (H2 IGN) fully}{}
-  
+  }{}
   \cellcolor{green}
   \procedureItem{Keep an overview of the DACS and OSS compartment}{}
   
@@ -96,13 +96,13 @@
   
   \cellcolor{orange}
   \procedureItem{Visually inspect trailer for anomalies}{}
-  
+  \iftoggle{firing}{
   \cellcolor{cyan}
   \procedureItem{Write down pressure on Pressure Reducer (O2 IGN)}{O2 Bottle Pressure: }
   
   \cellcolor{orange}
   \procedureItem{Close O2 Bottle Valve (O2 IGN) fully}{}
-  
+  }{}
   \cellcolor{orange}
   \procedureItem{Close N2 Bottle Valve (OSS PRZ) fully}{}
   
@@ -228,10 +228,10 @@
   
   \cellcolor{orange}
   \procedureItem{Approach FSS compartment from behind}{While approaching, check Igniter Fuel Line Pressure and Igniter Oxidizer Line Pressure}
-  
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Set Pressure Reducer (H2 IGN) to DECREASE and close additional knob}{}
-  
+  }{}
   \cellcolor{cyan}
   \procedureItem{Write down pressure on Pressure Reducer (FSS PRZ)}{N2 Pressure: }
   
@@ -278,10 +278,10 @@
   
   \cellcolor{orange}
   \procedureItem{Approach OSS compartment (from behind)}{}
-  
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Set Pressure Reducer (O2 IGN) to DECREASE and fully close additional knob}{}
-  
+  }{}
   \cellcolor{orange}
   \procedureItem{Open N2 Bottle Valve (OSS PRZ) slowly}{}
   

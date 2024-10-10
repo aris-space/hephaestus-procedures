@@ -88,6 +88,7 @@
     In parallel: DACS shall check sensor value and activation delays.
   }{Low-Pressure Leakage Tests can be performed in the Hangar}
   
+  \iftoggle{firing}{
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Spark Plug Functionality Check: } \textit{Can be performed one day prior to the test}} \\ \hline
 
   \cellcolor{cyan}
@@ -120,7 +121,7 @@
   }{}
   
   \cellcolor{cyan}
-  \procedureItem{$\rightarrow$ End of \textbf{FC \& Leakage Test}}{}
+  \procedureItem{$\rightarrow$ End of \textbf{FC \& Leakage Test}}{}}{}
   
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Packing: } \textit{Can be performed one day prior to the test}} \\ \hline
 
@@ -210,16 +211,16 @@
   
   \cellcolor{orange}
   \procedureItem{Fix N$_2$ Bottle (PRG) onto the trailer using the attached belts and “Spanngurte” (for transport). If no space on the trailer, use a car. Secure them properly in the car (Spanngurte). Never transport oxidizing and flammable gases/liquids in the same car (O$_2$ not in the same car as H$_2$ or Ethanol). Only transport with an open window}{}
-  
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Get H$_2$ Bottle from the gas storage. Check that H$_2$ Bottle is sufficiently full ($>$ \hl{TBD} bar). Load H$_2$ Bottle into the Emergency Car (keep the car's window open before loading into the car and during the transport)}{Bottle ID: }
-  
+  }{}
   \cellcolor{orange}
   \procedureItem{Get the Ethanol Canisters from “Gefahrenstofflager” ($>$ \hl{TBD} L). Load Ethanol Canister into Emergency Car}{}
-  
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Get the O$_2$ Bottle from gas storage. Fix O$_2$ Bottle onto the trailer using the attached belts and “Spanngurte” (for transport) or put it in the car. Safety measures of -3.55 apply.}{}
-  
+  }{}
   \cellcolor{orange}
   \procedureItem{\textit{LOX Dewar:}
     \begin{itemize}
@@ -230,7 +231,7 @@
     \end{itemize}
     $\rightarrow$ LOX Dewar is \textbf{ready for departure}
   }{Top view of the Dewar:
-    \includegraphics[width=\textwidth]{assets/picture-dewar.png}}
+    \includegraphics[width=\textwidth]{../firing-conduction/assets/picture-dewar.png}}
   
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Trailer, Water Pump, Dewar, Cable Roll \& Boxed Material Preparation}} \\ \hline
 

@@ -185,7 +185,7 @@
   \procedureItem{$\leftrightarrow$ TC to DACS1:
     \begin{itemize}
       \item Announce end of the \textbf{Functionality Check Valves}
-      \item Announce upcoming \textbf{Leakage Test / Spark Plug Functionality Check}
+      \item Announce upcoming \textbf{Leakage Test \iftoggle{firing}{/ Spark Plug Functionality Check}{}}
     \end{itemize}
   }{}
   
@@ -213,7 +213,7 @@
   \procedureItem{$\leftrightarrow$ TC to DACS1:
     \begin{itemize}
       \item Announce end of the Leakage Test
-      \item Announce upcoming Spark Plug Functionality Check
+      \iftoggle{firing}{\item Announce upcoming Spark Plug Functionality Check}{}
     \end{itemize}
   }{}
   
@@ -222,7 +222,7 @@
   
   \cellcolor{orange}
   \procedureItem{Install GoPro mounts and other cameras (don’t turn them on yet)}{}
-  
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Install the polycarbonate debris shielding over the ENG compartment}{}
   
@@ -260,12 +260,12 @@
   
   \cellcolor{green}
   \procedureItem{SO goes to HUT, takes \textbf{IGNITION KEY}, and returns to trailer}{}
-  
+  }{}
   \cellcolor{green}
   \procedureItem{$\leftrightarrow$ TC to all:
     \begin{itemize}
       \item Announce end of \textbf{Pre-Firing Checks}
-      \item Announce upcoming \textbf{Ignition Test}
+      \item Announce upcoming \iftoggle{firing}{\textbf{Ignition Test}}{\textbf{Filling}}
     \end{itemize}
   }{}
   
