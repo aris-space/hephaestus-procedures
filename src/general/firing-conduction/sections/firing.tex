@@ -102,12 +102,12 @@
   
   \cellcolor{yellow}
   \procedureItem{Switch to Firing plots}{}
-  
+  \iftoggle{firing}{
   \cellcolor{green}
   \procedureItem{Turn \textbf{IGNITION KEY} ON}{}
-  
+  }{}
   \cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to all: announce start of the Firing}{}
+  \procedureItem{$\leftrightarrow$ TC to all: announce start of the \textbf{\iftoggle{firing}{Firing}{Cold Flow}}}{}
   
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$TC to all: countdown starts on 5; 
@@ -131,7 +131,7 @@
       \item If an abort is triggered:
       \begin{itemize}
         \item Check that UI is in \textbf{SAFE STATE}
-        \item Turn \textbf{IGNITION KEY} OFF
+        \iftoggle{firing}{\item Turn \textbf{IGNITION KEY} OFF}{}
         \item Disarm \textbf{FIRING} circuit
         \item Check system state with surveillance cameras
         \item Check system state with sensor measurements
