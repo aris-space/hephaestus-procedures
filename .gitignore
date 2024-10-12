@@ -10,3 +10,4 @@ main.out
 .vscode/procedures-usefuls.code-snippets
 .DS_Store
 src/general/firing-conduction/main.out
+*.aux

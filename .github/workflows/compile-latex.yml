@@ -6,14 +6,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history to detect changes
 
-    - name: Compile all LaTeX documents
-      run: python3 scripts/compile-all-latex.py
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2
 
-    - name: Rename files and move to single release folder
+    - name: Compile all LaTeX documents with version tracking
+      run: |
+        docker run --rm \
+          -v "${{ github.workspace }}:/workspace" \
+          -w /workspace \
+          texlive/texlive:latest \
+          bash -c "python3 scripts/compile-all-latex.py"
+
+    - name: Rename files and move to single release folder with versioning
       run: |
         mkdir --parents release
-        python3 scripts/move-files.py
+        docker run --rm \
+          -v "${{ github.workspace }}:/workspace" \
+          -w /workspace \
+          texlive/texlive:latest \
+          bash -c "python3 scripts/move-files.py"
 
     - name: Upload PDF files
       uses: actions/upload-artifact@v4
