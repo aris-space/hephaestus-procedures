@@ -24,10 +24,22 @@ def get_custom_filename(tex_file):
     match = re.search(r'%\s*filename:\s*(\S+)', content)
     return match.group(1) if match else None
 
-def get_file_hash(file_path):
-    """Calculate the hash of a file to detect changes."""
-    with open(file_path, 'rb') as f:
-        return hashlib.sha256(f.read()).hexdigest()
+def get_folder_hash(folder_path):
+    """Calculate the combined hash of all files in a folder."""
+    sha256 = hashlib.sha256()
+    
+    # Go through all files in the folder and hash them
+    for root, _, files in os.walk(folder_path):
+        for file in sorted(files):  # Sort to ensure consistent order
+            file_path = os.path.join(root, file)
+            # Exclude versions.json or other non-relevant files if needed
+            if file == "versions.json":
+                continue
+            with open(file_path, 'rb') as f:
+                while chunk := f.read(8192):
+                    sha256.update(chunk)
+    
+    return sha256.hexdigest()
 
 # Initialize git repo
 repo = git.Repo(os.getcwd())
@@ -38,24 +50,23 @@ for dirpath, _, filenames in os.walk(base_folder):
         # Skip if there's no `main.tex`
         continue
 
-    # Get the custom filename and file hash
-    tex_file_path = os.path.join(dirpath, root_file)
-    custom_filename = get_custom_filename(tex_file_path)
-    current_hash = get_file_hash(tex_file_path)
+    # Get the custom filename and folder hash
+    folder_hash = get_folder_hash(dirpath)
+    custom_filename = get_custom_filename(os.path.join(dirpath, root_file))
 
-    # Check if the file has been modified
+    # Check if the folder has been modified
     relative_path = os.path.relpath(dirpath, base_folder)
     if relative_path not in versions:
-        # New file, set version to 01
-        versions[relative_path] = {'version': '01', 'hash': current_hash}
+        # New folder, set version to 01
+        versions[relative_path] = {'version': '01', 'hash': folder_hash}
     else:
-        # Compare hashes to detect changes
+        # Compare folder hashes to detect changes
         previous_hash = versions[relative_path]['hash']
-        if current_hash != previous_hash:
-            # File has changed, increment version
+        if folder_hash != previous_hash:
+            # Folder has changed, increment version
             current_version = int(versions[relative_path]['version'])
             new_version = f"{current_version + 1:02}"
-            versions[relative_path] = {'version': new_version, 'hash': current_hash}
+            versions[relative_path] = {'version': new_version, 'hash': folder_hash}
 
     # Compile LaTeX
     try:
@@ -65,7 +76,7 @@ for dirpath, _, filenames in os.walk(base_folder):
             cwd=dirpath
         )
     except subprocess.CalledProcessError as e:
-        print(f"Error compiling {tex_file_path}: {e}")
+        print(f"Error compiling {os.path.join(dirpath, root_file)}: {e}")
         exit(1)
 
     # Store the custom filename and version for later use

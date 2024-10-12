@@ -1,0 +1,130 @@
+{
+    "dacs-sw/control-station-preparation": {
+        "version": "01",
+        "hash": "2e71205317cdeefdca750bbcf714fc49b948b4849e0bba3ece1327c42a707ee1"
+    },
+    "dacs-sw/installation-hardware-check": {
+        "version": "01",
+        "hash": "e447dbd7143199512d01068675887c6d8a8e8e44507cd337b28c3951f274464c"
+    },
+    "dacs-sw/database-ingestion": {
+        "version": "01",
+        "hash": "0a64ee676bef89d0f1715d7388e30a51f4dafd09a747dfeb60aead5779e60894"
+    },
+    "dacs-sw/template": {
+        "version": "01",
+        "hash": "10a16e9406c9c062ae28f48fe693242bb81447f5458bb0f0b5d66fe82215fe17"
+    },
+    "dacs-sw/kidaq": {
+        "version": "01",
+        "hash": "d110e784b28bf93a052f8a2a6e60e8147ad8f8d077903edc6afb98fa21a81664"
+    },
+    "dacs-sw/control-station-deinstallation": {
+        "version": "01",
+        "hash": "670212942736e1709c03a19dc1f1a712730cdff4c91f3afe9a1347edf28f7c73"
+    },
+    "dacs-sw/control-station-installation": {
+        "version": "01",
+        "hash": "36ab7038c9c50ace1d9bebac27a1295dff4c408a359567feae5b3dfd16c0c418"
+    },
+    "dacs-sw/surveillance-installation": {
+        "version": "01",
+        "hash": "8f4954df21f7ed11d69f9e88e3c4d0dbc26b83d47c50220d1355fa0e4d881a44"
+    },
+    "dacs-sw/data-saving-and-export": {
+        "version": "01",
+        "hash": "7f6abd5f64e664a204faf397badf233fc8ff587ad3e64bb569e365e8492bd53f"
+    },
+    "general/contingency-trespassing": {
+        "version": "01",
+        "hash": "390d2a0498a975265ab026edbf18df31257688271b97e1cd03d21ea6159115b1"
+    },
+    "general/trailer-deinstallation": {
+        "version": "01",
+        "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
+    },
+    "general/firing-conduction": {
+        "version": "01",
+        "hash": "95f89f6d711ccd871cf281c94b9dfe4c162545134fdfd7478e45c22fd2a8dc3a"
+    },
+    "general/contingency-injury": {
+        "version": "01",
+        "hash": "8a8c622849a0827a73f75ce85a90850fd28e18fa0b6db9318f9ae518a225bc49"
+    },
+    "general/contingency-fire": {
+        "version": "01",
+        "hash": "7e0b68a83706d7de3dee427d438839d2b0976b76e9d43ef31c419a0614a9d5b0"
+    },
+    "general/cold-flow-conduction": {
+        "version": "01",
+        "hash": "9b6999d15843fc9bedfaf6c0a7334076802f0439b491ace9800a50533a852591"
+    },
+    "general/contingency-master": {
+        "version": "01",
+        "hash": "916f173ffd668f4f4fb7efbd2c2fb43a3d4a70d485092a0214756ea7f131e39f"
+    },
+    "general/trailer-installation": {
+        "version": "01",
+        "hash": "f5540e8e477a1857ba19f21d0409df4a1a26b5598eb55ed31ad2bb93cca89b75"
+    },
+    "general/packing-list": {
+        "version": "01",
+        "hash": "443452d8e3ef4f2dda199c7ba0e55b972e3069859928a49dd7eadf88b29bf021"
+    },
+    "dacs-hw/contingency-power-loss": {
+        "version": "01",
+        "hash": "efcb54bb43972f67489250a3f2c24d9e6a2b5c7f69f5cd2f1f992aaba9a8304b"
+    },
+    "dacs-hw/contingency-valve-anomalies": {
+        "version": "01",
+        "hash": "0b87b694f41c7e9661e825c938d81e778d9f4c4b3fde685beb67b40a32997287"
+    },
+    "dacs-hw/contingency-connection-loss": {
+        "version": "01",
+        "hash": "16c0a7248a365a47b1d71fb40f57975066c2d53cbba9c5084aa6f171cd5e771f"
+    },
+    "pss/contingency-leakage": {
+        "version": "01",
+        "hash": "4c48ee8dcb6314248bc6113e8a798413a40e20491f1f8c213552a6416333bbe1"
+    },
+    "pss/pss-deinstallation": {
+        "version": "01",
+        "hash": "69dc00a7dc0b76570c023c79e4dc37358d4aeffcb493adc4de44cb271875ed10"
+    },
+    "pss/low-pressure-leakage-test": {
+        "version": "01",
+        "hash": "9d9cae7300b062a602beaedf39e6df9ec46961d3777440e2642eefa747631277"
+    },
+    "pss/pss-preparation": {
+        "version": "01",
+        "hash": "8894a290eab5d9ed0fef3aa8ec0d2de08b1305ba5f55ca984b0c2068459f5c16"
+    },
+    "pss/high-pressure-leakage-test": {
+        "version": "01",
+        "hash": "47142e77ce395b81ca07c31604ce8c494d199bb9201c4574d015fd4ebda5bc28"
+    },
+    "pss/contingency-bottle-valve-anomaly": {
+        "version": "01",
+        "hash": "c25e9caf59fa9b606ba59819b59f119b3e32983c40b3c751d66f9802de2edd9b"
+    },
+    "pss/contingency-overpressure": {
+        "version": "01",
+        "hash": "8af85d0f8ca65d61ad441335b1e1b6908e7327fd4b097e905bb137414e0bc936"
+    },
+    "pss/functionality-check-valves": {
+        "version": "01",
+        "hash": "b232e2644a897fb2c3b077fab835f96e63bda261ea2dd5c3fde5a21d7b111bb1"
+    },
+    "pss/contingency-noises-hissing": {
+        "version": "01",
+        "hash": "a6d465ebf55242c4a96cd4585ad1a39db7fdffbe5240fcc3564990649d841bc1"
+    },
+    "pss/pss-installation": {
+        "version": "01",
+        "hash": "5b3cf318ab431993dfbde4c2252919f36fc769dc6af702fa50ab7c9c72e7cc8c"
+    },
+    "templates/procedure-template": {
+        "version": "01",
+        "hash": "c539364ac3d5ca3362d85392e7df555e34b6632673f4f3ec107b1078d290fdf7"
+    }
+}
