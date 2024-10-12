@@ -1,40 +1,38 @@
-name: Build LaTeX document
-on: [push, pull_request]
+name: Build LaTeX Document
+on:
+  push:
+    branches: [main]
+  pull_request:
 
 jobs:
   build_latex:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # Fetch full history to detect changes
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history to detect changes
 
-    - name: Set up Docker
-      uses: docker/setup-buildx-action@v2
+      - name: Set Up Docker Buildx
+        uses: docker/setup-buildx-action@v2
 
-    - name: Compile all LaTeX documents with version tracking inside Docker
-      run: |
-        docker run --rm \
-          -v "${{ github.workspace }}:/workspace" \
-          -e GITHUB_WORKSPACE="${{ github.workspace }}" \
-          -w /workspace \
-          texlive/texlive:latest \
-          bash -c "apt-get update && apt-get install -y git python3-pip python3-venv && \
-                   python3 -m venv /workspace/venv && \
-                   /workspace/venv/bin/pip install gitpython && \
-                   /workspace/venv/bin/python scripts/compile-all-latex.py"
+      - name: Compile and Move LaTeX Documents Inside Docker
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/workspace" \
+            -w /workspace \
+            texlive/texlive:latest \
+            bash -c "apt-get update && \
+                     apt-get install -y git python3-pip python3-venv && \
+                     python3 -m venv /workspace/venv && \
+                     /workspace/venv/bin/pip install gitpython && \
+                     /workspace/venv/bin/python scripts/compile-all-latex.py && \
+                     /workspace/venv/bin/python scripts/move-files.py"
 
-    - name: Rename files and move to single release folder with versioning inside Docker
-      run: |
-        docker run --rm \
-          -v "${{ github.workspace }}:/workspace" \
-          -e GITHUB_WORKSPACE="${{ github.workspace }}" \
-          -w /workspace \
-          texlive/texlive:latest \
-          bash -c "/workspace/venv/bin/python scripts/move-files.py"
+      - name: Upload PDF Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-pdfs
+          path: release/*
 
-    - name: Upload PDF files
-      uses: actions/upload-artifact@v4
-      with:
-        name: artifacts
-        path: release/*
