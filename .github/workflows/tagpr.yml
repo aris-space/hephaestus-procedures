@@ -1,49 +1,47 @@
-name: tagpr
+name: Tag and Release
+
 on:
   push:
-    branches: ["main"]
+    branches: [main]
 
 jobs:
-  tagpr:
+  tag_release:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-      with:
-        fetch-depth: 0  # Fetch full history to detect changes
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch full history to detect changes
 
-    - id: tagpr
-      uses: Songmu/tagpr@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Tag
+        id: create_tag
+        uses: Songmu/tagpr@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Remove watermark
-      if: ${{ steps.tagpr.outputs.tag != '' }}
-      run: |
-        sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/common/lib/header.tex
+      - name: Remove Watermark from Header
+        if: ${{ steps.create_tag.outputs.tag != '' }}
+        run: |
+          sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/common/lib/header.tex
 
-    - name: Compile all LaTeX documents with version tracking
-      if: ${{ steps.tagpr.outputs.tag != '' }}
-      run: |
-        docker run --rm \
-          -v "${{ github.workspace }}:/workspace" \
-          -w /workspace \
-          texlive/texlive:latest \
-          bash -c "python3 scripts/compile-all-latex.py"
+      - name: Compile and Move LaTeX Documents Inside Docker
+        if: ${{ steps.create_tag.outputs.tag != '' }}
+        run: |
+          docker run --rm \
+            -v "${{ github.workspace }}:/workspace" \
+            -w /workspace \
+            texlive/texlive:latest \
+            bash -c "apt-get update && \
+                     apt-get install -y git python3-pip python3-venv && \
+                     python3 -m venv /workspace/venv && \
+                     /workspace/venv/bin/pip install gitpython && \
+                     /workspace/venv/bin/python scripts/compile-all-latex.py && \
+                     /workspace/venv/bin/python scripts/move-files.py"
 
-    - name: Rename files and move to single release folder with versioning
-      if: ${{ steps.tagpr.outputs.tag != '' }}
-      run: |
-        mkdir --parents release
-        docker run --rm \
-          -v "${{ github.workspace }}:/workspace" \
-          -w /workspace \
-          texlive/texlive:latest \
-          bash -c "python3 scripts/move-files.py"
-
-    - name: Make release with PDFs
-      if: ${{ steps.tagpr.outputs.tag != '' }}
-      uses: softprops/action-gh-release@v2
-      with:
-        tag_name: ${{ steps.tagpr.outputs.tag }}
-        files: |
-          release/*
+      - name: Create GitHub Release with PDFs
+        if: ${{ steps.create_tag.outputs.tag != '' }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.create_tag.outputs.tag }}
+          files: release/*

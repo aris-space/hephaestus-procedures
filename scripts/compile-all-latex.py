@@ -37,12 +37,12 @@ for dirpath, _, filenames in os.walk(base_folder):
     if root_file not in filenames:
         # Skip if there's no `main.tex`
         continue
-    
+
     # Get the custom filename and file hash
     tex_file_path = os.path.join(dirpath, root_file)
     custom_filename = get_custom_filename(tex_file_path)
     current_hash = get_file_hash(tex_file_path)
-    
+
     # Check if the file has been modified
     relative_path = os.path.relpath(dirpath, base_folder)
     if relative_path not in versions:
@@ -56,30 +56,24 @@ for dirpath, _, filenames in os.walk(base_folder):
             current_version = int(versions[relative_path]['version'])
             new_version = f"{current_version + 1:02}"
             versions[relative_path] = {'version': new_version, 'hash': current_hash}
-    
+
     # Compile LaTeX
-    command = [
-        "docker",
-        "run",
-        "--rm",
-        "-v",
-        f"{os.environ['GITHUB_WORKSPACE']}:/workspace",
-        "-w",
-        f"/workspace/{dirpath}",
-        "texlive/texlive:latest",
-        "latexmk",
-        "-pdf",
-        "-interaction=nonstopmode",
-        f"{root_file}",
-    ]
-    subprocess.run(command, check=True)
-    
+    try:
+        subprocess.run(
+            ["latexmk", "-pdf", "-interaction=nonstopmode", root_file],
+            check=True,
+            cwd=dirpath
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"Error compiling {tex_file_path}: {e}")
+        exit(1)
+
     # Store the custom filename and version for later use
     version_number = versions[relative_path]['version']
     if custom_filename:
         with open(os.path.join(dirpath, 'file_info.txt'), 'w') as f:
             f.write(f"{custom_filename},{version_number}")
-            
+
 # Save the updated versions
 with open(version_file, 'w') as f:
     json.dump(versions, f, indent=4)

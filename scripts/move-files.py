@@ -15,8 +15,7 @@ else:
     raise FileNotFoundError("versions.json not found. Please ensure the versioning process is run first.")
 
 # Ensure the release folder exists
-if not os.path.exists(release_folder):
-    os.makedirs(release_folder)
+os.makedirs(release_folder, exist_ok=True)
 
 # Go through all subdirectories
 for root, dirs, files in os.walk(base_folder):
@@ -24,10 +23,10 @@ for root, dirs, files in os.walk(base_folder):
         if file != "main.pdf":
             # Skip file if it's not `main.pdf`
             continue
-        
+
         # Get the relative path to use for version lookup
         relative_path = os.path.relpath(root, base_folder)
-        
+
         # Check if a custom filename and version number is defined
         file_info_path = os.path.join(root, 'file_info.txt')
         if os.path.exists(file_info_path):
@@ -42,14 +41,15 @@ for root, dirs, files in os.walk(base_folder):
             else:
                 # If no version info exists, default to version 01
                 version_number = '01'
-            
+
             # Replace directory separators with hyphens for the filename
-            new_filename = f"{relative_path.replace(os.sep, '-')}_v{version_number}.pdf"
-        
+            sanitized_path = relative_path.replace(os.sep, '-')
+            new_filename = f"{sanitized_path}_v{version_number}.pdf"
+
         # Construct the old and new file paths
         old_path = os.path.join(root, file)
         new_path = os.path.join(release_folder, new_filename)
-        
+
         # Move and rename the file
         shutil.move(old_path, new_path)
         print(f"Moved {old_path} to {new_path}")
