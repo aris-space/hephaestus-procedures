@@ -38,6 +38,14 @@ jobs:
                      /workspace/venv/bin/pip install gitpython && \
                      /workspace/venv/bin/python scripts/compile-all-latex.py && \
                      /workspace/venv/bin/python scripts/move-files.py"
+      
+      - name: Commit `versions.json` file
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add versions.json
+          git diff --cached --quiet || git commit -m "Update versions.json"  # Commit only if there are changes
+          git push
 
       - name: Create GitHub Release with PDFs
         if: ${{ steps.create_tag.outputs.tag != '' }}
