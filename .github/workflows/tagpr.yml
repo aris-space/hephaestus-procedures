@@ -8,6 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Fetch full history to detect changes
+
     - id: tagpr
       uses: Songmu/tagpr@v1
       env:
@@ -15,19 +18,27 @@ jobs:
 
     - name: Remove watermark
       if: ${{ steps.tagpr.outputs.tag != '' }}
-      # Set the variable controlling the watermark addition to `false`
       run: |
         sed -i 's/\\setboolean{isDraft}{true}/\\setboolean{isDraft}{false}/' src/common/lib/header.tex
 
-    - name: Compile all LaTeX documents
+    - name: Compile all LaTeX documents with version tracking
       if: ${{ steps.tagpr.outputs.tag != '' }}
-      run: python3 scripts/compile-all-latex.py
+      run: |
+        docker run --rm \
+          -v "${{ github.workspace }}:/workspace" \
+          -w /workspace \
+          texlive/texlive:latest \
+          bash -c "python3 scripts/compile-all-latex.py"
 
-    - name: Rename files and move to single release folder
+    - name: Rename files and move to single release folder with versioning
       if: ${{ steps.tagpr.outputs.tag != '' }}
       run: |
         mkdir --parents release
-        python3 scripts/move-files.py
+        docker run --rm \
+          -v "${{ github.workspace }}:/workspace" \
+          -w /workspace \
+          texlive/texlive:latest \
+          bash -c "python3 scripts/move-files.py"
 
     - name: Make release with PDFs
       if: ${{ steps.tagpr.outputs.tag != '' }}
