@@ -33,7 +33,7 @@ for root, dirs, files in os.walk(base_folder):
             # Read the custom filename and version from file_info.txt
             with open(file_info_path, 'r') as f:
                 custom_filename, version_number = f.read().strip().split(',')
-            new_filename = f"{custom_filename}_v{version_number}.pdf"
+            new_filename = f"{custom_filename}_{version_number}.pdf"
         else:
             # Use default naming with versioning from versions.json
             if relative_path in versions:
@@ -44,7 +44,7 @@ for root, dirs, files in os.walk(base_folder):
 
             # Replace directory separators with hyphens for the filename
             sanitized_path = relative_path.replace(os.sep, '-')
-            new_filename = f"{sanitized_path}_v{version_number}.pdf"
+            new_filename = f"{sanitized_path}_{version_number}.pdf"
 
         # Construct the old and new file paths
         old_path = os.path.join(root, file)
