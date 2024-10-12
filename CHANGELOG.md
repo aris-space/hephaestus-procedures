@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.7](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.6...v0.0.7) - 2024-10-12
+- Fix version numbering by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/28
+- fix: tagpr workflow error by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/30
+
 ## [v0.0.6](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.5...v0.0.6) - 2024-10-12
 - Add custom filenames by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/26
 
