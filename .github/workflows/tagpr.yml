@@ -25,7 +25,7 @@ jobs:
       if: ${{ steps.tagpr.outputs.tag != '' }}
       run: |
         docker run --rm \
-          -e GITHUB_WORKSPACE="${{ github.workspace }}" \  # Pass GITHUB_WORKSPACE into Docker
+          -e GITHUB_WORKSPACE="${{ github.workspace }}" \
           -v "${{ github.workspace }}:/workspace" \
           -w /workspace \
           texlive/texlive:latest \
@@ -38,7 +38,7 @@ jobs:
       if: ${{ steps.tagpr.outputs.tag != '' }}
       run: |
         docker run --rm \
-          -e GITHUB_WORKSPACE="${{ github.workspace }}" \  # Pass GITHUB_WORKSPACE into Docker
+          -e GITHUB_WORKSPACE="${{ github.workspace }}" \
           -v "${{ github.workspace }}:/workspace" \
           -w /workspace \
           texlive/texlive:latest \

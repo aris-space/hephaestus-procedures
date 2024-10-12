@@ -16,7 +16,7 @@ jobs:
       run: |
         docker run --rm \
           -v "${{ github.workspace }}:/workspace" \
-          -e GITHUB_WORKSPACE="${{ github.workspace }}" \  # Pass GITHUB_WORKSPACE into Docker
+          -e GITHUB_WORKSPACE="${{ github.workspace }}" \
           -w /workspace \
           texlive/texlive:latest \
           bash -c "apt-get update && apt-get install -y git python3-pip python3-venv && \
@@ -28,7 +28,7 @@ jobs:
       run: |
         docker run --rm \
           -v "${{ github.workspace }}:/workspace" \
-          -e GITHUB_WORKSPACE="${{ github.workspace }}" \  # Pass GITHUB_WORKSPACE into Docker
+          -e GITHUB_WORKSPACE="${{ github.workspace }}" \
           -w /workspace \
           texlive/texlive:latest \
           bash -c "/workspace/venv/bin/python scripts/move-files.py"
