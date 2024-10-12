@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.6](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.5...v0.0.6) - 2024-10-12
+- Add custom filenames by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/26
+
 ## [v0.0.5](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.4...v0.0.5) - 2024-10-12
 - Master contingency, trailer installation, trailer deinstallation by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/21
 - feat: added custom filenames and versioning by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/23
