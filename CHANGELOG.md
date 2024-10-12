@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.5](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.4...v0.0.5) - 2024-10-12
+- Master contingency, trailer installation, trailer deinstallation by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/21
+- feat: added custom filenames and versioning by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/23
+
 ## [v0.0.4](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.3...v0.0.4) - 2024-10-10
 - Add cold flow procedure by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/19
 
