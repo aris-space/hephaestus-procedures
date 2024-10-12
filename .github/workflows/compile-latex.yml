@@ -12,22 +12,24 @@ jobs:
     - name: Set up Docker
       uses: docker/setup-buildx-action@v2
 
-    - name: Compile all LaTeX documents with version tracking
+    - name: Compile all LaTeX documents with version tracking inside Docker
       run: |
         docker run --rm \
           -v "${{ github.workspace }}:/workspace" \
           -w /workspace \
           texlive/texlive:latest \
-          bash -c "apt-get update && apt-get install -y git python3-pip && pip install gitpython && python3 scripts/compile-all-latex.py"
+          bash -c "apt-get update && apt-get install -y git python3-pip python3-venv && \
+                   python3 -m venv /workspace/venv && \
+                   /workspace/venv/bin/pip install gitpython && \
+                   /workspace/venv/bin/python scripts/compile-all-latex.py"
 
-    - name: Rename files and move to single release folder with versioning
+    - name: Rename files and move to single release folder with versioning inside Docker
       run: |
-        mkdir --parents release
         docker run --rm \
           -v "${{ github.workspace }}:/workspace" \
           -w /workspace \
           texlive/texlive:latest \
-          bash -c "python3 scripts/move-files.py"
+          bash -c "/workspace/venv/bin/python scripts/move-files.py"
 
     - name: Upload PDF files
       uses: actions/upload-artifact@v4
