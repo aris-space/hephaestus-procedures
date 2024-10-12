@@ -60,8 +60,8 @@
         "hash": "9b6999d15843fc9bedfaf6c0a7334076802f0439b491ace9800a50533a852591"
     },
     "general/contingency-master": {
-        "version": "01",
-        "hash": "916f173ffd668f4f4fb7efbd2c2fb43a3d4a70d485092a0214756ea7f131e39f"
+        "version": "02",
+        "hash": "b0f565d4134a3ee3f1f1e8d7a924522d8a350f27286c4ec84f1d58f294305c14"
     },
     "general/trailer-installation": {
         "version": "01",
@@ -126,5 +126,13 @@
     "templates/procedure-template": {
         "version": "01",
         "hash": "c539364ac3d5ca3362d85392e7df555e34b6632673f4f3ec107b1078d290fdf7"
+    },
+    "guidelines/safety-signature": {
+        "version": "03",
+        "hash": "793f1cc00568f58c7c665b165c7c491b1fed4eacbf889cd125038a21306027d4"
+    },
+    "guidelines/operation-safety-concept": {
+        "version": "01",
+        "hash": "fb63d2b6edccfd695d64a3f593c423175ed02a4baeed72d1cfb028f674db3e35"
     }
 }
