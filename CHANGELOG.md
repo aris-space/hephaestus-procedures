@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.8](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.7...v0.0.8) - 2024-10-12
+- Safety Signatures and Operational Safety Concept by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/32
+
 ## [v0.0.7](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.6...v0.0.7) - 2024-10-12
 - Fix version numbering by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/28
 - fix: tagpr workflow error by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/30
