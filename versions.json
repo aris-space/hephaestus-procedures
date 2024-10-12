@@ -128,7 +128,11 @@
         "hash": "c539364ac3d5ca3362d85392e7df555e34b6632673f4f3ec107b1078d290fdf7"
     },
     "guidelines/safety-signature": {
-        "version": "02",
-        "hash": "e101080a266f2b77607a4e1cef4458f98d29c6e586bf6ff5a1d9d0b205af6bfe"
+        "version": "03",
+        "hash": "793f1cc00568f58c7c665b165c7c491b1fed4eacbf889cd125038a21306027d4"
+    },
+    "guidelines/operation-safety-concept": {
+        "version": "01",
+        "hash": "fb63d2b6edccfd695d64a3f593c423175ed02a4baeed72d1cfb028f674db3e35"
     }
 }
