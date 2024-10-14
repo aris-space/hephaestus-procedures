@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.9](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.8...v0.0.9) - 2024-10-14
+- Logo update by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/34
+
 ## [v0.0.8](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.7...v0.0.8) - 2024-10-12
 - Safety Signatures and Operational Safety Concept by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/32
 
