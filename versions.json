@@ -134,5 +134,9 @@
     "guidelines/operation-safety-concept": {
         "version": "01",
         "hash": "fb63d2b6edccfd695d64a3f593c423175ed02a4baeed72d1cfb028f674db3e35"
+    },
+    "guidelines/ipz-operation-safety-concept": {
+        "version": "01",
+        "hash": "bf225a0efc3d7d3ea0a356e1dae32a95b8e016ced54b479873a7ac2904de3884"
     }
 }
