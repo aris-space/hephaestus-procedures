@@ -44,8 +44,8 @@
         "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
     },
     "general/firing-conduction": {
-        "version": "01",
-        "hash": "95f89f6d711ccd871cf281c94b9dfe4c162545134fdfd7478e45c22fd2a8dc3a"
+        "version": "02",
+        "hash": "fdd1448a8d971e361bbc7f3019b42361bdc3091cd6bc46f3c697d439869fa89c"
     },
     "general/contingency-injury": {
         "version": "01",
@@ -68,8 +68,8 @@
         "hash": "f5540e8e477a1857ba19f21d0409df4a1a26b5598eb55ed31ad2bb93cca89b75"
     },
     "general/packing-list": {
-        "version": "01",
-        "hash": "443452d8e3ef4f2dda199c7ba0e55b972e3069859928a49dd7eadf88b29bf021"
+        "version": "02",
+        "hash": "db1f1b0d709f6afa8928b292425b643861d35c47bf7c1790418db1e00e527ccf"
     },
     "dacs-hw/contingency-power-loss": {
         "version": "01",
@@ -112,8 +112,8 @@
         "hash": "8af85d0f8ca65d61ad441335b1e1b6908e7327fd4b097e905bb137414e0bc936"
     },
     "pss/functionality-check-valves": {
-        "version": "01",
-        "hash": "b232e2644a897fb2c3b077fab835f96e63bda261ea2dd5c3fde5a21d7b111bb1"
+        "version": "02",
+        "hash": "5bc62cf385540fdc14f9d9e6a67fc2e8d128c65e5f5b6fd5cd7a0dc2479ee51d"
     },
     "pss/contingency-noises-hissing": {
         "version": "01",
@@ -138,5 +138,9 @@
     "guidelines/ipz-operation-safety-concept": {
         "version": "01",
         "hash": "bf225a0efc3d7d3ea0a356e1dae32a95b8e016ced54b479873a7ac2904de3884"
+    },
+    "guidelines/ipz-fss-cf-operation-safety-concept": {
+        "version": "01",
+        "hash": "2dcb8cb86607a0e05c16f4c1e8f8ceedf4659dacb7c4561fc047824a5c2e95b0"
     }
 }
