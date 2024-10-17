@@ -60,18 +60,27 @@ In table \ref{tab:emergency-numbers} the emergency numbers are listed. Call them
     \end{tabularx}
 \end{table}
 \newpage
+\section{Risk Analysis}
+Water Coldflows involve pressurized systems and therefore have an inherent risk. Since the tests are performed with inert gas (nitrogen) and distilled water, the risks are limited to overpressures and asphyxiation by nitrogen rich atmosphere. These risks and their mitigations are discussed in this section.
+\subsection{Overpressure}
+An overpressure of the system can lead to rupture of components and therefore to an explosion. Overpressure can cause injury to personnel, namely hearing damage, lung damage and even death, and damage to surrounding facilities. However, during water coldflows, the pressure is limited to 60 bar and all components of the system have previously been tested to 60 bar. Additional preventive measures are taken to minimise the damage caused by a possible overpressure event:
+\begin{itemize}
+    \item The system is equipped with multiple pressure relief valves, which are set to open at 60 bar. This ensures that the pressure in the system is limited to 60 bar, even in the case a pressure reducer were to fail.
+    \item The TNT equivalent of the potential energy stored in the system and the size of the corresponding safety radius were calculated according to the ASME PCC-2-2018 standard. The safety radius was determined to be 5 meters. To have an additional safety margin and because it's easier to tape off the quadratic test area, the entire test area, which has a radius of around 20 meters, is taped off and monitored during testing.
+    \item The system is equipped with multiple pressure sensors which are monitored continuously during testing. If the pressure exceeds the set limit, an automatic abort is triggered which immediately depressurizes the system.
+\end{itemize}
+\subsection{Asphyxiation}
+Asphyxiation can occur if there is a leak of nitrogen gas into the atmosphere. Nitrogen is an inert gas and therefore does not cause any immediate harm to the human body. However, nitrogen displaces oxygen from the air and can therefore lead to asphyxiation. This risk is mitigated by performing the tests outdoors, where the nitrogen can disperse into the atmosphere and does not accumulate.
+
 \section{Site Map}
 The tests will be performed in the IPZ Test Area 2. The trailer will be positioned all the way at the fence to the airfield, with both the side of the system that will be pressurized and the engine compartment facing the airfield. The control station will be positioned close to the Hangar. The whole testing area will be taped off to prevent accidental trespassing and during pressurized operations a dedicated person will monitor the area to look out for trespassers.
 Figure \ref{fig:location-plan} shows the setup of the test location and the location of the fire extinguisher and first aid kit. During active testing, only the test conductor, safety officer and engineer in charge are allowed inside the taped zone with appropriate safety equipment (safety goggles and ear protection). When the system is pressurized, no one is allowed inside the taped off safety zone.
-The size of the safety zone was determined by calculating the TNT equivalent of the stored energy in the system and the resulting safety radius using the ASME PCC-2-2018 standard, the exact calculations can be found in the HEPHAESTUS safety folder on Sharepoint. The resulting minimal safety radius for a Water coldflow is 5 meters. To have added safety and because it's easier to tape off the quadratic test area, the entire test area, which has a radius of around 20 metres, is taped off and monitored during testing.
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{assets/location-map.png}
+    \includegraphics[width=\textwidth]{assets/location-map.png}
     \caption{Site map of the test location}
     \label{fig:location-plan}
 \end{figure}
-
-\newpage
 
 \newpage
 \section{Equipment}
