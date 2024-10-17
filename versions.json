@@ -136,11 +136,11 @@
         "hash": "fb63d2b6edccfd695d64a3f593c423175ed02a4baeed72d1cfb028f674db3e35"
     },
     "guidelines/ipz-operation-safety-concept": {
-        "version": "01",
-        "hash": "bf225a0efc3d7d3ea0a356e1dae32a95b8e016ced54b479873a7ac2904de3884"
+        "version": "02",
+        "hash": "d963bbe06efdd9861eb87533ae76715853bc11e671c0375fd7de5be5c3406940"
     },
     "guidelines/ipz-fss-cf-operation-safety-concept": {
-        "version": "01",
-        "hash": "2dcb8cb86607a0e05c16f4c1e8f8ceedf4659dacb7c4561fc047824a5c2e95b0"
+        "version": "02",
+        "hash": "2fe0dca11722ef6b510405a54261f3ff9ab212fbe65c9235a0ed861f2d0893a7"
     }
 }
