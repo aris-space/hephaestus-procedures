@@ -60,10 +60,20 @@ In table \ref{tab:emergency-numbers} the emergency numbers are listed. Call them
     \end{tabularx}
 \end{table}
 \newpage
+\section{Risk Analysis}
+Low Pressure Leakage Tests involve pressurized systems and therefore have an inherent risk. Since the tests are performed with inert gas (nitrogen), the risks are limited to overpressures and asphyxiation by nitrogen rich atmosphere. These risks and their mitigations are discussed in this section.
+\subsection{Overpressure}
+An overpressure of the system can lead to rupture of components and therefore to an explosion. Overpressure can cause injury to personnel, namely hearing damage, lung damage and even death, and damage to surrounding facilities. However, during low pressure leakage tests, the pressure is limited to 10 bar, while all components of the system have been previously tested with pressures up to 60 bar. Additional preventive measures are taken to minimise the damage caused by a possible overpressure event:
+\begin{itemize}
+    \item The system is equipped with multiple pressure relief valves, which are set to open at 60 bar. This ensures that the pressure in the system is limited to 60 bar, even in the case a pressure reducer were to fail.
+    \item The TNT equivalent of the potential energy stored in the system and the size of the corresponding safety radius were calculated according to the ASME PCC-2-2018 standard. The safety radius was determined to be 2.3 meters. To have an additional safety margin, the tape barrier is placed at 5 meters from the trailer on both sides. On the other two sides, the hangar wall and container provide a natural protective barrier.
+    \item The system is equipped with multiple pressure sensors which are monitored continuously during testing. If the pressure exceeds the set limit, an automatic abort is triggered which immediately depressurizes the system.
+\end{itemize}
+\subsection{Asphyxiation}
+Asphyxiation can occur if there is a leak of nitrogen gas into the atmosphere. Nitrogen is an inert gas and therefore does not cause any immediate harm to the human body. However, nitrogen displaces oxygen from the air and can therefore lead to asphyxiation. This risk is mitigated by performing the tests outdoors, where the nitrogen can disperse into the atmosphere and does not accumulate.
 \section{Site Map}
 The tests will be performed in front of the ARIS hangar between the hangar door and the container. The area can be shut off with tape. This way accidental trespassing of other people is avoided. The trailer will be placed in this zone, while the control station is located inside the hangar. 
 Figure \ref{fig:location-plan} shows the setup of the test location and the location of the fire extinguisher and first aid kit. During active testing, only the test conductor, safety officer and engineer in charge are allowed inside the taped zone with appropriate safety equipment (safety goggles and ear protection).
-The size of the safety zone was determined by calculating the TNT equivalent of the stored energy in the system and the resulting safety radius using the ASME PCC-2-2018 standard, the exact calculations can be found in the HEPHAESTUS safety folder on Sharepoint. The resulting minimal safety radius for a Low Pressure Leakage Test is 2.3 meters. To have an additional safety margin, the tape barrier is placed at 5 meters from the trailer on both sides. On the other two sides, the hangar wall and container provide a natural protective barrier.
 \begin{figure}[h]
     \centering
     \includegraphics[width=\textwidth]{assets/location-map.png}
@@ -85,6 +95,7 @@ Every person has to wear a warning vest according to their role at all times dur
     \end{tabularx}
 \end{table}
 The safety equipment is stored inside the ARIS Hangar. The wearing of provided safety equipmentas foreseen in the operating procedures is mandatory.
+\newpage
 \begin{table}[h]
     \caption{Safety Equipment}
     \label{tab:safety-equipment}
@@ -106,11 +117,12 @@ The safety equipment is stored inside the ARIS Hangar. The wearing of provided s
         2 & Barrier tape & \\ \hline
     \end{tabularx}
 \end{table}
-\newpage
 \section{Behaviour during test procedure}
 The test conductor has the lead during the whole test operation and therefore gives the orders, which shall be obeyed. The safety officer supervises the actions of the test conductor and the team and makes sure that the tests are executed according to the procedures. The safety officer can stop the operations at any time he considers proceeding with the test as dangerous. \\
 \noindent
 If during the test procedure an anomaly occurs or if there is an insecurity, the test participants are requested to inform the test conductor and the safety officer immediately.
+
+\newpage
 \section{Behaviour in case of an emergency} \label{emergency-behaviour}
 In case of an emergency or an unexpected system state, the contingency procedures (shown in table \ref{tab:contingency-procedures}) must be followed. Participants will be informed about the location of the contingency procedures during the briefing and installation.
 \begin{table}[h]
