@@ -44,8 +44,8 @@
         "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
     },
     "general/firing-conduction": {
-        "version": "02",
-        "hash": "fdd1448a8d971e361bbc7f3019b42361bdc3091cd6bc46f3c697d439869fa89c"
+        "version": "03",
+        "hash": "064f8da4db68fda4d677f31c21dfd09e9d0566abc401cb9e44b926e7919c0d39"
     },
     "general/contingency-injury": {
         "version": "01",
@@ -112,16 +112,16 @@
         "hash": "8af85d0f8ca65d61ad441335b1e1b6908e7327fd4b097e905bb137414e0bc936"
     },
     "pss/functionality-check-valves": {
-        "version": "02",
-        "hash": "5bc62cf385540fdc14f9d9e6a67fc2e8d128c65e5f5b6fd5cd7a0dc2479ee51d"
+        "version": "03",
+        "hash": "c9b1bb4a42586c0a6d65f7f035e38cf616f4d87578c49a9d2c47ed4a3f4a2c81"
     },
     "pss/contingency-noises-hissing": {
         "version": "01",
         "hash": "a6d465ebf55242c4a96cd4585ad1a39db7fdffbe5240fcc3564990649d841bc1"
     },
     "pss/pss-installation": {
-        "version": "01",
-        "hash": "5b3cf318ab431993dfbde4c2252919f36fc769dc6af702fa50ab7c9c72e7cc8c"
+        "version": "02",
+        "hash": "f002ae35a4ad6206a64603440f09341cd1a88d905a1b3b6b9f804b8422f37955"
     },
     "templates/procedure-template": {
         "version": "01",
