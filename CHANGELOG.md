@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.13](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.12...v0.0.13) - 2024-10-21
+- Risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/42
+
 ## [v0.0.12](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.11...v0.0.12) - 2024-10-17
 - Better risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/40
 
