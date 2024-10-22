@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.14](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.13...v0.0.14) - 2024-10-22
+- CF Updates by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/44
+
 ## [v0.0.13](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.12...v0.0.13) - 2024-10-21
 - Risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/42
 
