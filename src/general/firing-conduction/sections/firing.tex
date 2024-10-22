@@ -64,7 +64,7 @@
   \procedureItem{Close Main Valve (OSS)}{}
   
   \cellcolor{yellow}
-  \procedureItem{→Arm \textbf{}{FIRING} circuit}{}
+  \procedureItem{→Arm \textbf{FIRING} circuit}{}
   
   \cellcolor{yellow}
   \procedureItem{→Disarm \textbf{OSS PRE-FILL} circuit}{}
@@ -73,7 +73,9 @@
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
-  
+  \iftoggle{firing}{\cellcolor{yellow}
+  \procedureItem{Insert and turn \textbf{IGNITION KEY}}{}}{}
+
   \cellcolor{yellow}
   \procedureItem{Close Vent Valve (FSS)}{}
 
