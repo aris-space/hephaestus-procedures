@@ -44,8 +44,8 @@
         "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
     },
     "general/firing-conduction": {
-        "version": "04",
-        "hash": "901a7a92a27f4512b327daeadf6f519bfb6bdab6360692d60bf970fa266624f9"
+        "version": "06",
+        "hash": "04517176b1a185a945b0846f61ed6e6bf4a24e428255cd5e0bc020c08957f171"
     },
     "general/contingency-injury": {
         "version": "01",
@@ -100,8 +100,8 @@
         "hash": "8894a290eab5d9ed0fef3aa8ec0d2de08b1305ba5f55ca984b0c2068459f5c16"
     },
     "pss/high-pressure-leakage-test": {
-        "version": "01",
-        "hash": "47142e77ce395b81ca07c31604ce8c494d199bb9201c4574d015fd4ebda5bc28"
+        "version": "02",
+        "hash": "8aab9f4a129309efaa3e4a3c6e935ab000db24d0b5443c0d3fd3067cb3113a07"
     },
     "pss/contingency-bottle-valve-anomaly": {
         "version": "01",
