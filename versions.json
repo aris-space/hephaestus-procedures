@@ -72,8 +72,8 @@
         "hash": "db1f1b0d709f6afa8928b292425b643861d35c47bf7c1790418db1e00e527ccf"
     },
     "dacs-hw/contingency-power-loss": {
-        "version": "01",
-        "hash": "efcb54bb43972f67489250a3f2c24d9e6a2b5c7f69f5cd2f1f992aaba9a8304b"
+        "version": "02",
+        "hash": "34089c761dbae4ae137a3b0e02eaac5c7cedc7eaf2f8a7562530028bb093332a"
     },
     "dacs-hw/contingency-valve-anomalies": {
         "version": "01",
