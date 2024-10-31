@@ -142,5 +142,9 @@
     "guidelines/ipz-fss-cf-operation-safety-concept": {
         "version": "02",
         "hash": "2fe0dca11722ef6b510405a54261f3ff9ab212fbe65c9235a0ed861f2d0893a7"
+    },
+    "guidelines/ipz-oss-cf-operation-safety-concept copy": {
+        "version": "01",
+        "hash": "46e2dc230d2f0a626708654674d8c8a4fab9564b22deb48a4b7594871fdf1cc2"
     }
 }
