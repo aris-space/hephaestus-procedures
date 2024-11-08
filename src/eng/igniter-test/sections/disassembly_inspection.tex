@@ -1,0 +1,75 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Reestablishment}} \\ \hline
+
+\cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start time: }
+  
+  \cellcolor{cyan}
+  \procedureItem{Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Show current phase on the Firing Organization Chart}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Reestablishment}}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Return N2 Bottle (PRG) to gas storage}{}
+  
+  %\cellcolor{orange}
+  %\procedureItem{Return N2 Bottle (FSS PRZ) to gas storage}{}
+  
+  %\cellcolor{orange}
+  %\procedureItem{Return N2 Bottle (OSS PRZ) to gas storage}{}
+  \iftoggle{firing}{
+  \cellcolor{orange}
+  \procedureItem{Return H2 Bottle to gas storage}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Return O2 Bottle to gas storage}{}
+  }{}
+  %\cellcolor{orange}
+  %\procedureItem{Return Ethanol Canisters to “Gefahrenstofflager”}{}
+  
+  \cellcolor{red}
+  \procedureItem{Clean trailer}{}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Disassembly \& Inspection}} \\ \hline
+
+  \cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start time: }
+  
+  \cellcolor{cyan}
+  \procedureItem{Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ TC informs about the upcoming \textbf{Disassembly \& Inspection}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Hand out the following Procedures:
+    \begin{itemize}
+      \item \textit{\underline{Disassembly Engine}}
+      \item \textit{\underline{Inspection Engine}}
+    \end{itemize}}{}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Work in Parallel}} \\ \hline
+
+  \cellcolor{red}
+  \procedureItem{Disassemble ENGINE according to \textit{\underline{Disassembly Engine}}}{}
+  
+  \cellcolor{red}
+  \procedureItem{Inspect ENGINE according to \textit{\underline{Inspection Engine}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Disassembly Engine}} from ENG1}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Inspection Engine}}}{}
+  
+\end{tabularx}
