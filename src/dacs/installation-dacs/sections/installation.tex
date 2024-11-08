@@ -1,0 +1,395 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & CK 1 & Description \\ \hline
+
+  \procedureItem{
+    Unpack material and place monitors on two tables in the following order (from left to right):
+  \\
+    PROMETHEUS Monitor 1, PROMETHEUS Monitor 2, Surveillance Monitor
+  }
+
+  \procedureItem{
+    Connect 2 monitors PROMETHEUS Monitor 1 and 2 to MC PC (DP cable).
+  }
+
+  \procedureItem{
+    Connect the remaining monitor to the second Windows PC (DP cable).
+  }
+
+  \procedureItem{
+    Connect keyboards, mouses, power adapters and Wifi Adapters to both PCs.
+  }
+
+  \procedureItem{
+    Plug in power of Ethernet switch.
+  }
+
+  \procedureItem{
+    Plug in the circuit breaker (in the power strip) and press the reset button.
+    The field under the reset button should now be colored red.
+    If this is the case, place the housing on the circuit breaker and secure it with tape or a rubber band.
+  }
+
+  \procedureItem{
+    Connect PRO Ethernet Switch to Mission Control PC with short Ethernet cable.
+  }
+
+  \procedureItem{
+    Connect PRO Ethernet Switch to second Windows PC with short Ethernet cable.
+  }
+
+  \procedureItem{
+    Connect both PCs to the power strip an turn them on.
+  \\
+    Login credentials can be found on the DACS software page of the wiki
+  \\
+    \href
+    {https://wiki.aris-space.ch/e/en/rocketry/engines/liquid/test-bench/data-acquisition-and-control-system/Subsystems/Software}
+    {https://wiki.aris-space.ch/e/en/rocketry/engines/liquid/test-bench/data-acquisition-and-control-system/Subsystems/Software}
+  }
+
+  \procedureItem{
+    For the right monitor settings on the MC PC go to 'Settings' -$>$ 'Displays' and check the following things:
+    \begin{itemize}
+      \item Primary Display: Dell Inc. 28"
+      \item Fractional Scaling ON
+      \item Dell Inc. 24": 100\% Scaling
+    \end{itemize}
+    Dell Inc. 28": 175\% Scaling (check the UI in Firefox and if the size is appropriate, otherwise change 175\% to 125\% and try again) if there is some problem with this monitor (e.g. flickering) you can try to change this to another value, but then the UI formatting might not be perfect but still manageable)
+  }
+  
+  \procedureItem{
+    Unroll the 100m cable from the Mission Control Room to the trailer.
+    Be attentive not to damage the cable.
+  }
+  
+  \procedureItem{
+    Check that \underline{none} of the following cables are connected to the electrical cabinet (=P01+A01):
+    \begin{itemize}
+      \item 230VAC Power Supply (male blue SN 441011 type 12 plug, right side bottom)
+      \item MOB Signal Cable (M12 5 pin connector, right side bottom)
+      \item Ethernet Cable (RJ45 connector, right side bottom)
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Check if all plugs on the right side of the electrical cabinet (=P01+A01) are present and all cables are connected according to the wiring map.
+    \textit{Cables including HDC connector housings from X01 to X04 can be temporarily removed to provide a better overview of the P01 to P30 and T01 to T18. Reconnect after this step.}
+  }
+
+  \procedureItem{
+    Open electrical cabinet (=P01+A01) with the DIN lock key.
+  }
+
+  \procedureItem{
+    Check if all components of the electrical cabinet (=P01+A01) are grounded. The following components must be observed:
+
+    \begin{itemize}
+      \item cabinet door
+      \item ceiling
+      \item mounting plate
+    \end{itemize}
+
+    The cable is green yellow and ensures sufficient contact via non-insulated ring terminal lugs.
+  }
+
+  \procedureItem{
+    Check for loose wiring in the 230VAC connections (bottom right of =P01+A01). The wiring runs from the type 13 sockets to the terminals and the power supplies, with the colour code as follows.
+
+    \begin{itemize}
+      \item L: black, grey, or brown
+      \item PE: yellow and green
+      \item N: blue
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Check the power supply on the bottom of the mounting plate for loose cables or breaks as well as the presence of the components.
+    Components that must be present are:
+
+    \begin{itemize}
+      \item 24VDC Weidmüller power supply
+      \item 12VDC Weidmüller power supply
+      \item 5VDC Adjustable power supply
+    \end{itemize}
+
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map.
+  }
+
+  \procedureItem{
+    Check the terminal blocks on the right side of the electrical cabinet (=P01+A01) for loose cables or breaks as well as the presence of the terminal blocks. The terminal blocks should be present in the following order from top to bottom.
+
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map. The following terminal blocks should be present.
+
+    \begin{itemize}
+      \item Thermocouple T1-T10
+      \item Thermocouple T11-T20
+      \item Thermocouple T21-T30
+      \item Static Pressure P1-P10
+      \item Static Pressure P11-P20
+      \item Sense Line S1-S15
+      \item RTD T31-T40
+      \item 24V Supply
+      \item Loadcell L1-L6
+      \item Mass Flow M1-M4
+      \item Valve V1-V20
+      \item Throttle Valve C1-C4
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Check the wiring from the terminal blocks to the signal amplifiers for loose wires and bad insulation. The signal amplifiers can be identified by their labelling:
+
+    \begin{itemize}
+      \item “4-20mA to 2-10V Converter”
+      \item “Filter-boards from thermocouples”
+    \end{itemize}
+
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map.
+  }
+
+  \procedureItem{
+    Check the wiring from the terminal blocks and the signal amplifiers to the expansion boards (DB-37) and relays boards (RB12) for loose wires and bad insulation.
+    If cables are loose or not intact, they must be replaced and rewired according to the wiring map.
+  }
+
+  \procedureItem{
+    Check that:
+
+    \begin{itemize}
+      \item Labjack 1 is connected to Ethernet Switch 0 and expansion board 1
+      \item Labjack 2 is connected to Ethernet Switch 0 and expansion board 2
+      \item Labjack 3 is connected to Ethernet Switch 0 and expansion board 3
+      \item Labjack 4 is connected to Ethernet Switch 0 and expansion board 4
+      \item Labjack 5 is connected to Ethernet Switch 0 and expansion board 5
+      \item Check that ethernet of the surveillance and the 100m cable roll are connected
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Connect the MOB cable signal to the electrical cabinet (=P01+A01).
+  }
+
+  \procedureItem{
+    Remove the cable protectors from the 100m Ethernet cable and keep them in a spot where you can find them again later.
+  \\
+    \hl{Be careful not to lose them!}
+  }
+  
+  \procedureItem{
+    Connect the 100m ethernet cable to the ethernet switch in DACS Box.
+  }
+
+  \procedureItem{
+    Connect the 230 VAC power supply of the electrical cabinet (=P01+A01) to the 100m cable roll.
+  }
+
+  \procedureItem{
+    Check that the surveillance cameras are positioned on the trailer:
+    \begin{itemize}
+      \item 2 cameras on the FSS side
+      \item 2 cameras on the OSS side
+      \item 2 cameras on the shielding wall, on the engine side
+    \end{itemize}
+    For range surveillance, 1 camera will be mounted on the earth wall.
+  }
+
+  \procedureItem{
+    Check inside the junction box on the OSS tower, that every power supply of the cameras is properly connected
+  }
+
+  \procedureItem{
+    Make sure the Modem is connected via cable to the lan network of the trailer (Ethernet Switch 0).
+  }
+
+  \procedureItem{
+    Connect mission control PC to hotspot.
+  }
+
+  \procedureItem{
+    Check the \texttt{\#helios-config-file} Slack channel if any recent changes have been made to the config file.
+  \\
+    \noindent
+  \\
+    In case there have been changes that are not on the MCPC, figure out how to proceed.
+    The changes from Sharepoint may not have been tested.
+  \\
+    When in doubt, use the version from the MCPC and inform the author who made the changes that are not on the MCPC that their change has been ignored and will be reverted at the end of the test.
+  }
+
+  \procedureItem{
+    Connect the MOB cable signal to the MOB box
+  }
+
+  \procedureItem{
+    Ask TC to confirm that it's ok to connect the power cable for the trailer.
+  \\
+    Once confirmed, connect it with the circuit breaker.
+  }
+
+  \procedureItem{
+    Check that there's a connection to the trailer.
+  \\
+    The LED on the switch should light up.
+  \\
+    If it does not, check the cables at every connector.
+  }
+
+  \procedureItem{
+    A green light should turn on for:
+
+    \begin{itemize}
+      \item 24 VDC Power Supply
+      \item 12 VDC Power Supply
+      \item \hl{5 VDC Power Supply?}
+      \item Labjack 1
+      \item Labjack 2
+      \item Labjack 3
+      \item Labjack 4
+      \item Labjack 5
+      \item RB12 Board 0 (relay board 0)
+      \item RB12 Board 1 (relay board 1)
+      \item CB37 Board X1 (expansion board 1)
+      \item CB37 Board X2 (expansion board 2)
+      \item CB37 Board X3 (expansion board 3)
+      \item CB37 Board X4 (expansion board 4)
+      \item CB37 Board X5 (expansion board 5)
+    \end{itemize}
+
+    If there’s a light not turning on it means it’s not powered. Control that the connectors are properly attached and connected
+  }
+
+  \procedureItem{
+    Connect 100m Ethernet cable to the PRO Ethernet Switch
+  }
+
+  \procedureItem{
+    Connect the ethernet cable to the electrical cabinet (=P01+A01), if not already done
+  }
+
+  \procedureItem{
+    The software responsible should check that the ethernet is connected to mission control room computer.
+    If the Labjack is connected to the ethernet an orange light should start blinking on the Labjack
+  }
+
+  \procedureItem{
+    Check if loadcell transmitter are tared.If not tare them.
+    Press tare on the Loadcell PCB in the DACS box.
+  }
+
+  \procedureItem{
+    Close the electrical cabinet (=P01+A01) with the DIN lock key.
+  }
+
+  \procedureItem{
+    Launch system by running in terminal:
+  \\
+    \texttt{./start\_test\_maria.sh}
+  \\
+    Then continue at step 1.19.
+  \\
+    If that does not work do steps 1.14.-1.18.
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    The following steps are already executed by the \texttt{start\_test\_maria.sh} file and usually don't have to be done
+  \\
+    Open UI in browser (preferably Firefox):
+  \\
+  \texttt{file:///home/dacs/git/user-interface/rosWebPage/ui/ \\index.html}
+  \\
+    There is also a bookmark so you don't need to type this in
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Launch ROS from terminal:
+    \begin{itemize}
+      \item \texttt{cd catkin\_ws}
+      \item \texttt{catkin build}
+      \item \texttt{source ./devel/setup.bash}
+      \item \texttt{roslaunch data\_acquisition test.launch}
+    \end{itemize}
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Refresh UI and ensure it is connected to ROS websocket (green message in the histogram)
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Open Plotjuggler in a new terminal:
+    \begin{itemize}
+      \item \texttt{cd catkin\_ws}
+      \item \texttt{catkin build}
+      \item \texttt{source ./devel/setup.bash}
+      \item \texttt{rosrun plotjuggler plotjuggler}
+    \end{itemize}
+  }
+
+  \rowcolor{highlightColor}
+  \procedureItem{
+    Open Plotjuggler in a new terminal:
+    \begin{itemize}
+      \item \texttt{cd catkin\_ws}
+      \item \texttt{source ./devel/setup.bash}
+      \item \texttt{rosrun plotjuggler plotjuggler}
+    \end{itemize}
+  }
+
+  \procedureItem{
+    For the first Plotjuggler window:
+    \begin{itemize}
+      \item Press 'Start' (check that ROS Topic Subscriber is chosen in the Streaming window)
+      \item Choose all sensor topics
+      \item configure plots you want to see by importing layout from \texttt{/home/dacs/git/configuration\_tests/plotjuggler\_config.xml}
+      \item set buffer in upper left corner to 60 to set the window size to 60 seconds
+      \item Move this window to the second monitor
+    \end{itemize}
+  }
+
+  \procedureItem{
+    For the second Plotjuggler window:
+    \begin{itemize}
+      \item Press 'Start' (check that ROS Topic Subscriber is chosen in the Streaming window)
+      \item Choose all sensor topics
+      \item configure plots you want to see by importing layout from \texttt{/home/dacs/git/configuration\_tests/plotjuggler\_config.xml}
+      \item set buffer in upper left corner to 600 to set the window size to 10 minutes
+    \end{itemize}
+  }
+
+  \procedureItem{
+    Confirm that you get valid data read outs from the trailer.
+  }
+
+  \procedureItem{
+    After Mission Control Station is installed as in start surveillance website via the shortcut in the bottom task bar
+  }
+
+  \procedureItem{
+    Login via the button (no password needed, username = admin)
+  }
+
+  \procedureItem{
+    Check that cameras see all points of interest (valves, displays, etc.)
+  }
+
+  \procedureItem{
+    Confirm that you get a live camera feed.
+  }
+
+  \procedureItem{
+    To record the video Press Windows-G and then Record
+  }
+
+  \procedureItem{
+    Good luck on your firing $<$3
+  }
+\end{tabularx}
