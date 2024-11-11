@@ -4,7 +4,7 @@
   \hline
   \rowcolor{tableHeaderColor}
   ID & Check & Description & Comments \\ \hline
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Run Tank Depressurization}} \\ \hline
+  % \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Run Tank Depressurization}} \\ \hline
   \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
   
@@ -31,8 +31,8 @@
 \cellcolor{yellow}
   \procedureItem{Change phase in the UI to \textbf{SYSTEM DEACTIVATION}}{}
   
-  \cellcolor{yellow}
-  \procedureItem{Arm OSS PRE-FILL circuit}{}
+  % \cellcolor{yellow}
+  % \procedureItem{Arm OSS PRE-FILL circuit}{}
   
   \cellcolor{yellow}
   \procedureItem{Disarm FIRING circuit}{}
@@ -158,7 +158,7 @@
   \procedureItem{Step back from the system (outside the safety zone!)}{}
   
   \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: check all temperatures in the engine (nominal $<$ 70°C)}{}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: check all temperatures in the Igniter (nominal $<$ 70°C)}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
@@ -166,11 +166,11 @@
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{FIRING} circuit}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Vent Valve (FSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Vent Valve (FSS)}{}
   
  % \cellcolor{yellow}
  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (FSS PRZ)}{}
@@ -187,11 +187,11 @@
  % \cellcolor{cyan}
  % \procedureItem{Wait until FSS Pressure above Tank is equal to 0.0 barg}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (FSS) for 10s}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (FSS) for 10s}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
@@ -214,14 +214,14 @@
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (FSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (FSS)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{Check igniter lines pressure}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{Check igniter lines pressure}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{OSS PRE-FILL} circuit}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{OSS PRE-FILL} circuit}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{FIRING} circuit}{}
@@ -250,6 +250,13 @@
  % \cellcolor{orange}
  % \procedureItem{Close Bleed Valve (FSS PRZ)}{}
   
+ \cellcolor{orange}
+ \procedureItem{Approach OSS compartment (from behind)}{}
+%  \iftoggle{firing}{
+ \cellcolor{orange}
+ \procedureItem{Set Pressure Reducer (O2 IGN) to DECREASE and fully close additional knob}{}
+
+
   \cellcolor{orange}
   \procedureItem{Approach the ENG compartment (side only; DO NOT STAND IN FRONT OF THE ENGINE)}{}
   
@@ -257,30 +264,28 @@
   \procedureItem{Keep fire extinguisher ready}{}
   
   \cellcolor{orange}
-  \procedureItem{Inspect FSS main line to the engine and its connection for anomalies}{}
+  \procedureItem{Inspect FSS IGN line to the Igniter and its connection for anomalies}{}
   
   \cellcolor{orange}
-  \procedureItem{Inspect OSS main line to the engine and its connection for anomalies}{}
+  \procedureItem{Inspect OSS IGN line to the Igniter and its connection for anomalies}{}
   
   \cellcolor{orange}
-  \procedureItem{Inspect engine for anomalies}{}
+  \procedureItem{Inspect igniter for anomalies}{}
   
   \cellcolor{orange}
   \procedureItem{Turn off cameras}{}
   
   \cellcolor{orange}
   \procedureItem{Perform final visual inspection}{}
+
+  \cellcolor{cyan}
+  \procedureItem{This is the decision point for a rerun, if additional tests are to be performed, restart from Step 6.1}{}
   
 %\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{OSS Run Tank Purging}} \\ \hline
 
 %\cellcolor{yellow}
 %  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{OSS RUN TANK PURGING}}{}
   
-%  \cellcolor{orange}
-%  \procedureItem{Approach OSS compartment (from behind)}{}
-%  \iftoggle{firing}{
-%  \cellcolor{orange}
-%  \procedureItem{Set Pressure Reducer (O2 IGN) to DECREASE and fully close additional knob}{}
 %  }{}
 %  \cellcolor{orange}
 %  \procedureItem{Open N2 Bottle Valve (OSS PRZ) slowly}{}
