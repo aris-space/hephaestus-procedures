@@ -44,8 +44,8 @@
         "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
     },
     "general/firing-conduction": {
-        "version": "01",
-        "hash": "95f89f6d711ccd871cf281c94b9dfe4c162545134fdfd7478e45c22fd2a8dc3a"
+        "version": "02",
+        "hash": "6600c87c78b9a2029077f0a0fd317ef0e4b4564ed9fa7536d0258615d3aba38f"
     },
     "general/contingency-injury": {
         "version": "01",
@@ -132,8 +132,8 @@
         "hash": "793f1cc00568f58c7c665b165c7c491b1fed4eacbf889cd125038a21306027d4"
     },
     "guidelines/operation-safety-concept": {
-        "version": "01",
-        "hash": "fb63d2b6edccfd695d64a3f593c423175ed02a4baeed72d1cfb028f674db3e35"
+        "version": "02",
+        "hash": "9a78a566b47ef486f5fa410cea454c223cb4db1d5c035f9c4ffcaf2387ca682a"
     },
     "guidelines/ipz-operation-safety-concept": {
         "version": "01",
@@ -144,6 +144,10 @@
         "hash": "2dcb8cb86607a0e05c16f4c1e8f8ceedf4659dacb7c4561fc047824a5c2e95b0"
     },
     "guidelines/ipz-oss-cf-operation-safety-concept copy": {
+        "version": "01",
+        "hash": "886ffb66235f9a7ecf50e1194a2f09ab23bd17b655ec0892525a16a6f08e20df"
+    },
+    "guidelines/ipz-oss-cf-operation-safety-concept": {
         "version": "01",
         "hash": "886ffb66235f9a7ecf50e1194a2f09ab23bd17b655ec0892525a16a6f08e20df"
     }
