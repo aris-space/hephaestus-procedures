@@ -38,7 +38,7 @@
   \procedureItem{$\rightarrow$ TC informs about the upcoming:
     \begin{itemize}
       \item \textbf{Preconditions Check}
-      \item \textbf{Functionality Check Valves}
+      \item \textbf{Valve Functionality Check}
       \item \textbf{Leakage Test}
     \end{itemize}
   }{}
@@ -104,7 +104,7 @@
   \procedureItem{Check that the \textbf{IGNITION KEY} is out of the slot}{}
   
   \cellcolor{cyan}
-  \procedureItem{TC, SO, and PSS1 approach the trailer}{}
+  \procedureItem{TC, SO, and PSS1 approach the trailer}{Take chair with you}
   
   \cellcolor{orange}
   \procedureItem{Check that DACS compartment is free of loose items \& clean}{}
@@ -153,13 +153,13 @@
   \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
   
   \cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: announce upcoming \textbf{Functionality Check Valves}}{}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: announce upcoming \textbf{Valve Functionality Check}}{}
   
   \cellcolor{cyan}
   \procedureItem{TC, SO, and PSS1 wear ear protection and safety goggles}{}
   
   \cellcolor{orange}
-  \procedureItem{Perform a Functionality Check Valves according to \textit{\underline{Functionality Check Valves}}}{
+  \procedureItem{Perform a Valve Functionality Check according to \textit{\underline{Valve Functionality Check}}}{
     Pre-Conditions:
     \begin{itemize}
       \item No bottles open
@@ -181,7 +181,7 @@
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to DACS1:
     \begin{itemize}
-      \item Announce end of the \textbf{Functionality Check Valves}
+      \item Announce end of the \textbf{Valve Functionality Check}
       \item Announce upcoming \textbf{Leakage Test \iftoggle{firing}{/ Spark Plug Functionality Check}{}}
     \end{itemize}
   }{}
@@ -207,7 +207,7 @@
   }
   
   \cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to DACS1:
+  \procedureItem{$\leftrightarrow$ TC to all:
     \begin{itemize}
       \item Announce end of the Leakage Test
       \iftoggle{firing}{\item Announce upcoming Spark Plug Functionality Check}{}
@@ -253,12 +253,12 @@
   }{}
   
   \cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: announce end of \textbf{Spark Plug Functionality Check}}{}
+  \procedureItem{$\leftrightarrow$ TC to all: announce end of \textbf{Spark Plug Functionality Check}}{}
   
   \cellcolor{green}
   \procedureItem{SO goes to HUT, takes \textbf{IGNITION KEY}, and returns to trailer}{}
   }{}
-  \cellcolor{green}
+  \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to all:
     \begin{itemize}
       \item Announce end of \textbf{Pre-Firing Checks}

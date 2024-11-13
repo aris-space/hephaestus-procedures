@@ -1,5 +1,23 @@
 # Changelog
 
+## [v0.0.15](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.14...v0.0.15) - 2024-10-23
+- Risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/46
+
+## [v0.0.14](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.13...v0.0.14) - 2024-10-22
+- CF Updates by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/44
+
+## [v0.0.13](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.12...v0.0.13) - 2024-10-21
+- Risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/42
+
+## [v0.0.12](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.11...v0.0.12) - 2024-10-17
+- Better risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/40
+
+## [v0.0.11](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.10...v0.0.11) - 2024-10-17
+- Post dryrun changes by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/38
+
+## [v0.0.10](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.9...v0.0.10) - 2024-10-16
+- Safety concepts by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/36
+
 ## [v0.0.9](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.8...v0.0.9) - 2024-10-14
 - Logo update by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/34
 

@@ -88,6 +88,9 @@
 % Change section numbering to A, B, C...
 \renewcommand{\thesection}{\Alph{section}}
 
+\newtoggle{firing}
+\toggletrue{firing}
+
 \section{Operation Description}
 \input{sections/operation-description.tex}
 
@@ -104,9 +107,6 @@
 \input{sections/environmental-conditions.tex}
 
 \newpage
-
-\newtoggle{firing}
-\toggletrue{firing}
 
 %%%%%% Main section
 % Change section numbering to 1, 2, 3...
