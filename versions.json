@@ -142,5 +142,13 @@
     "guidelines/ipz-fss-cf-operation-safety-concept": {
         "version": "02",
         "hash": "2fe0dca11722ef6b510405a54261f3ff9ab212fbe65c9235a0ed861f2d0893a7"
+    },
+    "guidelines/ipz-oss-cf-operation-safety-concept copy": {
+        "version": "02",
+        "hash": "ab5be4df98f0bd21f9669d1b4658136b1acc2c3eca344f07a985985ff100e9bf"
+    },
+    "eng/igniter-assembly": {
+        "version": "01",
+        "hash": "8715dfa0562a41e8f84c94447a730d02f3d3bb0da97c979f71aac09840a90b9a"
     }
 }
