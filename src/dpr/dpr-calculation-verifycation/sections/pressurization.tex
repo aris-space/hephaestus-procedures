@@ -1,0 +1,94 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Check solenoid valve opening time in the sequence}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Arm \textbf{FSS FILL} circuit}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Change phase in the UI to \textbf{IDLE}}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Check that DPR Valve (FSS DPR) is closed}{}
+  
+  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles and face shields (first time opening bottle only)}{}
+  
+  \procedureItem{Slowly open the N2 Bottle Valve (FSS PRZ)}{}
+  
+  \procedureItem{First time opening N2 Bottle: 
+
+Check line between bottle and Pressure Reducer (FSS PRZ) for leaks (i.e. apply snoop to all fittings)}{}
+  
+  \procedureItem{Set the Pressure Reducer (FSS PRZ) to 20 bar (using the red knob)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Pressure above Tank}{}
+  
+  \procedureItem{Head back to mission control}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Close Vent Valve (FSS)}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open Pressurization Valve (FSS PRZ)}{}
+
+  \procedureItem{Ensure that FSS Pressure above Tank is at 0 barg}{}
+
+  \procedureItem{Write down starting time}{}
+
+  \procedureItem{Change phase in the UI (if we want to have a special phase for the test)}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Initiate \textbf{DPR-Test} sequence}{}
+
+  \procedureItem{Wait until the FSS pressure above tank is stable and write down the value}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open DPR Valve (FSS DPR)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Open Vent Valve (FSS)}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Pressure above Tank}{}
+
+  \procedureItem{Ensure that FSS Pressure above Tank is at 0 barg}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Close DPR Valve (FSS DPR)}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Close Pressurization Valve (FSS)}{}
+
+  \procedureItem{Change phase in the UI to \textbf{SAFE}}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Disarm \textbf{FSS FILL} circuit}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Confirm that no circuit is armed and all valves are in normal state}{}
+
+  \procedureItem{HOLD: system is in a safe-ish state, time for discussion
+  \begin{itemize}
+    \item If you want to do another test with same valve opening time: jump to point 3.28 
+    \item If you want to do another test with a different valve opening time jump to point 3.31
+    \item If you want to end the test jump to point 3.33
+  \end{itemize}
+  }{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: ARM \textbf{FSS FILL} circuit}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Change phase in the UI to \textbf{IDLE}}{}
+  
+  \procedureItem{Go back to point 3.11}{}
+
+  \procedureItem{Update the opening time in the \textbf{DPR-Test} sequence and restart the UI}{}
+
+  \procedureItem{Go back to point 3.28}{}
+    
+  \procedureItem{Close N2 Bottle Valve (FSS PRZ) fully}{}
+
+  \procedureItem{Open Bleed Valve (FSS PRZ)}{}
+  
+  \procedureItem{Set Pressure Reducer (FSS PRZ) to DECREASE}{}
+  
+  \procedureItem{Close Bleed Valve (FSS PRZ)}{}
+  
+  \procedureItem{Verify that the system is fully depressurized (check manometer)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Pressure above Tank}{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: Confirm that no circuit is armed and all valves are in normal state}{}
+  
+\end{tabularx}
