@@ -144,7 +144,11 @@
         "hash": "2fe0dca11722ef6b510405a54261f3ff9ab212fbe65c9235a0ed861f2d0893a7"
     },
     "dacs/installation-dacs": {
+        "version": "02",
+        "hash": "2b8b0fc1472822227ce3273f7d6889ed3ce534793f829450163f956e7da557dc"
+    },
+    "dpr/dpr-calculation-verifycation": {
         "version": "01",
-        "hash": "7858dfd0a15ec8ee91d6c78513ecd84b3a1405b06a9bfa027679d6a1d9ab5f25"
+        "hash": "f0c17c6f4cb4a12cfdb8a17b90d8d5306f409f667ae32bb5ba193cfde01c9801"
     }
 }
