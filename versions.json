@@ -149,7 +149,11 @@
     },
     "eng/igniter-assembly": {
         "version": "01",
-        "hash": "bf225a0efc3d7d3ea0a356e1dae32a95b8e016ced54b479873a7ac2904de3884"
+        "hash": "8715dfa0562a41e8f84c94447a730d02f3d3bb0da97c979f71aac09840a90b9a"
+    },
+    "eng/igniter-test": {
+        "version": "02",
+        "hash": "ef9c5e32d29cf0f4c70aeddcf4e17abbbfca11590bb965a78eea6a6ca7fbd28c"
     },
     "guidelines/ipz-fss-cf-operation-safety-concept": {
         "version": "01",
