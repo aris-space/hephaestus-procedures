@@ -1,5 +1,15 @@
 # Changelog
 
+## [v0.0.16](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.15...v0.0.16) - 2024-11-18
+- Circuit breaker update by @janmenti in https://github.com/aris-space/hephaestus-procedures/pull/48
+- Igniter Assembly, LOX CF SC by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/50
+- OSS CF & HF Safety Concept by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/51
+- Update compile-latex.yml by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/52
+- Igniter Assembly & Igniter Test by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/53
+- DACS Procedures by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/55
+- Lox cf procedure by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/56
+- Contingency frozen by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/57
+
 ## [v0.0.15](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.14...v0.0.15) - 2024-10-23
 - Risk assessment by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/46
 
