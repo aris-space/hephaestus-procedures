@@ -11,28 +11,44 @@
   \procedureItem{Write down starting time}{Start time: }
   
   \cellcolor{cyan}
-  \procedureItem{Define test name (header)}{}
-  
-  \cellcolor{cyan}
   \procedureItem{Define test description (sec. A)}{}
   
   \cellcolor{cyan}
-  \procedureItem{Define who will attend the test (sec B.)}{}
+  \procedureItem{Define who will attend the test (sec B.)}{Check that emergency driver 1 and 2 are never workoing on the system at the same time}
   
   \cellcolor{cyan}
   \procedureItem{Define test parameters (sec. C)}{}
   
   \cellcolor{cyan}
-  \procedureItem{Coordinate testing time slots with airfield responsible (Julius Wymann), e.g.: 
-    \begin{itemize}
-      \item Wednesday, 19.04.2023: Cryogenic Filling \& CF
-      \item Thursday, 20.04.2023: Buffer
-      \item Friday, 21.04.2023: Preparations for Firing
-      \item Saturday, 22.04.2023: Firing
-    \end{itemize}}{}
+  \iftoggle{firing}{\procedureItem{Coordinate testing time slots with airfield responsible (Julius Wymann), e.g.: 
+  \begin{itemize}
+    \item Wednesday, 19.04.2023: Cryogenic Filling \& CF
+    \item Thursday, 20.04.2023: Buffer
+    \item Friday, 21.04.2023: Preparations for Firing
+    \item Saturday, 22.04.2023: Firing
+  \end{itemize}}{}}{\procedureItem{Coordinate testing time slot with IPZ (See IPZ Slack for instructions or message Lina de Windt)}{Documents needed: Safety Concept, Date \& Time, responsible person}}
+  
   
   \cellcolor{cyan}
-  \procedureItem{Organize gas and gas transport if needed}{}
+  \procedureItem{Check gas storage or excel for enough gases}{If not: try to organize more, else move the test.}
+\cellcolor{green}
+\procedureItem{Organize Safety Car}{}
+
+\cellcolor{cyan}
+\procedureItem{Schedule Preparation \& Assembly one day prior to the test, refer to section 3.1 for details.}{}
+
+\cellcolor{cyan}    
+\procedureItem{Inform all attendees about (Slack message in hep-testing):
+\begin{itemize}
+  \item Date and Location
+  \item Scope (Short Test Description)
+  \item Timeline (See 1.12.)
+  \item Attendees
+  \item Safety (Operation Safety Concept, Emergency Contact List)
+  \item Organizational Stuff (Bring your ID's, Weather Conditions, Bring something to eat, Proper clothing for working with LOX)
+  \item Define remaining TODOs and assign a responsible person
+\end{itemize}}{}
+
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{To be performed at least 6 working hours prior to the Briefing}} \\ \hline
   \cellcolor{cyan}
   \procedureItem{Check weather forecast according to Meteo Swiss: 
@@ -40,9 +56,10 @@
       \item Temperatures within operating temperatures (0$^\circ$C -- 35$^\circ$C)
       \item Limited wind, no hard rain and no storms (DACS must stay dry)
     \end{itemize}}{}
-  
   \cellcolor{cyan}
-  \procedureItem{Check that testing area (airfield) is unoccupied (e.g., no tents, trucks, airplanes, \dots)}{}
+  \iftoggle{firing}{\procedureItem{Check that testing area (airfield) is unoccupied (e.g., no tents, trucks, airplanes, \dots)}{}}{}
+  
+
   
   \cellcolor{cyan}    
   \procedureItem{Define starting time of the test}{}
@@ -71,20 +88,10 @@
       \item H+5h45min: Return to IPZ
       \item H+6h00min: Debriefing
     \end{itemize}}{}
+
+  \cellcolor{cyan} 
+  \iftoggle{firing}{\procedureItem{Check that access request to airfield for all attendees has been sent out to MP (check on excel list)}{}}{}
   
-  \cellcolor{cyan}    
-  \procedureItem{Inform all attendees about:
-  \begin{itemize}
-    \item Date and Location
-    \item Scope (Short Test Description)
-    \item Timeline (See 1.12.)
-    \item Attendees
-    \item Safety (Operation Safety Concept, Emergency Contact List)
-    \item Organizational Stuff (Bring your ID's, Weather Conditions, Bring something to eat, Proper clothing for working with LOX)
-  \end{itemize}}{}
-  
-  \cellcolor{cyan}    
-  \procedureItem{Check that access request to airfield for all attendees has been sent out to MP (check on excel list)}{}
   
   \cellcolor{cyan}    
   \procedureItem{Check that emergency responsibles in the \textit{\underline{Contingency Procedures}} are filled out}{}
@@ -106,9 +113,15 @@
   
   \cellcolor{green}    
   \procedureItem{Charge mobile phone if necessary (ensure a charger cable is available)}{}
+
+  \cellcolor{cyan}
+  \procedureItem{Organize Powerbanks}{}
   
   \cellcolor{yellow}
   \procedureItem{Update config files on github, coordinate correct hash with DACS}{}
+
+  \cellcolor{yellow}
+  \procedureItem{Check Sensor configuration ready for test, especially massflow sensors in correct range}{}
   
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{To be performed 30 min before the Briefing}} \\ \hline
   
@@ -126,17 +139,16 @@
   \procedureItem{Evaluate risk in case of adverse weather conditions (heavy rain, \dots)}{}
   
   \cellcolor{cyan}    
-  \procedureItem{Check that all relevant procedures are printed out (sec. D)}{}
+  \procedureItem{Check that all relevant procedures are printed out (sec. D) or that everyone has the relevat procedures downloaded on their tablet}{}
   
   \cellcolor{green}    
   \procedureItem{Check that all attendees have read the \textit{\underline{Operation Safety Concept}}}{}
   \cellcolor{green}   
-  \procedureItem{Check that all attendees have signed the \textit{\underline{Safety Signatures}}}{}
+  \procedureItem{Check that all guests have signed the \textit{\underline{Safety Signatures}}}{}
   
   \cellcolor{green}    
   \procedureItem{Check that all attendees have filled out the \textit{\underline{Emergency Contact List}}}{}
-  
-  \cellcolor{green}    
+  \iftoggle{firing}{\cellcolor{green}    
   \procedureItem{Head to MP to get access badges and keys:
     \begin{itemize}
       \item Bring little bag (if many badges)
@@ -146,8 +158,9 @@
     Do not ask for ``19.22'' !!
   }{Picture of the keys:
     \includegraphics[width=\textwidth]{../firing-conduction/assets/picture-keys.png}
-  }
+  }}{}
   
+  \iftoggle{firing}{
   \cellcolor{cyan}    
   \procedureItem{Re-Check that testing area (airfield) is unoccupied (e.g., no tents, trucks, airplanes, \dots)}{}
   
@@ -163,7 +176,7 @@
     \begin{itemize}
       \item Pistenwagen (PiWa): 079 829 12 18 (Martin Larcher oder Durchdiener)
       \item Roger Gisler (C Support Flugbetrieb): 058 481 79 18 / 079 944 42 52
-    \end{itemize}}{}
+    \end{itemize}}{}}{}
   
   \cellcolor{cyan}    
   \procedureItem{$\rightarrow$ Ready for \textbf{Briefing}}{}

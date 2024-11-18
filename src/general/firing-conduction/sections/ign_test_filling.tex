@@ -9,7 +9,10 @@
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start time: }
-  
+
+  \cellcolor{green}
+  \procedureItem{TC, SO and EICs wear eye and ear protection}{}
+
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: ensure the \textbf{FIRING} circuit is disarmed}{}
   
@@ -134,11 +137,12 @@
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
-  \iftoggle{firing}{
 
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to DACS1: Check FSS Tank Weight}{If not zero, tare in DACS Box}
 
+
+  \iftoggle{firing}{
   \cellcolor{orange}
   \procedureItem{Close O2 Bottle Valve (O2 IGN) fully}{}
   
@@ -155,7 +159,7 @@
   \procedureItem{Clean measuring cup with distilled water}{}
   
   \cellcolor{orange}
-  \procedureItem{Open Drain Valve (FSS)}{}
+  \procedureItem{Open Drain/Fill Valve (FSS)}{}
   
   \cellcolor{orange}
   \procedureItem{Fill ethanol into measuring cup (for amount see sec. C)}{}
@@ -179,7 +183,7 @@
   \procedureItem{Write down amount of total measured ethanol}{ETH Measured: }
   
   \cellcolor{orange}
-  \procedureItem{Close Drain Valve (FSS)}{}
+  \procedureItem{Close Drain/Fill Valve (FSS)}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: check FSS Load Cell readings}{}
@@ -203,56 +207,53 @@
   \cellcolor{cyan}
   \procedureItem{Write down FSS Load Cell measurement}{LC Measured: }
   
-  \cellcolor{orange}
-  \procedureItem{Disconnect fill line (FSS) from the Drain Valve (FSS)}{}
-  
-  \cellcolor{orange}
-  \procedureItem{Mount drain line (FSS) to the Drain Valve (FSS)}{}
-  
-  \cellcolor{orange}
-  \procedureItem{Open Bleed Screw on the FSS mass flow sensor, wait until ethanol comes out, close Bleed Screw again, repeat for the second Bleed Screw}{}
-  
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: Disarm \textbf{FSS FILL} circuit}{}
   
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to all: announce end of \textbf{FSS Filling}}{}
-  
+
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Oxidizer Pre-Filling}} \\ \hline
+
+\cellcolor{cyan}
+\procedureItem{Write down starting time}{Start Time: }
+
+\cellcolor{green}
+\procedureItem{If cryogenic liquids are involved in the test:
+  \begin{itemize}
+    \item Check that all people who will be working on the system wear proper clothing:
+    \begin{itemize}
+      \item Prevent electrostatic charging 
+      \item Avoid porous textiles that can be saturated with liquids
+      \item Ideally thin cotton textiles (covered by a non-porous second skin, like a rain coat)
+    \end{itemize}
+  \end{itemize}
+}{}
+
+\cellcolor{cyan}
+\procedureItem{TC and SO wear ear protection, safety goggles and face shields}{}
+
+\cellcolor{cyan}
+\procedureItem{EICs wears ear protection, safety goggles, cryo-gloves, cryo-face-shield and cryo-apron}{}
+
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: Change phase in the UI to \textbf{OXIDIZER PRE-FILLING}}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: Arm \textbf{OSS PRE-FILL} circuit}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Write down starting time}{Start Time: }
-  
-  \cellcolor{green}
-  \procedureItem{If cryogenic liquids are involved in the test:
-    \begin{itemize}
-      \item Check that all people who will be working on the system wear proper clothing:
-      \begin{itemize}
-        \item Prevent electrostatic charging 
-        \item Avoid porous textiles that can be saturated with liquids
-        \item Ideally thin cotton textiles (covered by a non-porous second skin, like a rain coat)
-      \end{itemize}
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{TC and SO wear ear protection, safety goggles and face shields}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{PSS1 wears ear protection, safety goggles, cryo-gloves, cryo-face-shield and cryo-apron}{}
-
 
 \cellcolor{cyan}
-  \procedureItem{Take Dewar to the trailer, place it in the LOX safety zone (secure it properly, i.e. pull brakes on the wheels). Ensure that the SRV of the Dewar points away from the drawbar of the trailer}{}
+  \procedureItem{Take Dewar to the trailer, place it in front of the OSS fill line (leave enough space for EIC in between trailer and Dewar) (secure it properly, i.e. pull brakes on the wheels). Ensure that the SRV of the Dewar points away from the drawbar of the trailer}{}
 
+\cellcolor{cyan}
+\procedureItem{If recycling with LOX still in the system, jump to step 6.54, else continue with step 6.28}{}
+  
 \cellcolor{orange}
   \procedureItem{Check that Pressure Reducer (OSS PRZ) is set to DECREASE}{}
+
+\cellcolor{orange}
+\procedureItem{Check that OSS Fill valve is closed}{}
 
 \cellcolor{orange}
   \procedureItem{Open N2 Bottle Valve (OSS PRZ)}{}
@@ -288,28 +289,31 @@
   \procedureItem{$\leftrightarrow$TC to DACS1: open Main Valve (OSS MAIN) for 5s}{}
 
 \cellcolor{orange}
-  \procedureItem{Remove end cap from flexible pipe (OSS FILL)}{}
-
-\cellcolor{orange}
-  \procedureItem{Open Drain Valve a little bit (OSS FILL)}{}
+  \procedureItem{Open Drain Valve (OSS FILL)}{}
 
 \cellcolor{cyan}
-  \procedureItem{Ensure that no one is in front of the Drain Valve (OSS FILL) or the flexible pipe of the fill line (hold flexible line into safe direction)}{}
-
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: open Fill Valve (OSS) for 5s (N2 will leave the system) \\ Check whether or not N2 is actually flowing through both flexible line and Drain Valve (OSS FILL)}{}
+  \procedureItem{Ensure that no one is in front of the Drain Valve (OSS FILL)}{}
 
 \cellcolor{orange}
+  \procedureItem{Open Fill Valve (OSS) for 5s (N2 will leave the system)}{}
+
+  \cellcolor{orange}
+  \procedureItem{Close Drain Valve (OSS)}{}
+
+  \cellcolor{orange}
   \procedureItem{Close N2 Bottle Valve (OSS PRZ)}{}
 
-\cellcolor{cyan}
-  \procedureItem{Ensure that no one is in front of the Drain Valve (OSS FILL) or the flexible pipe of the fill line (hold flexible line into safe direction)}{}
+  \cellcolor{orange}
+  \procedureItem{Remove end cap from flexible pipe (OSS FILL)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: open Fill Valve (OSS) for 5s (N2 will leave the system)}{}
+  \cellcolor{cyan}
+  \procedureItem{Ensure that no one is in front of the flexpipe (hold it in a safe direction)}{}
 
-\cellcolor{orange}
-  \procedureItem{Immediately close Drain Valve (OSS FILL)}{}
+  \cellcolor{orange}
+  \procedureItem{Open Fill Valve (OSS) until no more N2 leaves the system}{}
+
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$TC to DACS1: Check OSS Tank Pressure, OSS Fill pressure and OSS Mainline pressure}{}
 
 \cellcolor{orange}
   \procedureItem{Immediately connect flexible pipe to LOX Dewar}{}
@@ -317,17 +321,84 @@
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$TC to DACS1: close Pressurization Valve (OSS PRZ)}{}
 
-\cellcolor{green}
-  \procedureItem{Open Bleed Valve (OSS PRZ) (N2 will leave the system)}{WHY SO?}
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$TC to DACS1: check OSS Pressurization Pressure}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Set Pressure Reducer (OSS PRZ) to DECREASE}{}
+
+
+\cellcolor{cyan}
+  \procedureItem{Jump to step 6.77, oxidizer filling}{}
+
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Oxidizer Re-Filling}} \\ \hline
+
+\cellcolor{orange}
+\procedureItem{Disconnect flexpipe from dewar}{}
+
+\cellcolor{orange}
+\procedureItem{Open drain valve (OSS Fill)}{}
+
+\cellcolor{orange}
+\procedureItem{Remove cap from X-piece}{}
+
+\cellcolor{orange}
+\procedureItem{Close drain valve (OSS Fill)}{}
+
+\cellcolor{orange}
+\procedureItem{Connect flexpipe to x-piece}{}
 
 \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: check OSS Pressurization Pressure}{WHY SO?}
+\procedureItem{$\leftrightarrow$ TC to DACS: Verify Test valve is open \& Open OSS Main Valve (LOX will leave the system)}{}
 
-\cellcolor{green}
-  \procedureItem{Set Pressure Reducer (OSS PRZ) to DECREASE}{WHY SO?}
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Check OSS Loadcell reading}{}
 
-\cellcolor{green}
-  \procedureItem{Close Bleed Valve (OSS PRZ)}{}
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Close OSS Main Valve}{}
+
+\cellcolor{orange}
+\procedureItem{Check OSS PRZ Pressure Reducer is fully set to decrease}{}
+
+\cellcolor{orange}
+\procedureItem{Open N$_2$ Bottle valve (OSS PRZ)}{}
+
+\cellcolor{orange}
+\procedureItem{Set OSS PRZ pressure reducer to 5barg}{}
+
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: check OSS pressurization pressure.}{}
+
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Close OSS Vent Valve}{}
+
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Open OSS PRZ Valve}{}
+
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Check OSS pressure above tank}{}
+
+\cellcolor{orange}
+\procedureItem{Close OSS PRZ N$_2$ bottle valve}{}
+
+\cellcolor{orange}
+\procedureItem{Open OSS Fill Valve until pressure above tank is 0 barg}{\textbf{ATTENTION:} There could still be remaining LOX in the system}
+
+\cellcolor{orange}
+\procedureItem{Connect Flexpipe to LOX Dewar}{}
+
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Close OSS PRZ Valve}{}
+
+\cellcolor{yellow}
+\procedureItem{$\leftrightarrow$ TC to DACS: Close OSS Vent Valve}{}
+
+\cellcolor{orange}
+\procedureItem{Set OSS PRZ pressure reducer to decrease}{}
+
+\cellcolor{cyan}
+\procedureItem{Proceed with step 6.77, oxidizer filling}{}
+
 
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Oxidizer Filling}} \\ \hline
 
@@ -335,33 +406,36 @@
   \procedureItem{$\leftrightarrow$TC to DACS1: change phase in the UI to \textbf{OXIDIZER FILLING}}{}
 
 \cellcolor{cyan}
-  \procedureItem{Perform an OSS Load Cell warning test}{}
+  \procedureItem{Perform an OSS Load Cell warning test}{Pull down quickly on the OSS tank and check that airhorn is activated}
 
 \cellcolor{cyan}
-  \procedureItem{TC, SO and PSS1 are only allowed to stay inside the LOX safety zone (be aware of the SRV openings)}{}
+  \procedureItem{TC, SO and EICs are not allowed to stay on the side of the OSS compartment (be aware of the SRV openings)}{}
 
-\cellcolor{cyan}
-  \procedureItem{Turn on Water Pump; 2930 rpm (max)}{}
+\cellcolor{orange}  
+\procedureItem{Check that the Drain Valve (OSS FILL) is closed}{}
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$TC to DACS1: open Vent Valve (OSS)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: open Fill Valve (OSS)}{}
+\cellcolor{orange}
+  \procedureItem{Open Fill Valve (OSS)}{}
+
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$TC to DACS1: Verify Test Valve is open (OSS)}{}
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$TC to DACS1: open Main Valve (OSS)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: announce upcoming \textbf{LOX filling}. Check OSS Pressure above Tank and OSS Load Cell readings over the duration of the filling}{}
+\cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$TC to everyone: announce upcoming \textbf{LOX filling}. Check OSS Pressure above Tank and OSS Load Cell readings over the duration of the filling}{}
 
 \cellcolor{orange}
   \procedureItem{Check that the Dewar Pressure (manometer) is more than 1 barg}{}
 
 \cellcolor{cyan}
-  \procedureItem{Contingency steps for \iftoggle{firing}{6.108 – 6.120}{6.65 - 6.77}:
+  \procedureItem{Contingency steps until dewar disconnection:
   \begin{itemize}
-      \item If LED lights up:
+      \item If LED turns RED:
       \begin{itemize}
           \item Immediately close LOX Dewar Valve
           \item Check which sensor triggered the warning
@@ -371,19 +445,13 @@
       \begin{itemize}
           \item Immediately close LOX Dewar Valve
           \item Check OSS Pressure above Tank, OSS Fill Line Pressure (no more than 1 barg)
-          \item PSS1 tightens leaking fittings
+          \item EIC tightens leaking fittings
       \end{itemize}
       
       \item If LOX comes out of the Vent Valve (OSS):
       \begin{itemize}
           \item Immediately close LOX Dewar Valve
           \item Wait for nominal evaporation conditions
-      \end{itemize}
-      
-      \item If Fill Valve (OSS) closes unexpectedly:
-      \begin{itemize}
-          \item Immediately close LOX Dewar Valve
-          \item Open Drain Valve (OSS FILL)
       \end{itemize}
   \end{itemize}}{}
 
@@ -392,7 +460,7 @@
   $\rightarrow$ Repressurize LOX Dewar}{}
 
 \cellcolor{cyan}
-  \procedureItem{Wait 120s (Temperature below Tank should reach -160°C)}{}
+  \procedureItem{Wait 120s (Temperature below Tank should reach -160°C)}{Write down OSS Runline Temperature}
 
 \cellcolor{orange}
   \procedureItem{Close LOX Dewar Valve}{}
@@ -404,19 +472,19 @@
   \procedureItem{Open LOX Dewar Valve}{}
 
 \cellcolor{cyan}
-  \procedureItem{Regularly check OSS Pressure above Tank and OSS Load Cell}{}
+  \procedureItem{$\leftrightarrow$TC to DACS1: Continuously announce OSS Pressure above Tank and OSS Load Cell}{}
 
 \cellcolor{cyan}
-  \procedureItem{Wait until OSS Load Cell shows tbd kg (Refer to section C)}{}
+  \procedureItem{Wait until OSS Load Cell reaches predetermined value (Refer to section C)}{}
 
-\cellcolor{green}
-  \procedureItem{Prepare ½ in. Swagelok end cap (plug) and adjustable wrench for PSS1}{}
+\cellcolor{orange}
+  \procedureItem{Prepare ½ in. Swagelok end cap (plug) and adjustable wrench for EIC}{}
 
 \cellcolor{orange}
   \procedureItem{Close LOX Dewar Valve}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: close Fill Valve (OSS)}{}
+\cellcolor{orange}
+  \procedureItem{Close Fill Valve (OSS)}{}
 
 \cellcolor{orange}
   \procedureItem{Slowly open Drain Valve (OSS FILL). Be careful, LOX might drain}{}
@@ -440,9 +508,6 @@
   \procedureItem{Close x-piece in the Fill Line with a ½ in. Swagelok end cap (plug)}{}
 
 \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$TC to DACS1: prepare KiDAQ for firing}{}
-
-\cellcolor{yellow}
   \procedureItem{$\leftrightarrow$TC to DACS1: save plots to mission control PC (if needed)}{}
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{System Activation}} \\ \hline
 
@@ -454,12 +519,6 @@
 
 \cellcolor{orange}
   \procedureItem{Get Dewar and place it outside the safety zone. Secure it properly}{}
-
-\cellcolor{orange}
-  \procedureItem{Check that no sensor cables are touching the engine}{}
-
-\cellcolor{orange}
-  \procedureItem{Check that there are no foreign parts in the ENG, OSS, FSS and DACS compartment}{}
 
 \cellcolor{orange}
   \procedureItem{Turn on GoPro and other cameras around the trailer}{\hl{Add detailed list}}
@@ -510,6 +569,6 @@
   \procedureItem{Ensure that the testing area is cleared (i.e. no tools, boxes, table etc.)}{}
 
 \cellcolor{cyan}
-  \procedureItem{TC, SO and PSS1 return to HUT}{}
+  \procedureItem{TC, SO and EICs return to Mission Control}{}
 
 \end{tabularx}

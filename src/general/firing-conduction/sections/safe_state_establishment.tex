@@ -49,11 +49,11 @@
   \cellcolor{yellow}
   \procedureItem{Perform a surveillance area check}{}
   
-  \cellcolor{cyan}
-  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles and face shields}{}
+  \cellcolor{green}
+  \procedureItem{TC, SO and EICs wear ear protection, safety goggles, face shields and LOX protection}{}
   
   \cellcolor{cyan}
-  \procedureItem{TC, SO and PSS1 slowly approach the safety zone}{}
+  \procedureItem{TC, SO and EICs slowly approach the safety zone}{}
   
   \cellcolor{green}
   \procedureItem{Take fire extinguisher at the border of the safety zone}{}
@@ -135,9 +135,10 @@
   
   \cellcolor{orange}
   \procedureItem{Close Bleed Valve (FSS PRZ)}{}
-  
-  \cellcolor{orange}
-  \procedureItem{Turn off Water Pump}{}
+
+
+  \cellcolor{cyan}
+  \procedureItem{If recycling, disarm \textbf{OSS PRE-FILL} go back to step 6.1, else continue with 8.40}{}
   
   \cellcolor{orange}
   \procedureItem{Slowly open Drain Valve (FSS) (ethanol will leave the system)}{}
@@ -192,7 +193,7 @@
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (FSS) for 10s}{}
-  
+  \iftoggle{firing}{
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
   
@@ -213,12 +214,10 @@
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  }{}
   
   \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (FSS)}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{Check igniter lines pressure}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{\iftoggle{firing}{Check igniter lines pressure}{}}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{OSS PRE-FILL} circuit}{}
@@ -257,10 +256,10 @@
   \procedureItem{Keep fire extinguisher ready}{}
   
   \cellcolor{orange}
-  \procedureItem{Inspect FSS main line to the engine and its connection for anomalies}{}
+  \procedureItem{Inspect FSS run line to the engine and its connection for anomalies}{}
   
   \cellcolor{orange}
-  \procedureItem{Inspect OSS main line to the engine and its connection for anomalies}{}
+  \procedureItem{Inspect OSS run line to the engine and its connection for anomalies}{}
   
   \cellcolor{orange}
   \procedureItem{Inspect engine for anomalies}{}
@@ -297,8 +296,8 @@
 \cellcolor{orange}
   \procedureItem{Close Drain Valve (OSS FILL)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Fill Valve (OSS FILL)}{}
+\cellcolor{orange}
+  \procedureItem{Open Fill Valve (OSS FILL)}{}
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: check OSS Load Cell}{}
@@ -306,8 +305,8 @@
 \cellcolor{orange}
   \procedureItem{Slowly open Drain Valve (OSS FILL) (remaining LOX will drain)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Vent Valve (OSS)}{}
+\cellcolor{orange}
+  \procedureItem{Close Vent Valve (OSS)}{}
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: close Fill Valve (OSS)}{}
@@ -367,7 +366,7 @@
   \procedureItem{Close N2 Bottle Valve (PRG) fully}{}
 
 \cellcolor{orange}
-  \procedureItem{OPEN BLEED VALVE ON THE PRESSURE REDUCER ON THE FILL VALVE IN THE OSS}{}
+  \procedureItem{OPEN BLEED VALVE ON THE PRESSURE REDUCER ON THE MAIN VALVE IN THE OSS}{}
 
 \cellcolor{cyan}
   \procedureItem{Wait until Pneumatic Pressure is equal to 0.0 barg (check manometer and sensor readings)}{}
@@ -382,7 +381,7 @@
   \procedureItem{Set Pressure Reducer (PRG) to DECREASE}{}
 
 \cellcolor{orange}
-  \procedureItem{CLOSE BLEED VALVE ON THE PRESSURE REDUCER ON THE FILL VALVE IN THE OSS}{}
+  \procedureItem{CLOSE BLEED VALVE ON THE PRESSURE REDUCER ON THE MAIN VALVE IN THE OSS}{}
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{SAFE STATE}}{}
@@ -391,6 +390,6 @@
   \procedureItem{$\leftrightarrow$ TC to all: system is in \textbf{Safe State}}{}
 
 \cellcolor{cyan}
-  \procedureItem{TC, SO and PSS1 return to HUT}{}
+  \procedureItem{TC, SO and EICs return to Mission Control}{}
 
 \end{tabularx}

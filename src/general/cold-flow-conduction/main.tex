@@ -41,8 +41,8 @@
 % Command for row in attendee list
 \newcommand{\attendeeItem}[3]{
   \cellcolor{#3} #1 & #2 & 
-  \underline{\hspace{4cm}}
-  & \underline{\hspace{4cm}} \\  \hline
+  \underline{\hspace{3cm}}
+  & \underline{\hspace{3cm}} & \checkbox \\  \hline
 }
 
 % Command for row in note list
@@ -88,6 +88,9 @@
 % Change section numbering to A, B, C...
 \renewcommand{\thesection}{\Alph{section}}
 
+\newtoggle{firing}
+\togglefalse{firing}
+
 \section{Operation Description}
 \input{sections/operation-description.tex}
 
@@ -105,8 +108,6 @@
 
 \newpage
 
-\newtoggle{firing}
-\togglefalse{firing}
 
 %%%%%% Main section
 % Change section numbering to 1, 2, 3...
@@ -122,28 +123,25 @@
 \input{../firing-conduction/sections/briefing.tex}
 
 \section{Preparation \& Assembly}
-\input{../firing-conduction/sections/preparation_assembly.tex}
+\input{sections/preparation_assembly.tex}
 
-\section{Transfer to Airfield and Installation}
-\input{../firing-conduction/sections/transfer_installation.tex}
+\section{Transfer to Test Area and Installation}
+\input{sections/transfer_installation.tex}
 
-\section{Preconditions Checks \& Pre Firing Checks}
+\section{Preconditions Checks \& Pre Coldflow Checks}
 \input{../firing-conduction/sections/preconditions_pre_firing.tex}
 
-\section{Ignition Test \& Filling}
+\section{Filling}
 \input{../firing-conduction/sections/ign_test_filling.tex}
 
-\section{Firing}
+\section{Cold Flow}
 \input{../firing-conduction/sections/firing.tex}
 
 \section{Safe State Establishment}
 \input{../firing-conduction/sections/safe_state_establishment.tex}
 
-\section{Post-Firing Checks \& Deinstallation}
+\section{Post-Coldflow Checks \& Deinstallation}
 \input{../firing-conduction/sections/post_firing_deinstallation.tex}
-
-\section{Return to IPZ}
-\input{../firing-conduction/sections/return_ipz.tex}
 
 \section{Disassembly \& Inspection}
 \input{../firing-conduction/sections/disassembly_inspection.tex}
