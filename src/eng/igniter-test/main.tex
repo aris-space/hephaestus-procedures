@@ -1,0 +1,160 @@
+% filename: HEP_OP_ENG_IgniterTest
+
+\documentclass{article}
+
+\input{../../common/lib/header}
+
+% Define a counter for the item numbers
+\newcounter{rowCounter}
+% Initialize counter
+\setcounter{rowCounter}{0}
+
+\newcounter{tableCounter}
+\setcounter{tableCounter}{0}
+
+% Command for row in checklist
+% First argument is amount
+% Second argument is description
+\newcommand{\checklistItem}[2]{
+  \checkbox & #1 & #2 \\ \hline
+}
+
+% Command for row in procedure list
+\newcommand{\procedureItem}[2]{
+  \stepcounter{rowCounter} % Increment counter
+  \arabic{tableCounter}.\arabic{rowCounter}
+  &
+  \checkbox
+  &
+  \begin{minipage}[t]{1.2\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  &
+  \begin{minipage}[t]{0.8\linewidth}
+    #2
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in attendee list
+\newcommand{\attendeeItem}[3]{
+  \cellcolor{#3} #1 & #2 & 
+  \underline{\hspace{4cm}}
+  & \underline{\hspace{4cm}} \\  \hline
+}
+
+% Command for row in note list
+\newcommand{\noteItem}[1]{
+  \begin{minipage}[t]{\linewidth}
+    #1
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+% Command for row in documents list
+\newcommand{\documentItem}[3]{
+  \checkbox
+  &
+  #1
+  &
+  \begin{minipage}[t]{\linewidth}
+    \textit{\uline{#2}}
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  &
+  \begin{minipage}[t]{\linewidth}
+    #3
+    \vspace{1mm} % Just slightly add vspace to prevent clipping into table border
+  \end{minipage}
+  \\ \hline
+}
+
+
+\title{Igniter Test Procedure}
+\author{Operating Procedure}
+\date{Version: \isodate\today}
+
+\begin{document}
+
+\maketitle
+
+% Set the page style for the title page
+\thispagestyle{fancy}
+
+%%%%%% Prefix section
+% Change section numbering to A, B, C...
+\renewcommand{\thesection}{\Alph{section}}
+
+\newtoggle{firing}
+\toggletrue{firing}
+
+\section{Operation Description}
+\input{sections/operation-description.tex}
+
+\section{Role Assignment}
+\input{sections/role-assignment.tex}
+
+\section{Test Parameters}
+\input{sections/test-parameters.tex}
+
+\section{Required Documents}
+\input{sections/required-documents.tex}
+
+\section{Environmental Conditions}
+\input{sections/environmental-conditions.tex}
+
+\newpage
+
+%%%%%% Main section
+% Change section numbering to 1, 2, 3...
+\renewcommand{\thesection}{\arabic{section}}
+
+% Reset section counter to start from 1 again
+\setcounter{section}{0}
+
+\section{Pre-Preparation}
+\input{sections/pre_preparation.tex}
+\newpage
+\section{Briefing}
+\input{sections/briefing.tex}
+
+\section{Preparation \& Assembly}
+\input{sections/preparation_assembly.tex}
+\newpage
+\section{Transfer to Airfield and Installation}
+\input{sections/transfer_installation.tex}
+
+\section{Preconditions Checks \& Pre Firing Checks}
+\input{sections/preconditions_pre_firing.tex}
+
+\section{Ignition Test}
+\input{sections/ign_test_filling.tex}
+
+%\section{Firing}
+%\input{sections/firing.tex}
+
+\section{Safe State Establishment}
+\input{sections/safe_state_establishment.tex}
+
+\section{Post-Firing Checks \& Deinstallation}
+\input{sections/post_firing_deinstallation.tex}
+
+\section{Return to IPZ}
+\input{sections/return_ipz.tex}
+
+\section{Disassembly \& Inspection}
+\input{sections/disassembly_inspection.tex}
+
+\section{Debriefing}
+\input{sections/debriefing.tex}
+\newpage
+
+%%%%%% Notes
+\setcounter{section}{0}
+\section*{Notes}
+\input{sections/notes.tex}
+
+\end{document}
