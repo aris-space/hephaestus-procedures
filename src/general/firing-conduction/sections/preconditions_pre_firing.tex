@@ -9,30 +9,8 @@
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start time: }
-  
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Trailer from ENG1}}}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Control}} from DACS1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{KiDAQ}} from DACS1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Hardware Check}} from DACS2}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Surveillance}} from DACS2}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation PSS}} from PSS1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Igniter}} from ENG1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Gather everyone in front of the HUT and perform an attendance check (sec. B)}{}
+  \procedureItem{Gather everyone in front of Mission Control and perform an attendance check (sec. B)}{}
   
   \cellcolor{cyan}
   \procedureItem{$\rightarrow$ TC informs about the upcoming:
@@ -42,20 +20,7 @@
       \item \textbf{Leakage Test}
     \end{itemize}
   }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{$\rightarrow$ From now on only TC, SO, and PSS1/ENG1 approach the trailer, except if explicitly demanded by an operation procedure or with the explicit consent of the TC or SO}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Tasks:
-    \begin{itemize}
-      \item TC, SO, and PSS1 go to trailer → carry ear protection with you. Take face shields to the trailer
-      \item DACS1: start UI (if not already done). Get ready for Pre-Firing Checks
-      \item Everyone else: Wait in HUT, ensure general order is established
-    \end{itemize}
-  }{}
-
-  
+ 
   \cellcolor{green}
   \procedureItem{Inform about safety points:
     \begin{itemize}
@@ -75,13 +40,13 @@
   \cellcolor{cyan}
   \procedureItem{Read out behaviour rules:
     \begin{itemize}
-      \item Between briefing and debriefing all present people are to wear warning vests and Visitor Badges (military)
+      \item Between briefing and debriefing all present people are to wear warning vests\iftoggle{firing}{ and Visitor Badges (military)}{}
       \item Inform TC and SO when task is completed
-      \item If you have no current task: wait in the HUT and do not disturb other working members
-      \item No one is to leave the area visible from the HUT (as soon as we are there)
+      \item If you have no current task: wait at Mission Control and do not disturb other working members
+      \item No one is to leave the area visible from the Mission Control (as soon as we are there)
       \item If you need to go to the toilet, do it right after the briefing
-      \item On the airfield: when going to the toilet, let other people know
-      \item You are NOT allowed to take any pictures or videos in the HUT
+      \item When going to the toilet, let other people know
+      \iftoggle{firing}{\item You are NOT allowed to take any pictures or videos in the HUT}{}
     \end{itemize}
   }{}
   
@@ -94,17 +59,33 @@
   
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Preconditions Check}} \\ \hline
 
+ 
+\cellcolor{cyan}
+\procedureItem{$\rightarrow$ From now on only TC, SO, and EICs approach the trailer, except if explicitly demanded by an operation procedure or with the explicit consent of the TC or SO}{}
+
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
   
   \cellcolor{green}
-  \procedureItem{Check that keys for the Emergency Car and the main gate are on the driver seat of the Emergency Car}{}
+  \procedureItem{Check that keys for the Emergency Car and the \iftoggle{firing}{main gate}{} are on the driver seat of the Emergency Car}{}
+
+  \cellcolor{green}
+  \procedureItem{Check that the safety zone around the trailer is marked off correctly:
+    \begin{itemize}
+      \item Warning tape
+      \item Fire extinguishers (one at the border, one near the trailer)
+      \item Warning sign (on the road between mobile hangar and HUT)
+    \end{itemize}
+  }{}
   
   \cellcolor{green}
-  \procedureItem{Check that the \textbf{IGNITION KEY} is out of the slot}{}
+  \procedureItem{SO takes the \textbf{IGNITION KEY}}{}
+
+  \cellcolor{green}
+  \procedureItem{Check that everyone in the Safety Zone is wearing ear and eye protection}{}
   
   \cellcolor{cyan}
-  \procedureItem{TC, SO, and PSS1 approach the trailer}{Take chair with you}
+  \procedureItem{TC, SO, and EICs approach the trailer}{Take chair with you}
   
   \cellcolor{orange}
   \procedureItem{Check that DACS compartment is free of loose items \& clean}{}
@@ -121,15 +102,6 @@
   \cellcolor{orange}
   \procedureItem{Check that FSS compartment is free of loose items \& clean}{}
   
-  \cellcolor{green}
-  \procedureItem{Check that the safety zone around the trailer is marked off correctly:
-    \begin{itemize}
-      \item Warning tape
-      \item Fire extinguishers (one at the border, one near the trailer)
-      \item Warning sign (on the road between mobile hangar and HUT)
-    \end{itemize}
-  }{}
-  
   \cellcolor{cyan}
   \procedureItem{$\rightarrow$ End of Preconditions Check}{}
   
@@ -137,32 +109,34 @@
   \procedureItem{$\leftrightarrow$ TC to all:
     \begin{itemize}
       \item Announce end of Preconditions Check
-      \item Announce upcoming Pre-Firing Checks
+      \item Announce upcoming Pre-\iftoggle{firing}{Firing}{Coldflow} Checks
     \end{itemize}
   }{}
   
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Firing Checks}} \\ \hline
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-\iftoggle{firing}{Firing}{Coldflow} Checks}} \\ \hline
   
   \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
-  
+
   \cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: ready for \textbf{Functionality Check}}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
+  \procedureItem{TC, SO, and PSS1 wear ear protection and safety goggles}{}
   
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to DACS1: announce upcoming \textbf{Valve Functionality Check}}{}
   
-  \cellcolor{cyan}
-  \procedureItem{TC, SO, and PSS1 wear ear protection and safety goggles}{}
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
+  
+
+  
+ 
   
   \cellcolor{orange}
   \procedureItem{Perform a Valve Functionality Check according to \textit{\underline{Valve Functionality Check}}}{
     Pre-Conditions:
     \begin{itemize}
-      \item No bottles open
+      \item All bottles connected
+      \item No bottle valve open
       \item No lines pressurized
       \item UI: IDLE
       \item No circuit armed
@@ -187,7 +161,7 @@
   }{}
   
   \cellcolor{orange}
-  \procedureItem{Perform a leakage test of the PSS and ENG according to \textit{\underline{High Pressure Leakage Test PSS}}}{
+  \procedureItem{Perform a leakage test of the PSS and ENG according to \textit{\underline{High Pressure Leakage Test PSS}}. If no modifications since last leakage test, LPLT can be skipped.}{
     Pre-Conditions:
     \begin{itemize}
       \item N$_2$ Bottle (PRG) open
@@ -215,7 +189,7 @@
   }{}
   
   \cellcolor{orange}
-  \procedureItem{Remove pressure plate from engine}{}
+  \procedureItem{Remove pressure plate from engine or cap from runline}{}
   
   \cellcolor{orange}
   \procedureItem{Install GoPro mounts and other cameras (don’t turn them on yet)}{}
@@ -261,7 +235,7 @@
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to all:
     \begin{itemize}
-      \item Announce end of \textbf{Pre-Firing Checks}
+      \item Announce end of \textbf{Pre-\iftoggle{firing}{Firing}{Coldflow} Checks}
       \item Announce upcoming \iftoggle{firing}{\textbf{Ignition Test}}{\textbf{Filling}}
     \end{itemize}
   }{}
