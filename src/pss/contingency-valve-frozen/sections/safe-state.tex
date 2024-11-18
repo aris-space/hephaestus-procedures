@@ -1,0 +1,28 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|c|X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Respomsible & Task \\ \hline
+  
+  \procedureItem{DACS}{Close PRZ valve OSS}
+  
+  \procedureItem{DACS}{Open vent valve OSS}
+
+  \procedureItem{TC}{Once depressurized, try to open the valve again.}
+  
+  \procedureItem{TC}{Verify all valves in normal state in UI}
+  
+  \procedureItem{DACS}{Restart UI and try to open Main Valve OSS}
+  
+  \procedureItem{TC}{Check pressure: if it is = 0 barg, trailer can be approached, jump to step \textbf{1.8}, else go to step \textbf{1.7}}
+
+  \procedureItem{TC}{Wait until trailer is apporachable or all of the LOX is vented (check with OSS Tank Temperature)}
+
+  \procedureItem{TC}{Check that drain Valve OSS Fill is open}
+
+  \procedureItem{TC}{Open Fill Valve OSS slowly (careful, LOX will drain)}
+  
+\end{tabularx}

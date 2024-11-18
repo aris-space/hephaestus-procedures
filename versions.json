@@ -162,5 +162,9 @@
     "guidelines/ipz-oss-cf-operation-safety-concept": {
         "version": "01",
         "hash": "886ffb66235f9a7ecf50e1194a2f09ab23bd17b655ec0892525a16a6f08e20df"
+    },
+    "pss/contingency-valve-frozen": {
+        "version": "01",
+        "hash": "c0801b4073c76bc6d98467ba2595135a3a4478ce0c5f0f8feeb6b0b5c95c205a"
     }
 }
