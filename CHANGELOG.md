@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.17](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.16...v0.0.17) - 2024-12-03
+- DACS Updates by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/58
+- Packing update by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/60
+
 ## [v0.0.16](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.15...v0.0.16) - 2024-11-18
 - Circuit breaker update by @janmenti in https://github.com/aris-space/hephaestus-procedures/pull/48
 - Igniter Assembly, LOX CF SC by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/50
