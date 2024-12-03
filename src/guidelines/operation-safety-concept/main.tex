@@ -89,6 +89,48 @@ During phases 5 to 7, the system is in a dangerous state. Therefore, no one is a
 
 \newpage
 
+\section{Risk Assessment}
+Firing tests involve pressurized systems, cryogenic and flammable fluids, as well as high temperatures and therefore have inherent risks associated with them. The risks are assessed and mitigated as described below:
+\subsection{Overpressure}
+An overpressure of the system can lead to rupture of components and therefore to an explosion. Overpressure can cause injury to personnel, namely hearing damage, lung damage and even death, and damage to surrounding facilities. However, during all operations with the trailer, the pressure is limited to 60 bar and all components of the system have previously been tested to 60 bar. Additional preventive measures are taken to minimise the chance of occurance and damage caused by a possible overpressure event:
+\begin{itemize}
+    \item Every potentially closed section of the system is equipped with a pressure relief valve, which are set to open at 80 bar. This ensures that the pressure in the system is limited to 80 bar, even in the case a pressure reducer were to fail or trapped LOX were to start evaporating. While this is higher than what the components have been tested to on the OSS side, all components are rated for at least 180 bar, which leaves a safety margin against plastic deformation of 2.25.
+    \item The TNT equivalent of the potential energy stored in the system and the size of the corresponding safety radius were calculated according to the ASME PCC-2-2018 standard. The potential energy also includes the theoretical maximum releasable energy if the ethanol content of the fully fueled system were to instantaneously combust with the LOX in the system. The safety radius was determined to be 53 meters. This case is extensively mitigated by strictly separating the propellants during all operations. Even in the unlikely case of a complete explosion of the system, the HUT where all personnel is located during testing is located around 70 meters away from the system.
+    \item The system is equipped with multiple pressure sensors which are monitored continuously during testing. If the pressure exceeds the set limit, an automatic abort is triggered which immediately depressurizes the system.
+    \item While personnel is working on the system, the pressurization valves are disabled through a physical circuit which disables the power to the solenoid valves. This ensures that the system cannot be pressurized while personnel is working on it.
+\end{itemize}
+\subsection{Asphyxiation}
+Asphyxiation can occur if there is a leak of nitrogen gas into the atmosphere. Nitrogen is an inert gas and therefore does not cause any immediate harm to the human body. However, nitrogen displaces oxygen from the air and can therefore lead to asphyxiation. This risk is mitigated by performing the tests outdoors, where the nitrogen can disperse into the atmosphere and does not accumulate. For transport to the airfield, the N2 bottles are only transported in cars with open windows, to ensure good ventilation. 
+\subsection{Cryogenic Burns}
+Cryogenic burns can occur if a person comes into contact with the cryogenic liquid oxygen. Liquid oxygen has a temperature of -183°C and can cause severe burns on contact with human skin. To prevent this, multiple safety measures are implemented:
+\begin{itemize}
+    \item All people working on the system during liquid oxgen filling and pressurization are required to wear adequate protective equipment, namely:
+    \begin{itemize}
+        \item Cryogenic resistant face shield to protect the face from splashes of liquid oxygen
+        \item Cryogenic resistant apron to protect the body from splashes of liquid oxygen
+        \item Cryogenic resistant gloves to protect the hands from splashes of liquid oxygen
+        \item Safety shoes to protect the feet from splashes of liquid oxygen
+        \item Thin cotton textiles to avoid saturation with liquid oxygen covered by a nonporous raincoat.
+    \end{itemize}
+    \item Procedures are in place to avoid personnel standing in areas where liquid oxygen could be released from the system and dry runs are performed to train the procedures.
+    \item The safety officer enforces the protected zones around the system during pressurization and liquid oxygen filling.
+    \item Finally, the contingency procedures for injury also cover the treatment of cryogenic burns.
+\end{itemize}
+
+\subsection{Fire}
+The strong oxidizing properties of liquid oxygen can cause fires if it comes into contact with flammable materials. The risk of fire is mitigated by:
+\begin{itemize}
+    \item All parts of the system that can come into contact with liquid oxygen are made of non flammable, liquid oxygen compatible materials.
+    \item The whole OSS section is thoroughly cleaned in accordance with cleaning for oxygen service (CFOS) procedures before the tests.
+    \item The system is purged with nitrogen before the tests to remove any particles that could ignite in contact with liquid oxygen.
+    \item For transport, the hydrogen and ethanol is always transported separately from the LOX and O2 to avoid any contact between fuels and oxidizers.
+\end{itemize}
+
+\subsection{Injury}
+To conduct the tests, gas bottles have to be handled and moved from the gas storage to the test site. Since the gas bottles are heavy and can be difficult to handle, they pose a risk of injury. To mitigate this risk, all personnel involved in handling the gas bottles are required to wear safety shoes, thick clothing and gloves. Additionally, the gas bottles are transported using a gas bottle trolley to reduce the risk of injury.
+
+\newpage
+
 \section{Site Map}
 The tests are performed in on the old runway of the Dübendorf Airfield. The area consists of the Runway, a hill and the Hunter Stübli (HUT). The trailer is positioned on the Runway in a way that the nozzle exhaust is pointed towards the hill. The Hunter Stübli is used as a control station. \\
 \noindent
@@ -112,7 +154,6 @@ Figure \ref{fig:emergency-route} shows the route that should be driven to exit t
     \label{fig:emergency-route}
 \end{figure}
 
-\newpage
 \section{Equipment}
 Every person has to wear a warning vest according to their role at all times during testing operations. The color code displayed in table \ref{tab:color-code} is used.
 \begin{table}[h]
@@ -120,7 +161,7 @@ Every person has to wear a warning vest according to their role at all times dur
     \label{tab:color-code}
     \begin{tabularx}{0.9\textwidth}{|X|X|X|X|}
         \hline
-        \cellcolor{cyan} Test Conductor & \cellcolor{green} Safety Officer & \cellcolor{orange} Engineers in charge (determined in role assignment) & \cellcolor{yellow} Visitors \\ \hline
+        \cellcolor{cyan} Test Conductor & \cellcolor{green} Safety Officer & \cellcolor{orange} Engineers in charge (determined in role assignment) & \cellcolor{yellow} Visitors, Remaining Engineers, Team Members \\ \hline
     \end{tabularx}
 \end{table}
 The safety equipment is stored in the entrance of the HUT. The wearing of provided safety equipmentas foreseen in the operating procedures is mandatory.
@@ -149,35 +190,15 @@ The safety equipment is stored in the entrance of the HUT. The wearing of provid
         2 & Barrier tape & \\ \hline
     \end{tabularx}
 \end{table}
-
+\newpage
 \section{Behaviour during test procedure}
 The test conductor has the lead during the whole test operation and therefore gives the orders, which shall be obeyed. The safety officer supervises the actions of the test conductor and the team and makes sure that the tests are executed according to the procedures. The safety officer can stop the operations at any time he considers proceeding with the test as dangerous. \\
 \noindent
 If during the test procedure an anomaly occurs or if there is an insecurity, the test participants are requested to inform the test conductor and the safety officer immediately. \\
 \noindent
-The attendees are not allowed to take photos and record video material. A pre-determined photographer will take pictures and video footage. The publishing of this material via social media or other channels is strictly forbidden. All to be published material must be checked and approved by the Airfield Dübendorf on request of team HELIOS. \textbf{Please do not contact the Airfield on your own}. \\
+The attendees are not allowed to take photos and record video material. A pre-determined photographer will take pictures and video footage. The publishing of this material via social media or other channels is strictly forbidden. All to be published material must be checked and approved by the Airfield Dübendorf on request of team HEPHAESTUS. \textbf{Please do not contact the Airfield on your own}. \\
 \noindent
 By signing the HEP\_GL\_SafetySignature you agree that during the tests pictures of you will be taken and used for internal purposes (photo gallery on website, flyer, Instagram, LinkedIn). If you do not agree, please contact the project manager or the safety officer during the briefing.
-\begin{itemize}
-    \item Focus
-    \item Even if you know the steps by heart, follow the procedure so that nothing is forgotten 
-    \item Work efficiently but do not rush. We’ll take all the time we need to do things properly
-    \item If something does not go as planned or seems suspicious, inform the TC and SO. Better to delay the test than to damage the system or even injure someone
-    \item If you notice unauthorized people, animals, cars, airplanes near the testing location, inform the TC and SO
-    \item Wear safety equipment as specified in the procedures
-    \item During every briefing all attendees must be present
-    \item Between briefing and debriefing all present people outside of the HUT (on the airfield) are to wear safety goggles. Remind each other if someone forgets it
-    \item Take care of each other
-    \item In case of an incident: First, keep calm and think. Do not endanger yourself. Then react. Use the contingency procedures. Emergency responsibilities are defined
-    \item Between briefing and debriefing all present people are to wear warning wests and Visitor Badges (military)
-    \item Inform TC and SO when the task is completed
-    \item There is a dedicated waiting area installed in the HUT, where you are encouraged to wait, if you have no current task
-    \item Do not disturb/interrupt other working members
-    \item No one is to leave the area visible from the HUT (as soon as we get there), except if explicitly demanded by an operation procedure or with the explicit consent of the TC or SO. Normal place to stay if there is no task is in the HUT
-    \item When going to the toilet, let other people know
-    \item You are NOT allowed to take any pictures or videos in HUT
-    \item Please keep the tables, as well as all the working places empty and clean
-\end{itemize}
 
 \section{Behaviour in case of an emergency} \label{emergency-behaviour}
 In case of an emergency or an unexpected system state, the contingency procedures (shown in table \ref{tab:contingency-procedures}) must be followed. Participants will be informed about the location of the contingency procedures during the briefing and installation according to the Firing Conduction.

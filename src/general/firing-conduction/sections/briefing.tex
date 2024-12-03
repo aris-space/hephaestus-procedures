@@ -13,9 +13,9 @@
     \begin{itemize}
       \item TC: blue
       \item SO: green
-      \item PSS1 \& PSS2: orange
-      \item ENG1 \& ENG2: orange
-      \item DACS1: orange
+      \item EIC: orange
+      \item DACS: yellow
+      \item LGO: yellow
       \item Visitors: yellow
       \item Supervisors: yellow
     \end{itemize}
@@ -28,19 +28,17 @@
   \procedureItem{Inform about the role assignment (sec. B)}{}
   
   \cellcolor{cyan}
-  \procedureItem{Show current phase on the Firing Organization Chart}{}
-  
-  \cellcolor{cyan}
   \procedureItem{Read out behaviour rules:
     \begin{itemize}
-      \item Between briefing and debriefing, all present people are to wear warning vests and Visitor Badges (military)
+      \iftoggle{firing}{\item Between briefing and debriefing, all present people are to wear warning vests and Visitor Badges (military)}{}
       \item Inform TC and SO when task is completed
-      \item If you have no current task, wait in the HUT and do not disturb other working members
-      \item No one is to leave the area visible from the HUT (as soon as we are there)
+      \item If you have no current task, wait in the \iftoggle{firing}{HUT}{Mission Control} and do not disturb other working members
+      \item No one is to leave the area visible from the \iftoggle{firing}{HUT}{Mission Control} (as soon as we are there)
       \item If you need to go to the toilet, do it right after the briefing
-      \item On the airfield: when going to the toilet, let other people know
-      \item You are NOT allowed to take any pictures or videos inside the HUT
-      \item The test consists of 13 phases: Pre-Preparation (already over), Briefing (right now), Preparation \& Assembly, Transfer to Airfield, Installation and Pre-Firing Checks, Filling \& Ignition Test, Firing, Safe State Establishment, Post-Firing Checks \& Deinstallation, Return to IPZ, Disassembly \& Inspection, and we end with a Debriefing
+      \item When going to the toilet, let other people know
+      \iftoggle{firing}{\item You are NOT allowed to take any pictures or videos inside the HUT}{}
+      \item The test consists of \iftoggle{firing}{12}{11} phases: Pre-Preparation (already over), Briefing (right now), Preparation \& Assembly, Transfer to Testing Area, Installation and Pre-\iftoggle{firing}{Firing}{Coldflow} Checks, Filling\iftoggle{firing}{\& Ignition Test}{}, \iftoggle{firing}{Firing}{Coldflow}, Safe State Establishment, Post-\iftoggle{firing}{Firing}{Coldflow} Checks \& Deinstallation, Return to Hangar, Disassembly \& Inspection, and we end with a Debriefing
+      \item Radio communication: Always use call signs ("TC to DACS") and wait for confirmation ("come in") before message.
       \item Read out the test description (sec. A) (goals of the test)
       \item Go through the test parameters (sec. C)
     \end{itemize}
@@ -48,10 +46,7 @@
   }{}
   
   \cellcolor{green}
-  \procedureItem{Hand out safety goggles (Can also be done on the airfield, note: for handling N$_2$ bottle, safety goggles are mandatory)}{}
-  
-  \cellcolor{green}
-  \procedureItem{Check that all people who will be working on the system wear safety shoes}{}
+  \procedureItem{Hand out safety goggles (Can also be done at the test site, note: for handling N$_2$ bottle, safety goggles are mandatory)}{}
   
   \cellcolor{green}
   \procedureItem{If cryogenic liquids are involved in the test: Check that all people who will be working on the system wear proper clothing:
@@ -59,6 +54,7 @@
       \item Prevent electrostatic charging 
       \item Avoid porous textiles that can be saturated with liquids
       \item Ideally, thin cotton textiles (covered by a non-porous second skin, like a raincoat)
+      \item EIC has to wear adequate footwear.
     \end{itemize}
   }{}
   
@@ -71,13 +67,12 @@
       \item If something does not go as planned or seems suspicious, inform the TC and SO
       \item If you notice unauthorized people, animals, cars, airplanes near the testing location, inform the TC and SO
       \item Wear safety equipment as specified in the procedures
-      \item Between briefing and debriefing, all present people outside of the HUT (on the airfield) are to wear safety goggles
+      \item Between briefing and debriefing, all present people inside the safety zone are to wear eye and ear protection
       \item In case of an incident: First, keep calm and think. Do not endanger yourself. Then react. Use the contingency procedures. Emergency responsibilities are defined
       \item Show the location of Contingency Procedures and how to use them (for new visitors only)
       \item Confirm that everyone has read the Operation Safety Concept
       \item Confirm that everyone has filled out the Emergency Contact List
-      \item Confirm that no one is allergic to bees/wasps (nest nearby HUT). 
-      If anyone is allergic: Check that they have proper medication with them
+      \item Check if anyone has allergies, if yes check that they have proper medication on them.
     \end{itemize}
   }{}
   
@@ -91,7 +86,7 @@
   }{}
   
   \cellcolor{cyan}
-  \procedureItem{If \textbf{Transfer to Airfield} is next Phase:
+  \procedureItem{If \textbf{Transfer to Testing Area} is next Phase:
 
     $\rightarrow$ go to step 4.1.
   }{}

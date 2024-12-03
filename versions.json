@@ -44,8 +44,8 @@
         "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
     },
     "general/firing-conduction": {
-        "version": "06",
-        "hash": "04517176b1a185a945b0846f61ed6e6bf4a24e428255cd5e0bc020c08957f171"
+        "version": "07",
+        "hash": "11a365d7e6aa07545c1e8bf1c7c8d9f760dc8901e3e0825d3c8ecfa8e3e5bfbd"
     },
     "general/contingency-injury": {
         "version": "01",
@@ -56,8 +56,8 @@
         "hash": "7e0b68a83706d7de3dee427d438839d2b0976b76e9d43ef31c419a0614a9d5b0"
     },
     "general/cold-flow-conduction": {
-        "version": "01",
-        "hash": "9b6999d15843fc9bedfaf6c0a7334076802f0439b491ace9800a50533a852591"
+        "version": "02",
+        "hash": "034a986d2a159cce401c5caec7af92da1c50cfaedd8ec1165480f0e82319d4b9"
     },
     "general/contingency-master": {
         "version": "02",
@@ -132,8 +132,8 @@
         "hash": "793f1cc00568f58c7c665b165c7c491b1fed4eacbf889cd125038a21306027d4"
     },
     "guidelines/operation-safety-concept": {
-        "version": "01",
-        "hash": "fb63d2b6edccfd695d64a3f593c423175ed02a4baeed72d1cfb028f674db3e35"
+        "version": "02",
+        "hash": "9a78a566b47ef486f5fa410cea454c223cb4db1d5c035f9c4ffcaf2387ca682a"
     },
     "guidelines/ipz-operation-safety-concept": {
         "version": "02",
@@ -154,5 +154,25 @@
     "dpr/dpr-closed-loop": {
         "version": "01",
         "hash": "a44052c87506f28c1d795ca6f677cfae9cbab42cd66c506be055f29dd2af1e0b"
+    },
+    "guidelines/ipz-oss-cf-operation-safety-concept copy": {
+        "version": "01",
+        "hash": "886ffb66235f9a7ecf50e1194a2f09ab23bd17b655ec0892525a16a6f08e20df"
+    },
+    "eng/igniter-assembly": {
+        "version": "01",
+        "hash": "8715dfa0562a41e8f84c94447a730d02f3d3bb0da97c979f71aac09840a90b9a"
+    },
+    "eng/igniter-test": {
+        "version": "02",
+        "hash": "ef9c5e32d29cf0f4c70aeddcf4e17abbbfca11590bb965a78eea6a6ca7fbd28c"
+    },
+    "guidelines/ipz-oss-cf-operation-safety-concept": {
+        "version": "01",
+        "hash": "886ffb66235f9a7ecf50e1194a2f09ab23bd17b655ec0892525a16a6f08e20df"
+    },
+    "pss/contingency-valve-frozen": {
+        "version": "01",
+        "hash": "c0801b4073c76bc6d98467ba2595135a3a4478ce0c5f0f8feeb6b0b5c95c205a"
     }
 }

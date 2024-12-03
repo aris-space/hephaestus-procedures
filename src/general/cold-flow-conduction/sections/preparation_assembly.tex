@@ -1,0 +1,168 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Subsystem Preparation: } \textit{Can be performed one day prior to the test}} \\ \hline
+  
+  \cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start time:}
+  
+  \cellcolor{cyan}
+  \procedureItem{If not immediately after briefing: 
+    Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
+
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Subsystem Preparation}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Hand out the following procedures:
+    \begin{itemize}
+      \item \textit{\underline{Assembly Engine}}
+      \item \textit{\underline{Preparation PSS}}
+    \end{itemize}
+  }{}
+
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Work in Parallel}} \\ \hline
+  
+  \cellcolor{red}
+  \procedureItem{Prepare ENGINE according to \textit{\underline{Assembly Engine \iftoggle{firing}{, Assembly Igniter}{}}}}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Prepare PSS according to \textit{\underline{Preparation PSS}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Assembly Engine}}}{}
+  \iftoggle{firing}{\cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Assembly Igniter}}}{}
+  }{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Preparation PSS}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ End of Subsystem Preparation}{}
+  
+  \iftoggle{firing}{
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Spark Plug Functionality Check: } \textit{Can be performed one day prior to the test}} \\ \hline
+
+  \cellcolor{cyan}
+  \procedureItem{Check that ENGINE compartment is cleared}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Step back from the system ($>$ 2m). Nobody touching the trailer}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: turn \textbf{IGNITION KEY} ON}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: activate Spark Plug}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Listen for spark}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: deactivate Spark Plug}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: turn \textbf{IGNITION KEY} OFF}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{If no spark:
+    \begin{itemize}
+      \item Check connections $\rightarrow$ go back to P-4.28
+      \item If still no spark: Replace spark plug $\rightarrow$ go back to P-4.28
+    \end{itemize}
+  }{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ End of \textbf{FC \& Leakage Test}}{}}{}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Packing: } \textit{Can be performed one day prior to the test}} \\ \hline
+
+\cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start Time: }
+  
+  \cellcolor{cyan}
+  \procedureItem{Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Packing}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Hand out the following procedures:
+    \begin{itemize}
+      \item \textit{Material List}
+    \end{itemize}
+  }{}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Work in Parallel}} \\ \hline
+
+\cellcolor{green}
+  \procedureItem{Pack safety equipment box according to \textit{\underline{Material List}}.
+    Prepare cryo safety equipment for LOX Dewar Transport
+  }{}
+  
+  \cellcolor{red}
+  \procedureItem{Pack ENGINE box according to \textit{\underline{Material List}}}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Pack PSS box according to \textit{\underline{Material List}}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Pack DACS box according to \textit{\underline{Material List}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ End of \textbf{Packing}}{}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Preparation for Transfer to Test Area: } \textit{To be performed on the day of firing}} \\ \hline
+
+\cellcolor{cyan}
+  \procedureItem{Write down starting time}{Start time: }
+  
+  \cellcolor{cyan}
+  \procedureItem{Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Preparation for Transfer}}{}
+  
+\cellcolor{red}
+  \procedureItem{Prepare Trailer for Transport:
+    \begin{itemize}
+      \item Ensure there are no unfixed components on the trailer
+      \item Fold up trailer side walls, fix them properly
+      \item Fold down covers of the trailer, fix them properly
+      \item Retract legs of the trailer
+      \item Push trailer outside the HANGAR
+      \iftoggle{firing}{\item Attach trailer to towing vehicle (2nd Car)}{}
+    \end{itemize}
+    $\rightarrow$ \textbf{Trailer} is ready for departure
+  }{}
+% Change sequence
+  \iftoggle{firing}{
+  \cellcolor{red}
+  \procedureItem{Load boxed material into Cars (appropriate securing required):
+    \begin{itemize}
+      \item Emergency Car: GEN/SFTY/DACS/Snacks \& Beverages/Cable Roll
+      \item 2nd Car: N$_2$ Bottles/Ethanol/H$_2$ Bottle/ENG/PSS/TOOL
+    \end{itemize}
+    $\rightarrow$ \textbf{Emergency Car} is ready for departure
+  }{}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ Ready for \textbf{Transfer to Test Area}}{}
+  
+\end{tabularx}

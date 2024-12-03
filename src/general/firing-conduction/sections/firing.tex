@@ -5,7 +5,7 @@
   \rowcolor{tableHeaderColor}
   ID & Check & Description & Comments \\ \hline
 
-\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Firing}} \\ \hline
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-\iftoggle{firing}{Firing}{Coldflow} Preparations}} \\ \hline
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
@@ -23,7 +23,7 @@
     \end{itemize}}{The one person responsible for the window is also in charge for starting and stopping the screen recording as well as the recording of the KiDAQ}
   
   \cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$TC to all: inform about start of \textbf{Firing} in a few minutes}{}
+  \procedureItem{$\leftrightarrow$TC to all: inform about start of \textbf{\iftoggle{firing}{Firing}{Coldflow}} in a few minutes}{}
   
   \cellcolor{yellow}
   \procedureItem{Start video recording with surveillance cameras}{}
@@ -38,16 +38,13 @@
   \procedureItem{Perform a surveillance area check}{}
   
   \cellcolor{green}
-  \procedureItem{Ensure everyone is in the HUT}{}
+  \procedureItem{Ensure everyone is in Mission Control}{}
   
   \cellcolor{green}
-  \procedureItem{→SO announces to everyone that no one is allowed to leave the HUT}{}
-  
+  \procedureItem{→SO announces to everyone that no one is allowed to leave Mission Control}{}
+  \iftoggle{firing}{
   \cellcolor{green}
-  \procedureItem{Check that window is open}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{Confirm KiDAQ is ready for firing}{}
+  \procedureItem{Check that window is open}{}}{}
   
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Chill 1}} \\ \hline
 
@@ -94,13 +91,10 @@
   \cellcolor{yellow}
   \procedureItem{Check OSS Pressure above Tank}{}
   
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-CF and Firing}} \\ \hline
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-CF \iftoggle{firing}{and Firing}{}}} \\ \hline
 
   \cellcolor{yellow}
   \procedureItem{Change phase in the UI to \textbf{FIRING}}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{Start recording on KiDAQ}{}
   
   \cellcolor{yellow}
   \procedureItem{Perform a final surveillance area check}{}
@@ -118,17 +112,10 @@
   \procedureItem{$\leftrightarrow$TC to all: countdown starts on 5; 
     \begin{itemize}
       \item 5, 4, 3, 2, 1
-    \end{itemize}}{Check after pre-CF:
-    \begin{itemize}
-      \item OSS Pressure above Tank
-      \item OSS pressurization manometer bottle on camera
-      \item FSS Pressure above Tank
-      \item Mass flow OSS
-    \end{itemize}
-    Turn on KiDAQ recording after 30s}
+    \end{itemize}}{}
   
   \cellcolor{yellow}
-  \procedureItem{$\rightarrow$ Initiate \textbf{FIRING} sequence}{}
+  \procedureItem{$\rightarrow$ Initiate \textbf{\iftoggle{firing}{FIRING}{Coldflow}} sequence}{}
   
   \cellcolor{cyan}
   \procedureItem{Check that phase in the UI is \textbf{POST-FIRING}:
@@ -156,12 +143,12 @@
         \item check water pump functionality (check recording of water pump camera), inspect engine once in safe state
       \end{enumerate}
   }
-  
+  \iftoggle{firing}{
   \cellcolor{green}
   \procedureItem{Turn \textbf{IGNITION KEY} OFF}{}
   
   \cellcolor{green}
-  \procedureItem{SO takes \textbf{IGNITION KEY}}{}
+  \procedureItem{SO takes \textbf{IGNITION KEY}}{}}{}
   
   \cellcolor{yellow}
   \procedureItem{Check system state with surveillance cameras}{}
@@ -175,8 +162,6 @@
   \cellcolor{yellow}
   \procedureItem{Stop video recording with surveillance cameras}{}
   
-  \cellcolor{yellow}
-  \procedureItem{Stop KiDAQ recording}{}
   
   \cellcolor{yellow}
   \procedureItem{Change the phase in the UI to \textbf{RUN TANK DEPRESSURIZATION}}{}

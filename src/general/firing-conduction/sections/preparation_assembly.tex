@@ -12,10 +12,7 @@
   \cellcolor{cyan}
   \procedureItem{If not immediately after briefing: 
     Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Show current phase on the \textit{Firing Organization Chart}}{}
-  
+
   \cellcolor{cyan}
   \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Subsystem Preparation}}{}
   
@@ -23,70 +20,30 @@
   \procedureItem{Hand out the following procedures:
     \begin{itemize}
       \item \textit{\underline{Assembly Engine}}
-      \item \textit{\underline{Assembly Igniter}}
+      \iftoggle{firing}{\item \textit{\underline{Assembly Igniter}}}{}
       \item \textit{\underline{Preparation PSS}}
-      \item \textit{\underline{Preparation Control}}
-      \item \textit{\underline{KiDAQ}}
     \end{itemize}
   }{}
 
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Work in Parallel}} \\ \hline
   
   \cellcolor{red}
-  \procedureItem{Prepare ENGINE according to \textit{\underline{Assembly Engine, Assembly Igniter}}}{}
+  \procedureItem{Prepare ENGINE according to \textit{\underline{Assembly Engine \iftoggle{firing}{, Assembly Igniter}{}}}}{}
   
   \cellcolor{orange}
   \procedureItem{Prepare PSS according to \textit{\underline{Preparation PSS}}}{}
   
-  \cellcolor{yellow}
-  \procedureItem{If not already done: Install the Control station according to \textit{\underline{Installation Control}}}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{Prepare DACS according to \textit{\underline{Preparation Control}}}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{Prepare DACS according to \textit{\underline{KiDAQ}}}{}
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Assembly Engine}}}{}
+  \iftoggle{firing}{\cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Assembly Igniter}}}{}
+  }{}
   
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Assembly Engine}} from ENG1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Assembly Igniter}} from ENG1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Preparation PSS}} from PSS1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{KiDAQ}}}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Preparation Control}} from DACS1}{}
+  \procedureItem{Collect completed and signed \textit{\underline{Preparation PSS}}}{}
   
   \cellcolor{cyan}
   \procedureItem{$\rightarrow$ End of Subsystem Preparation}{}
-  
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Functionality Check \& Leakage Test: } \textit{Can be performed one day prior to the test}} \\ \hline
-  
-  \cellcolor{cyan}
-  \procedureItem{Write down starting time}{Start Time:}
-  
-  \cellcolor{cyan}
-  \procedureItem{Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Functionality Check \& Leakage Test}}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Only TC, SO, and PSS1/ENG1 are allowed to approach the trailer}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Perform a Functionality Check Valves according to \textit{\underline{Functionality Check Valves}}}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{If the system has been disassembled/adapted since the last CF/FI:
-    Perform a low-pressure leakage test of the system according to \textit{\underline{Low-Pressure Leakage Test PSS}}. 
-    In parallel: DACS shall check sensor value and activation delays.
-  }{Low-Pressure Leakage Tests can be performed in the Hangar}
   
   \iftoggle{firing}{
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Spark Plug Functionality Check: } \textit{Can be performed one day prior to the test}} \\ \hline
@@ -158,21 +115,21 @@
   \procedureItem{Pack DACS box according to \textit{\underline{Material List}}}{}
   
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Material List}} from SO}{}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
   
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Material List}} from ENG1}{}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
   
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Material List}} from PSS1}{}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
   
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Material List}} from DACS1}{}
+  \procedureItem{Collect completed and signed \textit{\underline{Material List}}}{}
   
   \cellcolor{cyan}
   \procedureItem{$\rightarrow$ End of \textbf{Packing}}{}
   
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Preparation for Transfer to Airfield: } \textit{To be performed on the day of firing}} \\ \hline
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Preparation for Transfer to Test Area: } \textit{To be performed on the day of firing}} \\ \hline
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start time: }
@@ -207,7 +164,7 @@
   \procedureItem{Get an N$_2$ Bottle (PRG) from the gas storage and place it on the trailer / in the car (only transport with open window)}{Bottle ID: }
   
   \cellcolor{orange}
-  \procedureItem{Check that N$_2$ Bottle (PRG) is sufficiently full ($>$ 100 bar)}{}
+  \procedureItem{Check that N$_2$ Bottle (PRG) is sufficiently full ($>$ 50 bar)}{}
   
   \cellcolor{orange}
   \procedureItem{Fix N$_2$ Bottle (PRG) onto the trailer using the attached belts and “Spanngurte” (for transport). If no space on the trailer, use a car. Secure them properly in the car (Spanngurte). Never transport oxidizing and flammable gases/liquids in the same car (O$_2$ not in the same car as H$_2$ or Ethanol). Only transport with an open window}{}
@@ -243,26 +200,12 @@
       \item Fold down covers of the trailer, fix them properly
       \item Retract legs of the trailer
       \item Push trailer outside the HANGAR
-      \item Attach trailer to towing vehicle (2nd Car)
+      \iftoggle{firing}{\item Attach trailer to towing vehicle (2nd Car)}{}
     \end{itemize}
     $\rightarrow$ \textbf{Trailer} is ready for departure
   }{}
-  
-  \cellcolor{red}
-  \procedureItem{Prepare Water Pump for Transport:
-    \begin{itemize}
-      \item Mount Water Pump on roller carriage (if not already done)
-      \item Mount Water Container on roller carriage (if not already done)
-      \item Push roller carriage outside the HANGAR
-    \end{itemize}
-    $\rightarrow$ \textbf{Water Pump} is ready for departure
-  }{}
-  
-  \cellcolor{red}
-  \procedureItem{Push Cable Roll outside the HANGAR
-    $\rightarrow$ \textbf{Cable Roll} is ready for departure
-  }{}
-  
+% Change sequence
+  \iftoggle{firing}{
   \cellcolor{red}
   \procedureItem{Load boxed material into Cars (appropriate securing required):
     \begin{itemize}
@@ -270,9 +213,9 @@
       \item 2nd Car: N$_2$ Bottles/Ethanol/H$_2$ Bottle/ENG/PSS/TOOL
     \end{itemize}
     $\rightarrow$ \textbf{Emergency Car} is ready for departure
-  }{}
+  }{}}{}
   
   \cellcolor{cyan}
-  \procedureItem{$\rightarrow$ Ready for Transfer to Airfield}{}
+  \procedureItem{$\rightarrow$ Ready for \textbf{Transfer to Test Area}}{}
   
 \end{tabularx}
