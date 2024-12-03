@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.18](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.17...v0.0.18) - 2024-12-03
+- Contingency rework by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/61
+
 ## [v0.0.17](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.16...v0.0.17) - 2024-12-03
 - DACS Updates by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/58
 - Packing update by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/60
