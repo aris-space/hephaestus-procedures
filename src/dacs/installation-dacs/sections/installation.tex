@@ -10,19 +10,19 @@
   \procedureItem{
     Unpack material and place monitors on two tables in the following order (from left to right):
   \\
-    PROMETHEUS Monitor 1, PROMETHEUS Monitor 2, Surveillance Monitor
+    Monitor 1, Monitor 2, Surveillance Monitor
   }
 
   \procedureItem{
-    Connect 2 monitors PROMETHEUS Monitor 1 and 2 to MC PC (DP cable).
+    Connect 2 monitors, Monitor 1 and 2 to MC Laptop (HDMI cable).
   }
 
   \procedureItem{
-    Connect the remaining monitor to the second Windows PC (DP cable).
+    Connect the remaining monitor to the Windows PC (DP cable).
   }
 
   \procedureItem{
-    Connect keyboards, mouses, power adapters to both PCs and connect Wifi Adapter to MC PC.
+    Connect keyboards, mouses, power adapters to both PCs and connect Wifi Adapter to Surveillance PC.
   }
 
   \procedureItem{
@@ -36,17 +36,23 @@
   }
 
   \procedureItem{
-    Connect PRO Ethernet Switch to Mission Control PC with short Ethernet cable.
+    Connect PRO Ethernet Switch to Mission Control Laptop with short Ethernet cable.
   }
 
   \procedureItem{
-    Connect PRO Ethernet Switch to second Windows PC with short Ethernet cable.
+    Connect PRO Ethernet Switch to Windows PC with short Ethernet cable.
   }
   
   \procedureItem{
     Unroll the 100m cable from the Mission Control Room to the trailer.
     Be attentive not to damage the cable.
   }
+
+  \procedureItem{
+    If you are working with DACS1 and DACS2, one can go ahead with the procedure and do the checks 
+    inside the DACS box. The other DACS member can head back to the MC and jump to point 1.29, 
+    continuing the procedure from there
+  }{}
   
   \procedureItem{
     Check that \underline{none} of the following cables are connected to the electrical cabinet (=P01+A01):
@@ -178,6 +184,8 @@
     Make sure the Modem is connected via cable to the lan network of the trailer (Ethernet Switch 0).
   }
 
+  \procedureItem{If you are working with DACS1 and DACS2 you can skip to point 1.35, else continue with the procedure}
+
   \procedureItem{
     Connect both PCs to the power strip an turn them on.
   \\
@@ -189,33 +197,27 @@
   }
 
   \procedureItem{
-    For the right monitor settings on the MC PC go to 'Settings' -$>$ 'Displays' and check the following things:
+    Connect mission control PC to internet.
+  }
+
+  \procedureItem{Check HEPHAESTUS config}
+
+  \procedureItem{Open a Terminal on the MC Laptop}{}
+
+  \procedureItem{
+    Open Grafana on the MC Laptop:
     \begin{itemize}
-      \item Primary Display: Dell Inc. 28"
-      \item Fractional Scaling ON
-      \item Dell Inc. 24": 100\% Scaling
+      \item Open a Webbrowser 
+      \item Type \textbf{Localhost:3000} in the search bar 
+      \item Choose the dashboard that you need for your test
     \end{itemize}
-    Dell Inc. 28": 175\% Scaling (check the UI in Firefox and if the size is appropriate, otherwise change 175\% to 125\% and try again) if there is some problem with this monitor (e.g. flickering) you can try to change this to another value, but then the UI formatting might not be perfect but still manageable)
-  }
-
-  \procedureItem{
-    Connect mission control PC to hotspot.
-  }
-
-  \procedureItem{
-    Check the \texttt{\#helios-config-file} Slack channel if any recent changes have been made to the config file.
-  \\
-    \noindent
-  \\
-    In case there have been changes that are not on the MCPC, figure out how to proceed.
-    The changes from Sharepoint may not have been tested.
-  \\
-    When in doubt, use the version from the MCPC and inform the author who made the changes that are not on the MCPC that their change has been ignored and will be reverted at the end of the test.
-  }
+  }{}
 
   \procedureItem{
     Connect the MOB cable signal to the MOB box
   }
+
+  \procedureItem{If one of the two DACS members has not finished their procedure steps, wait until both are at this point}
 
   \procedureItem{
     Ask TC to confirm that it's ok to connect the power cable for the trailer.
@@ -256,16 +258,24 @@
   }
 
   \procedureItem{
-    Connect 100m Ethernet cable to the PRO Ethernet Switch
+    Connect 100m Ethernet cable to the PRO Ethernet Switch.
   }
 
   \procedureItem{
-    Connect the ethernet cable to the electrical cabinet (=P01+A01), if not already done
+    Connect the ethernet cable to the electrical cabinet (=P01+A01), if not already done.
   }
+
+  \procedureItem{
+    Start the UI on the MC Laptop:
+    \begin{itemize}
+      \item If you made any changes in the code use \texttt{./bild\_and\_run.sh} to start the UI
+      \item If you made no changes in the code use \texttt{./run.sh} to start the UI
+    \end{itemize}
+  }{}
 
   \procedureItem{
     The software responsible should check that the ethernet is connected to mission control room computer.
-    If the Labjack is connected to the ethernet an orange light should start blinking on the Labjack
+    If the Labjack is connected to the ethernet the green light should start blinking on the Labjack.
   }
 
   \procedureItem{
@@ -275,85 +285,6 @@
 
   \procedureItem{
     Close the electrical cabinet (=P01+A01) with the DIN lock key.
-  }
-
-  \procedureItem{
-    Launch system by running in terminal:
-  \\
-    \texttt{./start\_test\_maria.sh}
-  \\
-    Then continue at step 1.19.
-  \\
-    If that does not work do steps 1.14.-1.18.
-  }
-
-  \rowcolor{highlightColor}
-  \procedureItem{
-    The following steps are already executed by the \texttt{start\_test\_maria.sh} file and usually don't have to be done
-  \\
-    Open UI in browser (preferably Firefox):
-  \\
-  \texttt{file:///home/dacs/git/user-interface/rosWebPage/ui/ \\index.html}
-  \\
-    There is also a bookmark so you don't need to type this in
-  }
-
-  \rowcolor{highlightColor}
-  \procedureItem{
-    Launch ROS from terminal:
-    \begin{itemize}
-      \item \texttt{cd catkin\_ws}
-      \item \texttt{catkin build}
-      \item \texttt{source ./devel/setup.bash}
-      \item \texttt{roslaunch data\_acquisition test.launch}
-    \end{itemize}
-  }
-
-  \rowcolor{highlightColor}
-  \procedureItem{
-    Refresh UI and ensure it is connected to ROS websocket (green message in the histogram)
-  }
-
-  \rowcolor{highlightColor}
-  \procedureItem{
-    Open Plotjuggler in a new terminal:
-    \begin{itemize}
-      \item \texttt{cd catkin\_ws}
-      \item \texttt{catkin build}
-      \item \texttt{source ./devel/setup.bash}
-      \item \texttt{rosrun plotjuggler plotjuggler}
-    \end{itemize}
-  }
-
-  \rowcolor{highlightColor}
-  \procedureItem{
-    Open Plotjuggler in a new terminal:
-    \begin{itemize}
-      \item \texttt{cd catkin\_ws}
-      \item \texttt{source ./devel/setup.bash}
-      \item \texttt{rosrun plotjuggler plotjuggler}
-    \end{itemize}
-  }
-
-  \procedureItem{
-    For the first Plotjuggler window:
-    \begin{itemize}
-      \item Press 'Start' (check that ROS Topic Subscriber is chosen in the Streaming window)
-      \item Choose all sensor topics
-      \item configure plots you want to see by importing layout from \texttt{/home/dacs/git/configuration\_tests/plotjuggler\_config.xml}
-      \item set buffer in upper left corner to 60 to set the window size to 60 seconds
-      \item Move this window to the second monitor
-    \end{itemize}
-  }
-
-  \procedureItem{
-    For the second Plotjuggler window:
-    \begin{itemize}
-      \item Press 'Start' (check that ROS Topic Subscriber is chosen in the Streaming window)
-      \item Choose all sensor topics
-      \item configure plots you want to see by importing layout from \texttt{/home/dacs/git/configuration\_tests/plotjuggler\_config.xml}
-      \item set buffer in upper left corner to 600 to set the window size to 10 minutes
-    \end{itemize}
   }
 
   \procedureItem{

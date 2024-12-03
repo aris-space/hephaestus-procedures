@@ -68,8 +68,8 @@
         "hash": "f5540e8e477a1857ba19f21d0409df4a1a26b5598eb55ed31ad2bb93cca89b75"
     },
     "general/packing-list": {
-        "version": "04",
-        "hash": "0254d95db8f618d704610373841211e5b8206b6953ffbc39b03d7678bf8b6af5"
+        "version": "05",
+        "hash": "2aaa606752b06912220ba286a031003df1539351f5a96558ed79ce235aae08be"
     },
     "dacs-hw/contingency-power-loss": {
         "version": "02",
@@ -145,7 +145,15 @@
     },
     "dacs/installation-dacs": {
         "version": "03",
-        "hash": "ce33f86eb66910c21b3e16c3672c9306b8a51cf5fb5c7ad42e9320f59c93317a"
+        "hash": "7c94c5eadd00754e5c444b06bc7c84f0657e0d072656fe6889f0d078774364b9"
+    },
+    "dpr/dpr-calculation-verifycation": {
+        "version": "03",
+        "hash": "ccb73ad931c0dd8289b53214dd896b879c5e47e5aaafeb3bbd0b4e43f1997c7b"
+    },
+    "dpr/dpr-closed-loop": {
+        "version": "01",
+        "hash": "a44052c87506f28c1d795ca6f677cfae9cbab42cd66c506be055f29dd2af1e0b"
     },
     "guidelines/ipz-oss-cf-operation-safety-concept copy": {
         "version": "01",

@@ -1,0 +1,36 @@
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: change phase in the UI to \textbf{FUEL FILLING} circuit}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: arm \textbf{FSS FILL} circuit}{}
+
+  \procedureItem{Connect fill line (FSS) to the Drain Valve (FSS)}{}
+  
+  \procedureItem{Open Drain Valve (FSS)}{}
+  
+  \procedureItem{
+
+  Fill the runtank with distilled water:
+    \begin{itemize}
+      \item Fill distilled water into measuring cup
+      \item Step on chair and fill fuel into the funnel of the fill line (FSS)
+      \item Repeat these steps until you filled 3.5 liters of distilled water
+    \end{itemize}
+  }{}
+
+  \procedureItem{$\leftrightarrow$TC to DACS1: check FSS Load Cell readings}{}
+  
+  \procedureItem{Close Drain Valve (FSS)}{}
+  
+  \procedureItem{Disconnect fill line (FSS) from the Drain Valve (FSS)}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: Disarm \textbf{FSS FILL} circuit}{}
+  
+  \procedureItem{$\leftrightarrow$TC to DACS1: change phase in the UI to \textbf{SAFE}}{}
+  
+\end{tabularx}
