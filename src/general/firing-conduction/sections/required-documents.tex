@@ -16,26 +16,25 @@
     \documentItem{1}{Connection Loss}{HEP\_CP\_DACS\_ConnectionLoss}
     \documentItem{1}{Valve Anomalies}{HEP\_CP\_DACS\_ValveAnomalies}
     \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Safety}} \\ \hline
-    \documentItem{1}{Safety Concept}{HEP\_GL\_IPZ\_FSS\_Coldflow\_SafetyConcept}
+    \documentItem{1}{Safety Concept}{\iftoggle{firing}{HEP\_GL\_OperationSafetyConcept}{HEP\_GL\_IPZ\_OSS\_Coldflow\_SafetyConcept}}
     \documentItem{1}{Emergency Contact List}{HEP\_GL\_SFTY\_EmergencyContactList}
     \documentItem{1}{Safety Signatures}{HEP\_GL\_SFTY\_SafetySignature}
-    \documentItem{2}{Warning Sign}{HEP\_GL\_SFTY\_WarningSign}
     \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{General}} \\ \hline
     \documentItem{1}{Firing Conduction}{HEP\_OP\_GEN\_FiringConduction}
     \documentItem{1}{Material List}{HEP\_PL\_PackingList}
     \documentItem{1}{Installation Trailer}{HEP\_OP\_GEN\_Installation-Trailer}
     \documentItem{1}{Deinstallation Trailer}{HEP\_OP\_GEN\_Deinstallation-Trailer}
     \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Engine}} \\ \hline
-    \documentItem{1}{Assembly Igniter}{HEP\_OP\_ENG\_AssemblyIgniter}
+    \documentItem{1}{Engine Assembly}{HEP\_OP\_ENG\_EngineAssembly}
+    \iftoggle{firing}{\documentItem{1}{Assembly Igniter}{HEP\_OP\_ENG\_AssemblyIgniter}
     \documentItem{1}{Installation Igniter}{HEP\_OP\_ENG\_InstallationIgniter}
-    \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{PSS}} \\ \hline
+    }{}\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{PSS}} \\ \hline
     \documentItem{1}{Preparation PSS}{HEP\_OP\_PSS\_Preparation}
     \documentItem{1}{Installation PSS}{HEP\_OP\_PSS\_Installation}
     \documentItem{1}{Deinstallation PSS}{HEP\_OP\_PSS\_Deinstallation}
     \documentItem{1}{Functionality Check Valves}{HEP\_OP\_PSS\_FunctionalityCheckValves}
     \documentItem{1}{High-Pressure Leakage Test}{HEP\_OP\_PSS\_HighPressureLeakageTest}
     \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{DACS}} \\ \hline
-    \documentItem{1}{KiDAQ}{HEP\_OP\_DACS\_KiDAQ}
     \documentItem{1}{Preparation Control}{HEP\_OP\_DACS\_ControlStationPreparation}
     \documentItem{1}{Installation Control}{HEP\_OP\_DACS\_ControlStationInstallation}
     \documentItem{1}{Deinstallation Control}{HEP\_OP\_DACS\_ControlStationDeinstallation}

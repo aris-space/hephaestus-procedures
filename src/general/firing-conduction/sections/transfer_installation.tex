@@ -12,43 +12,32 @@
   \procedureItem{If not immediately after briefing:
     \begin{itemize}
       \item Gather everyone in front of the HANGAR and perform an attendance check (sec. B)
-      \item Show current phase on the \textit{\underline{Firing Organization Chart}}
       \item TC informs about upcoming \textbf{Transfer to Airfield}
     \end{itemize}
   }{}
   
-  \cellcolor{green}
-  \procedureItem{If not already done: Hand out access badges}{}
+\iftoggle{firing}{  \cellcolor{green}
+  \procedureItem{If not already done: Hand out access badges}{}}{}
   
   \cellcolor{green}
   \procedureItem{Ensure everyone wears proper Hi-Vis jacket}{}
   
-  \cellcolor{green}
-  \procedureItem{Ensure everyone wears access badge clearly visible}{}
+\iftoggle{firing}{  \cellcolor{green}
+  \procedureItem{Ensure everyone wears access badge clearly visible}{}}{}
   
   \cellcolor{cyan}
   \procedureItem{Hand out the following procedures:
     \begin{itemize}
       \item \textit{\textbf{Installation Trailer}}
-      \item \textit{\textbf{Installation Control}}
-      \item \textit{\textbf{Installation Hardware Check}}
-      \item \textit{\textbf{Installation Surveillance}}
-      \item \textit{\textbf{KiDAQ}}
+      \item \textit{\textbf{Installation DACS}}
+      \item \textit{\textbf{KiDAQ}} (if necessary)
       \item \textit{\textbf{Installation PSS}}
-      \item \textit{\textbf{Installation Igniter}}
+      \iftoggle{firing}{\item \textit{\textbf{Installation Igniter}}}{}
     \end{itemize}
   }{}
   
-\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Transfer to Airfield}} \\ \hline
-
-\cellcolor{cyan}
-  \procedureItem{Destination:
-    \begin{itemize}
-      \item HUT
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Transfer to Test Area}} \\ \hline
+  \iftoggle{firing}{\cellcolor{cyan}
   \procedureItem{Route:
     \begin{itemize}
       \item Through main gate
@@ -56,7 +45,8 @@
       \item Open the gate and wait until all attendees are passed through, close the gate again and put the key for the main gate on the driver’s seat of the Emergency Car (as soon as it’s parked)
       \item \textbf{DO NOT LEAVE THE GATE OPEN AT ANY TIME!!}
     \end{itemize}
-  }{}
+  }{}}{}
+  % Write new
   
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Behaviour: }} \\ \hline
 
@@ -125,9 +115,21 @@
   }{}
   
   \cellcolor{cyan}
-  \procedureItem{Take Firing Organization Chart and magnets and place it in the General Box}{}
-  
-  \cellcolor{cyan}
   \procedureItem{$\rightarrow$ Transfer to Airfield}{}
   
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Installation Trailer from ENG1}}}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Installation DACS}} from DACS1}{}
+  
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Installation PSS}} from PSS1}{}
+  \iftoggle{firing}{
+  \cellcolor{cyan}
+  \procedureItem{Collect completed and signed \textit{\underline{Installation Igniter}} from ENG1}{}
+  }{}
+  \cellcolor{cyan}
+  \procedureItem{$\leftrightarrow$ TC to all: Installation is completed}{}
+
 \end{tabularx}

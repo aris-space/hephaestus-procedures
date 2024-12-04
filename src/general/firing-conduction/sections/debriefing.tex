@@ -12,12 +12,9 @@
   \procedureItem{Gather everyone in front of the HANGAR and perform an attendance check (sec. B)}{}
   
   \cellcolor{cyan}
-  \procedureItem{Show current phase on the Firing Organization Chart}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{$\rightarrow$ TC informs about end of the \textbf{Firing}}{}
-  
+  \procedureItem{$\rightarrow$ TC informs about end of the \textbf{\iftoggle{firing}{Firing}{Coldflow}}}{}
+  \iftoggle{firing}{
   \cellcolor{green}
-  \procedureItem{Return IDs}{}
+  \procedureItem{Return IDs}{}}{}
   
 \end{tabularx}
