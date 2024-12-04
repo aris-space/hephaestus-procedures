@@ -68,8 +68,8 @@
         "hash": "f5540e8e477a1857ba19f21d0409df4a1a26b5598eb55ed31ad2bb93cca89b75"
     },
     "general/packing-list": {
-        "version": "06",
-        "hash": "bc23ea09521e18423aa2bff9c81cdab42414c8a5c599151063a90928131f6a15"
+        "version": "07",
+        "hash": "78d114fe5eb37e1fac22b22a0186967ecdf382395d00241fbab62c6ef0c12a61"
     },
     "dacs-hw/contingency-power-loss": {
         "version": "03",
