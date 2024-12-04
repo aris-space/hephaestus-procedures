@@ -1,5 +1,8 @@
 # Changelog
 
+## [v0.0.19](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.18...v0.0.19) - 2024-12-04
+- Packing Update by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/63
+
 ## [v0.0.18](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.17...v0.0.18) - 2024-12-03
 - Contingency rework by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/61
 
