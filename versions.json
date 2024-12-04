@@ -154,5 +154,9 @@
     "eng/igniter-test": {
         "version": "01",
         "hash": "5fb7086eecc1017d33a29249683d74e317d526dea73c43129b535f613a4908f4"
+    },
+    "eng/MkI-engine-assembly": {
+        "version": "01",
+        "hash": "a74c3bbb4497af7fa0700bf3c217ff6472742797aa707c2aa35765bdb474b0d2"
     }
 }
