@@ -144,8 +144,8 @@
         "hash": "2fe0dca11722ef6b510405a54261f3ff9ab212fbe65c9235a0ed861f2d0893a7"
     },
     "dacs/installation-dacs": {
-        "version": "05",
-        "hash": "3a01be615c553cf54bc387444b271766ea7ccd4cdd6b92ee56f89fcbf33bd73f"
+        "version": "06",
+        "hash": "b8edadb03382af756e285686619e3483629d0ccf29ca19f52e1ee9edfd078696"
     },
     "dpr/dpr-calculation-verifycation": {
         "version": "03",
