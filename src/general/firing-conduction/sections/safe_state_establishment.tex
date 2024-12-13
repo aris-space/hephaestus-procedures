@@ -138,7 +138,7 @@
 
 
   \cellcolor{cyan}
-  \procedureItem{If recycling, disarm \textbf{OSS PRE-FILL} go back to step 6.1, else continue with 8.40}{}
+  \procedureItem{If recycling, disarm \textbf{OSS PRE-FILL} go back to step 6.71, else continue with 8.43}{}
   
   \cellcolor{orange}
   \procedureItem{Slowly open Drain Valve (FSS) (ethanol will leave the system)}{}
@@ -175,9 +175,15 @@
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (FSS PRZ)}{}
+
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
   
   \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (FSS) for 5s}{\hl{CROSS CONTAMINATION????}}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (FSS) for 5s}{}
+
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: close Pressurization Valve (FSS PRZ)}{}
@@ -281,6 +287,10 @@
   \cellcolor{orange}
   \procedureItem{Set Pressure Reducer (O2 IGN) to DECREASE and fully close additional knob}{}
   }{}
+
+  \cellcolor{orange}
+  \procedureItem{Check that OSS PRZ Pressure Reducer is set to decrease}{}
+
   \cellcolor{orange}
   \procedureItem{Open N2 Bottle Valve (OSS PRZ) slowly}{}
   
@@ -291,7 +301,7 @@
   \procedureItem{TC, SO and PSS1 are only allowed to stay inside the LOX safety zone (be aware of the SRV openings)}{}
 
 \cellcolor{orange}
-  \procedureItem{Check that end cap (x-piece (OSS FILL)) is properly tightened using the ½ in. Swagelok gap inspector}{}
+  \procedureItem{Check that end cap (x-piece (OSS FILL)) is properly tightened}{}
 
 \cellcolor{orange}
   \procedureItem{Close Drain Valve (OSS FILL)}{}
@@ -299,23 +309,23 @@
 \cellcolor{orange}
   \procedureItem{Open Fill Valve (OSS FILL)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: check OSS Load Cell}{}
-
 \cellcolor{orange}
   \procedureItem{Slowly open Drain Valve (OSS FILL) (remaining LOX will drain)}{}
 
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: check OSS Load Cell}{}
+
 \cellcolor{orange}
-  \procedureItem{Close Vent Valve (OSS)}{}
+  \procedureItem{Close Fill Valve (OSS)}{}
+
+  \cellcolor{orange}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: Close Vent Valve (OSS)}{}
 
 \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Fill Valve (OSS)}{}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (OSS PRZ) (wait until check valve stops making a sound)}{}
 
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (OSS PRZ) (wait until check valve stops making a sound)}{Reminder: \textbf{OSS PRE-FILL} circuit is armed}
-
-\cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Fill Valve (OSS) for 5s}{}
+\cellcolor{orange}
+  \procedureItem{Open Fill Valve (OSS) for 5s}{}
 
 \cellcolor{orange}
   \procedureItem{Close Drain Valve (OSS FILL)}{}
@@ -333,7 +343,7 @@
   \procedureItem{$\leftrightarrow$ TC to DACS1: open Vent Valve (OSS)}{}
 
 \cellcolor{orange}
-  \procedureItem{Verify that no more LOX is in the system (check temperature and density reading on Mass Flow Sensor (OSS))}{}
+  \procedureItem{Verify that no more LOX is in the system (check temperatures in tank and mainline)}{}
 
 \cellcolor{cyan}
   \procedureItem{Write down pressure on Pressure Reducer (OSS PRZ)}{N2 Pressure: }
@@ -353,11 +363,12 @@
 \cellcolor{orange}
   \procedureItem{Close Bleed Valve (OSS PRZ)}{}
 
-\cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
 
-\cellcolor{cyan}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: confirm that all valves are in normal state and no circuit is armed}{}
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: confirm that all valves are in normal state}{}
+
+\cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
 
 \cellcolor{cyan}
   \procedureItem{Write down pressure on Pressure Reducer (PRG)}{N2 Pressure: }
@@ -366,13 +377,10 @@
   \procedureItem{Close N2 Bottle Valve (PRG) fully}{}
 
 \cellcolor{orange}
-  \procedureItem{OPEN BLEED VALVE ON THE PRESSURE REDUCER ON THE MAIN VALVE IN THE OSS}{}
+\procedureItem{Open Bleed Valve on the Pressure Reducer on the Main Valve in the OSS}{}
 
 \cellcolor{cyan}
-  \procedureItem{Wait until Pneumatic Pressure is equal to 0.0 barg (check manometer and sensor readings)}{}
-
-\cellcolor{cyan}
-  \procedureItem{Wait until Purge Pressure is equal to 0.0 barg (check manometer and sensor readings)}{}
+  \procedureItem{Check that both Purge and Pneumatic Pressures are zero}{}
 
 \cellcolor{orange}
   \procedureItem{Set Pressure Reducer (PNU) to DECREASE}{}
@@ -381,7 +389,7 @@
   \procedureItem{Set Pressure Reducer (PRG) to DECREASE}{}
 
 \cellcolor{orange}
-  \procedureItem{CLOSE BLEED VALVE ON THE PRESSURE REDUCER ON THE MAIN VALVE IN THE OSS}{}
+  \procedureItem{Close Bleed Valve on the Pressure Reducer on the Main Valve in the OSS}{}
 
 \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{SAFE STATE}}{}

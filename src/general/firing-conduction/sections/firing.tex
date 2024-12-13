@@ -46,38 +46,40 @@
   \cellcolor{green}
   \procedureItem{Check that window is open}{}}{}
   
-\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Chill 1}} \\ \hline
+\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Pre-Chilling}} \\ \hline
 
 \cellcolor{yellow}
-  \procedureItem{Switch to PSS plots (if necessary)}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Wait until OSS Main Line Temperature is -140°C. Monitor OSS Pressure above Tank.}{Indicators showing that the prechill is complete: The time evolution of the temperature in the main line/injector manifold show a drop shortly before the final temperature is reached. You should see ‘clouds’ coming out of the nozzle.}
-  
+  \procedureItem{Switch to Pre-Chilling plots}{}
+
   \cellcolor{yellow}
-  \procedureItem{Change phase in the UI to \textbf{INITIAL PRESSURIZATION}}{}
+  \procedureItem{Open OSS Main Valve}{}
+
+  \cellcolor{cyan}
+  \procedureItem{Wait for pre-chilling to complete. If tank weight drops below predetermined level, stop pre-chilling.}{Prechilling is completed if OSS INJ T reaches -160 or white clouds come out of the engine.}
   
   \cellcolor{yellow}
   \procedureItem{Close Main Valve (OSS)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{→Arm \textbf{FIRING} circuit}{}
-  
-  \cellcolor{yellow}
-  \procedureItem{→Disarm \textbf{OSS PRE-FILL} circuit}{}
-  
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Initial Pressurization}} \\ \hline
+
 
 \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
+
+\cellcolor{yellow}
+\procedureItem{Change phase in the UI to \textbf{INITIAL PRESSURIZATION}}{}
+
+\cellcolor{yellow}
+\procedureItem{→Arm \textbf{FIRING} circuit}{}
+
+\cellcolor{yellow}
+\procedureItem{→Disarm \textbf{OSS PRE-FILL} circuit}{}
+
   \iftoggle{firing}{\cellcolor{yellow}
-  \procedureItem{Insert and turn \textbf{IGNITION KEY}}{}}{}
+  \procedureItem{Insert \textbf{IGNITION KEY}}{}}{}
 
   \cellcolor{yellow}
   \procedureItem{Close Vent Valve (FSS)}{}
-
-  \cellcolor{yellow}
-  \procedureItem{Close Emergency Valve (FSS)}{}
   
   \cellcolor{yellow}
   \procedureItem{Open Pressurization Valve (FSS PRZ)}{}
@@ -96,7 +98,7 @@
   \cellcolor{yellow}
   \procedureItem{Change phase in the UI to \textbf{FIRING}}{}
   
-  \cellcolor{yellow}
+  \cellcolor{cyan}
   \procedureItem{Perform a final surveillance area check}{}
   
   \cellcolor{yellow}
