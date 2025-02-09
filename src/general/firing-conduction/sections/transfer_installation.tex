@@ -4,17 +4,75 @@
   \hline
   \rowcolor{tableHeaderColor}
   ID & Check & Description & Comments \\ \hline
+
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Preparation for Transfer to Test Area: }} \\ \hline
   
   \cellcolor{cyan}
   \procedureItem{Write down starting time}{Start Time: }
   
   \cellcolor{cyan}
-  \procedureItem{If not immediately after briefing:
-    \begin{itemize}
-      \item Gather everyone in front of the HANGAR and perform an attendance check (sec. B)
-      \item TC informs about upcoming \textbf{Transfer to Airfield}
-    \end{itemize}
+  \procedureItem{$\rightarrow$ TC informs about upcoming \textbf{Preparation for Transfer}}{}
+
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Gas Bottle / Fuel Preparation}} \\ \hline
+  
+  \cellcolor{orange}
+  \procedureItem{Get an N$_2$ Bottle (FSS PRZ) with at least 80 bar from the gas storage and fix it in the towing car with Spanngurte (only transport with open window)}{Bottle ID: }
+  
+  \cellcolor{orange}
+  \procedureItem{Get an N$_2$ Bottle (OSS PRZ) with at least 100 bar from the gas storage and fix it in the towing car with Spanngurte (only transport with open window)}{Bottle ID: }
+  
+  \cellcolor{orange}
+  \procedureItem{Get an N$_2$ Bottle (PRG) with at least 80 bar from the gas storage and fix it in the towing car with Spanngurte (only transport with open window)}{Bottle ID: }
+  
+  \iftoggle{firing}{
+  \cellcolor{orange}
+  \procedureItem{Get H$_2$ Bottle with at least 30 bar from the gas storage and fix it in the towing car with Spanngurte.}{Bottle ID: }
   }{}
+  \cellcolor{orange}
+  \procedureItem{Get the Ethanol Canisters from “Gefahrenstofflager” ($>$ 6 L per firing). Load Ethanol Canister into towing car}{}
+  \iftoggle{firing}{
+  \cellcolor{orange}
+  \procedureItem{Get the O$_2$ Bottle with at least 30 bar from the gas storage and fix it  onto the trailer using the attached belts and “Spanngurte” (for transport) or put it in the emergency   car.}{Never put GOX and EthOH/H2 in the same car.}
+  }{}
+  \cellcolor{orange}
+  \procedureItem{\textit{LOX Dewar:}
+    \begin{itemize}
+      \item Wear safety goggles and cryo-gloves
+      \item Get LOX Dewar from the LOX storage and place it in front of the HANGAR
+      \item Ensure that pressure in the Dewar is more than 3 barg (check manometer on Dewar). If pressure is less than 3 barg, repressurize it by slowly opening the green knob. If SRVs open constantly, vent and repressurize on the airfield.
+      \item Inspect wheels of Dewar before departure, they can be loose and break off.
+    \end{itemize}
+    $\rightarrow$ LOX Dewar is \textbf{ready for departure}
+  }{Top view of the Dewar:
+    \includegraphics[width=\textwidth]{../firing-conduction/assets/picture-dewar.png}}
+  
+  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Trailer, Dewar, Cable Roll \& Boxed Material Preparation}} \\ \hline
+
+  \iftoggle{firing}{
+    \cellcolor{red}
+    \procedureItem{Load boxed material into Cars (appropriate securing required):
+      \begin{itemize}
+        \item Emergency Car: GEN/SFTY/DACS/Snacks \& Beverages/Cable Roll
+        \item 2nd Car: N$_2$ Bottles/Ethanol/H$_2$ Bottle/ENG/PSS/Cones/Warning Sign/Tent
+      \end{itemize}
+      $\rightarrow$ \textbf{Emergency Car} is ready for departure
+    }{}}{}
+
+\cellcolor{red}
+  \procedureItem{Prepare Trailer for Transport:
+    \begin{itemize}
+      \item Ensure there are no unfixed components on the trailer
+      \item Fold up trailer side walls, fix them properly
+      \item Fold down covers of the trailer, fix them properly
+      \item Retract legs of the trailer
+      \item Push trailer outside the HANGAR
+      \iftoggle{firing}{\item Attach trailer to towing vehicle (2nd Car)}{}
+    \end{itemize}
+    $\rightarrow$ \textbf{Trailer} is ready for departure
+  }{}
+  
+  \cellcolor{cyan}
+  \procedureItem{$\rightarrow$ Ready for \textbf{Transfer to Test Area}}{}
   
 \iftoggle{firing}{  \cellcolor{green}
   \procedureItem{If not already done: Hand out access badges}{}}{}
@@ -26,109 +84,55 @@
   \procedureItem{Ensure everyone wears access badge clearly visible}{}}{}
   
   \cellcolor{cyan}
-  \procedureItem{Hand out the following procedures:
-    \begin{itemize}
-      \item \textit{\textbf{Installation Trailer}}
-      \item \textit{\textbf{Installation DACS}}
-      \item \textit{\textbf{KiDAQ}} (if necessary)
-      \item \textit{\textbf{Installation PSS}}
-      \iftoggle{firing}{\item \textit{\textbf{Installation Igniter}}}{}
-    \end{itemize}
+  \procedureItem{Inform about transfer and setup procedure:
+  \begin{itemize}
+    \item People walking go first
+    \item Emergency Car drives to the gate, opens, lets everyone through and then closes again. \textbf{Never leave Gate open unattended!}
+    \item Emergency Car goes to HUT
+    \item Towing car goes to trailer location (Between markings 46 and 47)
+    \item LOX Dewar goes to the border of the safety zone
+    \item On arrival, DACS unload safety car, start DACS installation, SO, TC, EICs unload towing car, SO starts with safety zone installation, TC and EICs start with trailer installation
+    \item Once trailer installation is complete, TC, SO \& EICs start with PSS Installation
+    \item Always inform when you are done with your tasks.
+  \end{itemize}
   }{}
-  
-\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Transfer to Test Area}} \\ \hline
-  \iftoggle{firing}{\cellcolor{cyan}
-  \procedureItem{Route:
-    \begin{itemize}
-      \item Through main gate
-      \item Emergency Car (Driver \& SO) goes first
-      \item Open the gate and wait until all attendees are passed through, close the gate again and put the key for the main gate on the driver’s seat of the Emergency Car (as soon as it’s parked)
-      \item \textbf{DO NOT LEAVE THE GATE OPEN AT ANY TIME!!}
-    \end{itemize}
-  }{}}{}
-  % Write new
-  
-\multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textit{Behaviour: }} \\ \hline
 
-\cellcolor{cyan}
-  \procedureItem{If it is raining:
-    \begin{itemize}
-      \item Make sure to load tent/pavilion into Towing Car Trailer
-      \item Install tent/pavilion before unloading all material
-      \item Secure tent/pavilion in place with weights
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Driver Emergency Car:
-    \begin{itemize}
-      \item Unload GEN/SFTY/DACS/Snacks \& Beverages/Cable Roll at HUT
-      \item Unload all other material at trailer
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Safety Officer:
-    \begin{itemize}
-      \item Open HUT and leave key on the inside lock of the door
-      \item Tape \textit{\underline{Warning Sign}} onto two empty boxes and position them on both sides of the safety zone (roughly 100m from the trailer). If aluminum profiles are available, use aluminum profiles.
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Driver Towing Car Trailer:
-    \begin{itemize}
-      \item Place the trailer at the testing location as shown in the \underline{\textit{Operation Safety Concept}} (between \textbf{Marking 46 and 47}, closer to 46)
-      \item Unload all material from the Towing Car. \textbf{Leave the N$_2$ Bottles in the car until they can be fixed to the structures!}
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Other:
-    \begin{itemize}
-      \item Place the LOX Dewar at the border of the safety zone as shown in the \underline{\textit{Operation Safety Concept}} and ensure that it is secured properly (wear safety goggles and cryo-gloves during the entire transport). The Dewar can either be pulled at the handle or pushed.
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{As soon as done with transfer:
-    \begin{itemize}
-      \item SO: Install the safety equipment according to \underline{\textit{Operation Safety Concept}}
-      \item ENG: Install the Trailer according to \underline{\textit{Installation Trailer}}, install Water Pump
-      \item DACS: Install the control station according to \textit{\underline{Installation Control}}, install hardware according to \textit{\underline{Installation Hardware Check}}, install surveillance cameras according to \textit{\underline{Installation Surveillance}}, install KiDAQ according to \textit{\underline{KiDAQ}}
-    \end{itemize}
-  }{Installing the water pump includes filling the water container with water. If the grass behind the trailer is dry, the water pump can be used to water the grass. Don't forget to bleed the water pump, it shall not suck air into the system!}
-  
-  \cellcolor{cyan}
-  \procedureItem{As soon as trailer is installed:
-    \begin{itemize}
-      \item ENG: Install igniter according to \textit{\underline{Installation Igniter}}
-      \item PSS: Install PSS according to \textit{\underline{Installation PSS}}
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Questions? Remarks?
-    \begin{itemize}
-      \item $\rightarrow$ End of briefing
-    \end{itemize}
-  }{}
-  
-  \cellcolor{cyan}
-  \procedureItem{$\rightarrow$ Transfer to Airfield}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Trailer from ENG1}}}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation DACS}} from DACS1}{}
-  
-  \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation PSS}} from PSS1}{}
   \iftoggle{firing}{
+    \cellcolor{cyan}    
+    \procedureItem{Re-Check that testing area (airfield) is unoccupied (e.g., no tents, trucks, airplanes, \dots)}{}
+    
+    \cellcolor{cyan}    
+    \procedureItem{Get final clearance to enter airfield:
+      \begin{itemize}
+        \item If wind vane still up, flight operations are still ongoing
+        \item If wind vane is down, limited flight operations are still possible
+      \end{itemize}
+      Call PiWa if suspected flight operations or earlier entry desired. Installation during flight operations is generally possible depending on the circumstances.
+      
+      Contacts:
+      \begin{itemize}
+        \item Pistenwagen (PiWa): 079 829 12 18 (Martin Larcher oder Durchdiener)
+        \item Roger Gisler (C Support Flugbetrieb): 058 481 79 18 / 079 944 42 52
+      \end{itemize}}{}}{}
+  
+  \cellcolor{green}
+  \procedureItem{Open HUT and leave key on the inside lock of the door}{}
+
+  \cellcolor{green}
+  \procedureItem{Setup Safety Area around trailer}{}
+  
+  \cellcolor{orange}
+  \procedureItem{Place the LOX Dewar at the border of the safety zone as shown in the \underline{\textit{Operation Safety Concept}} and ensure that it is secured properly (wear safety goggles and cryo-gloves during the entire transport).}{}
+  
   \cellcolor{cyan}
-  \procedureItem{Collect completed and signed \textit{\underline{Installation Igniter}} from ENG1}{}
-  }{}
+  \procedureItem{Complete Trailer installation according to \textit{\underline{HEP\_OP\_GEN\_TrailerInstallation}}}{}
+  
+  \cellcolor{yellow}
+  \procedureItem{Complete DACS installation}{TC can help DACS2 with part at the trailer}
+
+  \cellcolor{cyan}
+  \procedureItem{Install PSS according to \textit{\underline{HEP\_OP\_PSS\_InstallationPSS}}}{}
+  
   \cellcolor{cyan}
   \procedureItem{$\leftrightarrow$ TC to all: Installation is completed}{}
 
