@@ -112,7 +112,7 @@
   \procedureItem{$\leftrightarrow$ TC to DACS1: announce upcoming \textbf{Valve Functionality Check}}{}
   
   \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{ValveFC}}{}
   
 
   
@@ -125,7 +125,7 @@
       \item All bottles connected
       \item No bottle valve open
       \item No lines pressurized
-      \item UI: IDLE
+      \item UI: ValveFC
       \item No circuit armed
       \item All valves in normal state
     \end{itemize}
@@ -133,7 +133,7 @@
     \begin{itemize}
       \item N$_2$ Bottle (PRG) open
       \item PRG: 10 bar, PNU: 8 bar
-      \item UI: IDLE
+      \item UI: ValveFC
       \item No circuit armed
       \item All valves in normal state
     \end{itemize}
@@ -146,6 +146,9 @@
       \item Announce upcoming \textbf{Leakage Test \iftoggle{firing}{/ Spark Plug Functionality Check}{}}
     \end{itemize}
   }{}
+
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS: Change phase in the UI to \textbf{LeakageTest}}{}
   
   \cellcolor{orange}
   \procedureItem{Perform a leakage test of the PSS and ENG according to \textit{\underline{High Pressure Leakage Test PSS}}. If no modifications since last leakage test, LPLT can be skipped.}{
@@ -153,7 +156,7 @@
     \begin{itemize}
       \item N$_2$ Bottle (PRG) open
       \item PRG: 10 bar, PNU: 8 bar
-      \item UI: IDLE
+      \item UI: LeakageTest
       \item No circuit armed
       \item All valves in normal state
     \end{itemize}
@@ -161,7 +164,7 @@
     \begin{itemize}
       \item N$_2$ Bottle (PRG) open
       \item PRG: 10 bar, PNU: 8 bar
-      \item UI: IDLE
+      \item UI: LeakageTest
       \item No circuit armed
       \item All valves in normal state
     \end{itemize}
@@ -190,6 +193,9 @@
   \cellcolor{cyan}
   \procedureItem{Step back from the system}{}
   
+  \cellcolor{yellow}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{SparkplugFC}}{}
+
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: turn \textbf{IGNITION KEY} ON}{}
   

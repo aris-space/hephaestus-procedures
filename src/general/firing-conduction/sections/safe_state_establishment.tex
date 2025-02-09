@@ -29,7 +29,7 @@
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{System Deactivation}} \\ \hline
 
 \cellcolor{yellow}
-  \procedureItem{Change phase in the UI to \textbf{SYSTEM DEACTIVATION}}{}
+  \procedureItem{Change phase in the UI to \textbf{DEACTIVATION}}{}
   
   \cellcolor{yellow}
   \procedureItem{Arm OSS PRE-FILL circuit}{}
@@ -162,68 +162,65 @@
   \procedureItem{$\leftrightarrow$ TC to DACS1: check all temperatures in the engine (nominal $<$ 70°C)}{}
   
   \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{IDLE}}{}
-  
-  \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{FIRING} circuit}{}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: disarm \textbf{OSS PRE-FILL} circuit}{}
   
   \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Vent Valve (FSS)}{}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: initiate deactivation sequence.}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (FSS PRZ)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Pressurization Valve (FSS PRZ)}{}
 
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (FSS) for 5s}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (FSS) for 5s}{}
 
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Pressurization Valve (FSS PRZ)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Pressurization Valve (FSS PRZ)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Vent Valve (FSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Vent Valve (FSS)}{}
   
-  \cellcolor{cyan}
-  \procedureItem{Wait until FSS Pressure above Tank is equal to 0.0 barg}{}
+  % \cellcolor{cyan}
+  % \procedureItem{Wait until FSS Pressure above Tank is equal to 0.0 barg}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (OSS)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (FSS) for 10s}{}
-  \iftoggle{firing}{
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (FSS) for 10s}{}
+  % \iftoggle{firing}{
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (H2 IGN)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (H2 IGN)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Main Valve (H2 IGN)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Main Valve (H2 IGN)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (O2 IGN)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Main Valve (O2 IGN)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Main Valve (O2 IGN)}{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Main Valve (O2 IGN)}{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
-  }{}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: open Purge Valve (IGN) for 5s}{}
+  % }{}
   
-  \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{\iftoggle{firing}{Check igniter lines pressure}{}}
+  % \cellcolor{yellow}
+  % \procedureItem{$\leftrightarrow$ TC to DACS1: close Purge Valve (OSS)}{\iftoggle{firing}{Check igniter lines pressure}{}}
   
   \cellcolor{yellow}
   \procedureItem{$\leftrightarrow$ TC to DACS1: arm \textbf{OSS PRE-FILL} circuit}{}
@@ -279,7 +276,7 @@
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{OSS Run Tank Purging}} \\ \hline
 
 \cellcolor{yellow}
-  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{OSS RUN TANK PURGING}}{}
+  \procedureItem{$\leftrightarrow$ TC to DACS1: change phase in the UI to \textbf{OSSTnkPrg}}{}
   
   \cellcolor{orange}
   \procedureItem{Approach OSS compartment (from behind)}{}
