@@ -1,0 +1,37 @@
+% Procedure for installation
+
+\stepcounter{tableCounter} % Increment counter
+\setcounter{rowCounter}{0} % Reset counter
+\begin{tabularx}{\textwidth}{|>{\columncolor{tableColumnColor}}c|>{\columncolor{tableColumnColor}}c|>{\hsize=1.2\hsize}X|>{\hsize=.8\hsize}X|}
+  \hline
+  \rowcolor{tableHeaderColor}
+  ID & Check & Description & Comments \\ \hline
+  \procedureItem{
+    Activate both solenoids from the MC to check that they are working as expected.
+  }{Check with wrench}
+
+  \procedureItem{
+    Mark three points on the tank, one towards the top, one at the middle and one towards the bottom with marker
+  }
+  
+  \procedureItem{
+    Fill the tank with distilled water through the bleed valve
+  }{Use funnel and plastic tube}
+
+  \procedureItem{
+    Close bleed valve
+  }
+
+  \procedureItem{
+    Measure the circumference of the tank at the three points and write it down.
+  }{\begin{enumerate}
+    \item \underline{\hspace{2cm}}
+    \item \underline{\hspace{2cm}}
+    \item \underline{\hspace{2cm}}
+    \end{enumerate}}
+
+  \procedureItem{
+    Position the cameras so that they see the whole setup
+  }
+
+\end{tabularx}
