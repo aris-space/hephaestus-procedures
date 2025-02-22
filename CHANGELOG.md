@@ -1,5 +1,9 @@
 # Changelog
 
+## [v0.0.21](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.20...v0.0.21) - 2025-02-22
+- Add Download and Sort bash script by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/68
+- TSR Release by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/70
+
 ## [v0.0.20](https://github.com/aris-space/hephaestus-procedures/compare/v0.0.19...v0.0.20) - 2025-02-09
 - Incorporate SM changes by @v30matt in https://github.com/aris-space/hephaestus-procedures/pull/66
 
