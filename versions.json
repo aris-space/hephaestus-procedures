@@ -40,8 +40,8 @@
         "hash": "f23e112dce30b1da3d9cd51c46e91a14431ab075ba800a2bcaf6541f27ad3f65"
     },
     "general/trailer-deinstallation": {
-        "version": "01",
-        "hash": "f79e72c653be435088a327631768cc45a8d4b207cf83843b13bc5bf64a40eb83"
+        "version": "02",
+        "hash": "d1c0918b03d64edf0526f63b29d71636306ea45757d2d373c51e003cc47412dd"
     },
     "general/firing-conduction": {
         "version": "10",
@@ -64,8 +64,8 @@
         "hash": "7c3f26105282637d7884bab1f4056267735bc5773c0c6f07df712c33d5504b3c"
     },
     "general/trailer-installation": {
-        "version": "04",
-        "hash": "7ee278ed56d0a1e19834b4c085bd456a1358482ec5b644fc2b0e7f9ac1aa94cc"
+        "version": "05",
+        "hash": "0ea0ad8d7bcee29ec522ff951058b8ae771b1a7c1f851d9a441b038d1a3ee7f1"
     },
     "general/packing-list": {
         "version": "08",
