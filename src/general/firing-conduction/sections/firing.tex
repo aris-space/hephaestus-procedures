@@ -61,7 +61,7 @@
   \procedureItem{Wait for pre-chilling to complete. If tank weight drops below predetermined level, stop pre-chilling.}{Prechilling is completed if OSS INJ T reaches -160 or white clouds come out of the engine.}
   
   \cellcolor{yellow}
-  \procedureItem{Close Main Valve (OSS)}{}
+  \procedureItem{Close OSS Main Valve}{}
   
 \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Initial Pressurization}} \\ \hline
 
@@ -82,13 +82,16 @@
   \procedureItem{Insert \textbf{IGNITION KEY}}{}}{}
 
   \cellcolor{yellow}
-  \procedureItem{Close Vent Valve (FSS)}{}
+  \procedureItem{Close FSS Vent Valve}{}
   
   \cellcolor{yellow}
   \procedureItem{Open Pressurization Valve (FSS PRZ)}{}
   
   \cellcolor{yellow}
   \procedureItem{Check FSS Pressure above Tank}{}
+
+  \cellcolor{yellow}
+  \procedureItem{Check that OSS Vent Valve is closed}{}
   
   \cellcolor{yellow}
   \procedureItem{Open Pressurization Valve (OSS PRZ)}{}
@@ -145,7 +148,8 @@
       \end{enumerate}
       \textbf{Overtemperature}: Potential damage to engine
       \begin{enumerate}
-        \item check water pump functionality (check recording of water pump camera), inspect engine once in safe state
+        \item Check other temperature sensors, maybe only sensor error
+        \item Inspect engine for damage once in safe state
       \end{enumerate}
   }
   \iftoggle{firing}{
