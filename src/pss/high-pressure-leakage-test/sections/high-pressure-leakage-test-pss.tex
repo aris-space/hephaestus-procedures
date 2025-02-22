@@ -8,11 +8,13 @@
   \procedureItem{Inform about the imminent start of the high-pressure leakage test:
   \begin{itemize}
     \item All personnel must be outside of the safety zone
-    \item Only TC, SO and PSS1 are allowed to approach the trailer
+    \item Only TC, SO and EIC are allowed to approach the trailer
     \item Workspaces on the trailer must be cleared
   \end{itemize}}{}
   
-  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles, face shields and working gloves}{}
+  \procedureItem{TC, SO and EIC wear ear protection, safety goggles, face shields and working gloves}{}
+
+  \procedureItem{Remove pressure plate from the engine}{}
   
   \procedureItem{Approach FSS compartment}{}
   
@@ -20,9 +22,9 @@
   
   \procedureItem{Slowly open the N2 Bottle Valve (FSS PRZ) fully}{}
   
-  \procedureItem{Slowly set the Pressure Reducer (FSS PRZ) to \textbf{\textcolor{red}{45 barg}} (in 10 bar steps and checking pressure readings with DACS after every step) while regularly applying Snoop to all fittings and check for leaks}{}
+  \procedureItem{Slowly set the Pressure Reducer (FSS PRZ) to \textbf{\textcolor{red}{55 barg}} (in 10 bar steps and checking pressure readings with DACS after every step) while regularly applying Snoop to all fittings and check for leaks}{}
   
-  \procedureItem{$\leftrightarrow$TC to DACS1: Check FSS Pressure above Tank}{}
+  \procedureItem{$\leftrightarrow$TC to DACS1: Check FSS Pressurisation pressure}{}
   
   \procedureItem{Approach OSS compartment}{}
   
@@ -30,96 +32,67 @@
   
   \procedureItem{Slowly open the N2 Bottle Valve (OSS PRZ) fully}{}
   
-  \procedureItem{Slowly set the Pressure Reducer (OSS PRZ) to \textbf{\textcolor{red}{45 barg}} (in 10 bar steps and checking pressure readings with DACS after every step) while regularly applying Snoop to all fittings and check for leaks}{}
+  \procedureItem{Slowly set the Pressure Reducer (OSS PRZ) to \textbf{\textcolor{red}{55 barg}} (in 10 bar steps and checking pressure readings with DACS after every step) while regularly applying Snoop to all fittings and check for leaks}{}
   
-  \procedureItem{$\leftrightarrow$TC to DACS1: Check OSS Pressure above Tank}{}
+  \procedureItem{$\leftrightarrow$TC to DACS1: Check OSS Pressurisation pressure}{}
   
   \procedureItem{Retreat to HUT and monitor the system pressure via sensor values}{}
   
   \procedureItem{$\rightarrow$Arm \textbf{FIRING} circuit}{}
+  
+  \procedureItem{$\rightarrow$Close FSS Vent Valve}{}
+  
+  \procedureItem{$\rightarrow$Close OSS Vent Valve}{}
 
-  \procedureItem{$\rightarrow$Close Emergency Valve (FSS)}{}  
-  
-  \procedureItem{$\rightarrow$Close Vent Valve (FSS)}{}
-  
-  \procedureItem{$\rightarrow$Close Vent Valve (OSS)}{}
-
-  \procedureItem{Wait 5 min to check if Pressurization Valve is leaktight}{Leaktight if pressure in Tank and Runline doesn't increase}
-  
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{FSS}}\\ \hline
+  \procedureItem{Wait 5 min to check if Pressurization Valves are leaktight}{Leaktight if pressure in Tank doesn't increase}
 
   \procedureItem{Open Pressurization Valve (FSS PRZ) and wait until system is fully pressurized}{}
   
-  \procedureItem{$\rightarrow$Check FSS Pressurization Pressure}{}
+  \procedureItem{$\rightarrow$Check FSS Tank Pressure}{}
+
+  \procedureItem{Open Pressurization Valve (OSS PRZ) and wait until system is fully pressurized}{}
   
-  \procedureItem{Open Main Valve (FSS) and wait until system is fully pressurized}{}
-  
-  \procedureItem{$\rightarrow$Check Injector Manifold Pressure}{}
-  
-  \procedureItem{Close Pressurization Valve (FSS PRZ)}{}
-  
-  \procedureItem{Close Main Valve (FSS)}{}
+  \procedureItem{$\rightarrow$Check OSS Tank Pressure}{}
   
   \procedureItem{Set timer to 15 minutes (only for newly assembled system, else 5 minutes)}{}
   
   \procedureItem{If pressure readings drop significantly before timer ends, the remaining waiting time can be skipped}{}
   
   \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS tank pressure: \underline{\hspace{5cm}}} \\ \hline
-  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS inj pressure: \underline{\hspace{5cm}}} \\ \hline
+  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS Mainline pressure: \underline{\hspace{5cm}}} \\ \hline
   \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS tank pressure (15 min): \underline{\hspace{5cm}}} \\ \hline
-  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS inj pressure (15 min): \underline{\hspace{5cm}}} \\ \hline
-
-  \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{OSS}} \\ \hline
-  
-  \procedureItem{Open Pressurization Valve (OSS PRZ) and wait until system is fully pressurized}{}
-  
-  \procedureItem{$\rightarrow$Check OSS Pressurization Pressure}{}
-  
-  \procedureItem{Open Main Valve (OSS) and wait until system is fully pressurized}{}
-  
-  \procedureItem{$\rightarrow$Check OSS Runline Pressure, Injector Manifold Pressure}{}
-  
-  \procedureItem{Close Pressurization Valve (OSS PRZ)}{}
-  
-  \procedureItem{Close Main Valve (OSS)}{}
-  
-  \procedureItem{Set timer to 15 minutes (only for newly assembled system, else 5 minutes)}{}
-  
-  \procedureItem{If pressure readings drop significantly before timer ends, the remaining waiting time can be skipped}{}
-  
+  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS Mainline pressure (15 min): \underline{\hspace{5cm}}} \\ \hline
   \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{OSS tank pressure: \underline{\hspace{5cm}}} \\ \hline
-  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{OSS inj pressure: \underline{\hspace{5cm}}} \\ \hline
+  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{OSS Mainline pressure: \underline{\hspace{5cm}}} \\ \hline
   \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{OSS tank pressure (15 min): \underline{\hspace{5cm}}} \\ \hline
-  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{OSS inj pressure (15 min): \underline{\hspace{5cm}}} \\ \hline
-
+  \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{OSS Mainline pressure (15 min): \underline{\hspace{5cm}}} \\ \hline
+  
   \multicolumn{4}{|c|}{\cellcolor{tableColumnColor} \textbf{Depressurization}} \\ \hline
   
-  \procedureItem{Open Vent Valve (FSS)}{}
+  \procedureItem{Open FSS Vent Valve}{}
   
   \procedureItem{Check that system is depressurized:
 \begin{itemize}
   \item Check FSS Pressure above Tank
-  \item Check Injector Manifold Pressure
+  \item Check FSS Mainline Pressure
 \end{itemize}}{}
   
-  \procedureItem{Open Main Valve (FSS) (depressurizing engine section via Vent Valve (FSS))}{}
-  
-  \procedureItem{Open Emergency Valve (FSS)}{}
-
-  \procedureItem{Open Main Valve (OSS MAIN)}{}
-  
-  \procedureItem{Open Vent Valve (OSS)}{}
+  \procedureItem{Open OSS Vent Valve}{}
   
   \procedureItem{Check that system is depressurized:
 \begin{itemize}
   \item Check OSS Pressure above Tank
-  \item Check OSS Runline Pressure
-  \item Check Injector Manifold Pressure
+  \item Check OSS Mainline Pressure
 \end{itemize}}{}
+
+\procedureItem{Disarm \textbf{FIRING} circuit}{}
+
+\procedureItem{Confirm that no circuit is armed and all valves are in normal state}{}
+
   
-  \procedureItem{TC, SO and PSS1 wear ear protection, safety goggles, face shields and working gloves}{}
+  \procedureItem{TC, SO and EIC wear ear protection, safety goggles, face shields and working gloves}{}
   
-  \procedureItem{TC, SO and PSS1 approach the FSS compartment}{}
+  \procedureItem{TC, SO and EIC approach the FSS compartment}{}
   \multicolumn{4}{|>{\hsize=4\hsize\linewidth=\hsize}X|}{FSS PRZ N2 tank pressure: \underline{\hspace{5cm}}} \\ \hline
   
   \procedureItem{Close N2 Bottle Valve (FSS PRZ)}{}
@@ -130,17 +103,15 @@
   
   \procedureItem{Close Bleed Valve (FSS PRZ)}{}
   
-  \procedureItem{If the pressure drops more than 5 bar, there are leaks:
+  \procedureItem{If the pressure dropped more than 1 barg per minute, there are leaks:
 \begin{itemize}
   \item Find leaks (look for bubbles)
   \item Mark leaking fittings
-  \item Retighten all marked fittings and go back to step 3.4.
+  \item Retighten all marked fittings and go back to step 3.5.
 \end{itemize}
-If the pressure did not drop more than 5 bar, continue with the next step}{}
+If the pressure did not drop more than 1 barg per minute, continue with the next step}{}
   
-  \procedureItem{Close Main Valve (FSS MAIN)}{}
-  
-  \procedureItem{TC, SO and PSS1 approach the OSS compartment}{}
+  \procedureItem{TC, SO and EIC approach the OSS compartment}{}
   
   \procedureItem{Write down pressure on Pressure Reducer (OSS PRZ):}{}
   
@@ -152,17 +123,12 @@ If the pressure did not drop more than 5 bar, continue with the next step}{}
   
   \procedureItem{Close Bleed Valve (OSS PRZ)}{}
   
-  \procedureItem{If the pressure drops more than 5 bar, there are leaks:
+  \procedureItem{If the pressure dropped more than 1 barg per minute, there are leaks:
 \begin{itemize}
   \item Find leaks (look for bubbles)
   \item Mark leaking fittings
-  \item Retighten all marked fittings and go back to step 3.4.
+  \item Retighten all marked fittings and go back to step 3.5.
 \end{itemize}
-If the pressure did not drop more than 5 bar, continue with the next step}{}
+If the pressure did not drop more than 1 barg per minute, continue with the next step}{}
   
-  \procedureItem{Close Main Valve (OSS MAIN)}{}
-  
-  \procedureItem{$\leftrightarrow$TC to DACS1: Disarm \textbf{FIRING} circuit}{}
-  
-  \procedureItem{$\leftrightarrow$TC to DACS1: Confirm that no circuit is armed and all valves are in normal state}{}
-\end{tabularx}
+ \end{tabularx}
